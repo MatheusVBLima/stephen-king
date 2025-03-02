@@ -1,10 +1,8 @@
 import { getBookBySlug } from "@/lib/books-data";
 import { BookDetail } from "@/components/BookDetail";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from "next/link";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 // Function to capitalize the first letter of each word
 function capitalizeWords(str: string): string {
@@ -56,20 +54,15 @@ export default async function BookPage({ params }: BookPageProps) {
                          location === 'derry' ? 'Derry' : 
                          location === 'salems-lot' ? "Salem's Lot" : capitalizeWords(location);
 
-  return (
-    <main className="p-4 mx-auto max-w-7xl">
-      <div className="mb-6">
-        <Button 
-          variant="outline" 
-          asChild 
-        >
-          <Link href={`/#${location}`}>
-            <ArrowLeft />
-            <span>Back to {displayLocation}</span>
-          </Link>
-        </Button>
-      </div>
+  // Breadcrumb segments
+  const breadcrumbSegments = [
+    { name: displayLocation, href: `/#${location}` },
+    { name: book.title, href: `/${location}/${bookTitle}`, isCurrent: true }
+  ];
 
+  return (
+    <main className="p-4 mx-auto md:px-0 max-w-7xl">
+      <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
       <BookDetail book={book} />
     </main>
   );

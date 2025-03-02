@@ -1,18 +1,29 @@
 import Link from 'next/link';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
+import { Button } from '@/components/ui/button';
+import { Home } from 'lucide-react';
 
 export default function NotFound() {
+  // Breadcrumb segments
+  const breadcrumbSegments = [
+    { name: "Page not found", href: "#", isCurrent: true }
+  ];
+
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] p-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Page not found</h2>
-      <p className="mb-6 max-w-md text-muted-foreground">
+      <div className="w-full max-w-md mx-auto mb-6">
+        <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
+      </div>
+      <h2 className="mb-4 text-3xl font-bold">Page not found</h2>
+      <p className="max-w-md mb-6 text-muted-foreground">
         The work you are looking for was not found or does not exist.
       </p>
-      <Link
-        href="/"
-        className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
-      >
-        Back to home page
-      </Link>
+      <Button asChild>
+        <Link href="/">
+          <Home className="w-4 h-4 mr-2" />
+          Return to home page
+        </Link>
+      </Button>
     </div>
   );
 } 
