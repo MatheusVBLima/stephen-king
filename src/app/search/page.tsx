@@ -101,7 +101,7 @@ export default function SearchPage() {
           <SearchBar />
         </div>
         
-        <Suspense fallback={<div className="text-center">Carregando resultados...</div>}>
+        <Suspense fallback={<div className="text-center">Loading results...</div>}>
           <SearchResults />
         </Suspense>
       </div>

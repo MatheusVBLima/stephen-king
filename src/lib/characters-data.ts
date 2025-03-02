@@ -1,53 +1,53 @@
 import { Character } from './types';
 
-// Função para criar um "slug" a partir do nome do personagem
+// Function to create a "slug" from the character's name
 export function slugify(text: string): string {
     return text
         .toString()
         .toLowerCase()
-        .replace(/\s+/g, '-')      // Substitui espaços por hífens
-        .replace(/[^\w\-]+/g, '')  // Remove caracteres especiais
-        .replace(/\-\-+/g, '-')    // Substitui múltiplos hífens por um único
-        .replace(/^-+/, '')        // Remove hífens do início
-        .replace(/-+$/, '');       // Remove hífens do final
+        .replace(/\s+/g, '-')      // Replaces spaces with hyphens
+        .replace(/[^\w\-]+/g, '')  // Removes special characters
+        .replace(/\-\-+/g, '-')    // Replaces multiple hyphens with a single one
+        .replace(/^-+/, '')        // Removes hyphens from the beginning
+        .replace(/-+$/, '');       // Removes hyphens from the end
 }
 
-// Dados de personagens recorrentes nas obras de Stephen King
+// Data of recurring characters in Stephen King's works
 const characters: Character[] = [
-    // Personagens de Derry
+    // Characters from Derry
     {
         id: "pennywise",
         name: "Pennywise (It)",
         slug: "pennywise",
-        description: "Pennywise é a forma predominante assumida pela criatura alienígena conhecida como 'It'. Ele aparece como um palhaço para atrair crianças e se alimenta do medo antes de devorar suas vítimas. É um ser interdimensional que hibernou por milhões de anos antes de chegar à Terra.",
+        description: "Pennywise is the predominant form taken by the alien creature known as 'It'. He appears as a clown to attract children and feeds on fear before devouring his victims. He is an interdimensional being that hibernated for millions of years before arriving on Earth.",
         imageUrl: "/images/characters/pennywise.jpg",
         books: [
             {
                 bookTitle: "It",
                 role: "Antagonist",
                 significance: "Major",
-                notes: "Principal antagonista da obra, representando o mal puro."
+                notes: "Main antagonist of the story, representing pure evil."
             }
         ],
         relationships: [
             {
-                characterName: "Os Perdedores",
+                characterName: "The Losers",
                 characterId: "losers-club",
                 relationshipType: "Enemy",
-                description: "O grupo de crianças (e mais tarde adultos) que confronta e eventualmente derrota Pennywise."
+                description: "The group of children (and later adults) who confront and eventually defeat Pennywise."
             }
         ],
-        traits: ["Metamorfo", "Manipulador", "Imortal", "Aterrorizante", "Alimenta-se de medo"],
+        traits: ["Shapeshifter", "Manipulative", "Immortal", "Terrifying", "Feeds on fear"],
         quotes: [
             {
-                text: "Nós todos flutuamos aqui embaixo.",
+                text: "We all float down here.",
                 book: "It",
-                context: "Uma das frases mais icônicas do personagem, dita para atrair suas vítimas."
+                context: "One of the character's most iconic phrases, used to lure his victims."
             },
             {
-                text: "Eu sou o comedor de mundos, e de crianças. E você está próximo, Richie.",
+                text: "I am the eater of worlds, and of children. And you are next, Richie.",
                 book: "It",
-                context: "Pennywise se gabando de seus poderes."
+                context: "Pennywise boasting about his powers."
             }
         ],
         isVillain: true,
@@ -55,16 +55,16 @@ const characters: Character[] = [
     },
     {
         id: "losers-club",
-        name: "O Clube dos Perdedores",
+        name: "The Losers' Club",
         slug: "losers-club",
-        description: "Um grupo de sete crianças unidas por suas experiências traumáticas com Pennywise em Derry. Retornam como adultos para confrontar o mal 27 anos depois. São conhecidos por seu vínculo profundo, coragem e determinação frente ao mal sobrenatural.",
+        description: "A group of seven children united by their traumatic experiences with Pennywise in Derry. They return as adults to confront the evil 27 years later. They are known for their deep bond, courage, and determination in the face of supernatural evil.",
         imageUrl: "/images/characters/losers-club.jpg",
         books: [
             {
                 bookTitle: "It",
                 role: "Protagonist",
                 significance: "Major",
-                notes: "Protagonistas coletivos que enfrentam Pennywise."
+                notes: "Collective protagonists who face Pennywise."
             }
         ],
         relationships: [
@@ -72,50 +72,50 @@ const characters: Character[] = [
                 characterName: "Pennywise (It)",
                 characterId: "pennywise",
                 relationshipType: "Enemy",
-                description: "A entidade maligna que aterroriza Derry e que os Perdedores juram destruir."
+                description: "The evil entity that terrorizes Derry and that the Losers swear to destroy."
             }
         ],
-        traits: ["Corajosos", "Leais", "Traumatizados", "Unidos", "Resilientes"],
+        traits: ["Brave", "Loyal", "Traumatized", "United", "Resilient"],
         quotes: [
             {
-                text: "Se a gente ficar junto, tudo que a gente imaginar pode virar realidade.",
+                text: "If we stick together, anything we imagine can become reality.",
                 book: "It",
-                context: "Bill Denbrough falando sobre o poder do grupo unido."
+                context: "Bill Denbrough talking about the power of the united group."
             }
         ],
         isVillain: false,
         firstAppearance: "It"
     },
 
-    // Personagens de Castle Rock
+    // Characters from Castle Rock
     {
         id: "cujo",
         name: "Cujo",
         slug: "cujo",
-        description: "Um São Bernardo outrora amigável que se torna um monstro assassino após ser infectado com raiva. Simboliza como o mal pode corromper até mesmo os mais inocentes e como o terror pode surgir de situações cotidianas.",
+        description: "A once-friendly Saint Bernard that becomes a killer monster after being infected with rabies. He symbolizes how evil can corrupt even the most innocent and how terror can arise from everyday situations.",
         imageUrl: "/images/characters/cujo.jpg",
         books: [
             {
                 bookTitle: "Cujo",
                 role: "Antagonist",
                 significance: "Major",
-                notes: "O cão transformado em assassino que aterroriza Donna e Tad Trenton."
+                notes: "The dog transformed into a killer that terrorizes Donna and Tad Trenton."
             }
         ],
         relationships: [
             {
-                characterName: "Família Trenton",
+                characterName: "Trenton Family",
                 characterId: "trenton-family",
                 relationshipType: "Enemy",
-                description: "As principais vítimas de Cujo durante seu surto de raiva."
+                description: "The main victims of Cujo during his rabies outbreak."
             }
         ],
-        traits: ["Instintivo", "Brutal", "Transformado", "Doente", "Irracional"],
+        traits: ["Instinctive", "Brutal", "Transformed", "Sick", "Irrational"],
         quotes: [
             {
-                text: "Não era culpa de Cujo. Era apenas algo que tinha acontecido.",
+                text: "It wasn't Cujo's fault. It was just something that happened.",
                 book: "Cujo",
-                context: "Reflexão sobre a natureza da tragédia sem vilões deliberados."
+                context: "Reflection on the nature of tragedy without deliberate villains."
             }
         ],
         isVillain: true,
@@ -123,22 +123,22 @@ const characters: Character[] = [
     },
     {
         id: "sheriff-bannerman",
-        name: "Xerife George Bannerman",
+        name: "Sheriff George Bannerman",
         slug: "sheriff-bannerman",
-        description: "O xerife de Castle Rock que aparece em várias histórias ambientadas na cidade. Responsável, dedicado e profundamente ligado à comunidade, representa a lei e a ordem em uma cidade frequentemente assolada por eventos sobrenaturais.",
+        description: "The sheriff of Castle Rock who appears in several stories set in the town. Responsible, dedicated, and deeply connected to the community, he represents law and order in a town frequently plagued by supernatural events.",
         imageUrl: "/images/characters/sheriff-bannerman.jpg",
         books: [
             {
                 bookTitle: "The Dead Zone",
                 role: "Supporting",
                 significance: "Major",
-                notes: "Busca a ajuda de Johnny Smith para resolver assassinatos em série."
+                notes: "Seeks Johnny Smith's help to solve serial murders."
             },
             {
                 bookTitle: "Cujo",
                 role: "Supporting",
                 significance: "Minor",
-                notes: "Investiga os incidentes envolvendo Cujo."
+                notes: "Investigates the incidents involving Cujo."
             }
         ],
         relationships: [
@@ -146,34 +146,34 @@ const characters: Character[] = [
                 characterName: "Johnny Smith",
                 characterId: "johnny-smith",
                 relationshipType: "Colleague",
-                description: "Trabalha com Johnny Smith para resolver crimes usando as habilidades psíquicas de Johnny."
+                description: "Works with Johnny Smith to solve crimes using Johnny's psychic abilities."
             }
         ],
-        traits: ["Dedicado", "Justo", "Cético", "Protetor", "Resiliente"],
+        traits: ["Dedicated", "Fair", "Skeptical", "Protective", "Resilient"],
         quotes: [
             {
-                text: "Esta cidade já viu coisas estranhas demais para eu desconsiderar qualquer possibilidade.",
+                text: "This town has seen too many strange things for me to dismiss any possibility.",
                 book: "The Dead Zone",
-                context: "Refletindo sobre os eventos sobrenaturais em Castle Rock."
+                context: "Reflecting on the supernatural events in Castle Rock."
             }
         ],
         isVillain: false,
         firstAppearance: "The Dead Zone"
     },
 
-    // Personagens de Salem's Lot
+    // Characters from Salem's Lot
     {
         id: "kurt-barlow",
         name: "Kurt Barlow",
         slug: "kurt-barlow",
-        description: "O vampiro principal que invade a pequena cidade de Jerusalem's Lot. Antigo e poderoso, ele representa o mal ancestral que se infiltra em comunidades aparentemente inocentes. Barlow é metódico em sua conquista da cidade, transformando seus habitantes em vampiros.",
+        description: "The main vampire who invades the small town of Jerusalem's Lot. Ancient and powerful, he represents the ancestral evil that infiltrates seemingly innocent communities. Barlow is methodical in his conquest of the town, turning its inhabitants into vampires.",
         imageUrl: "/images/characters/kurt-barlow.jpg",
         books: [
             {
                 bookTitle: "Salem's Lot",
                 role: "Antagonist",
                 significance: "Major",
-                notes: "O vampiro mestre que transforma a cidade em um ninho de mortos-vivos."
+                notes: "The master vampire who transforms the town into a nest of undead."
             }
         ],
         relationships: [
@@ -181,21 +181,21 @@ const characters: Character[] = [
                 characterName: "Ben Mears",
                 characterId: "ben-mears",
                 relationshipType: "Enemy",
-                description: "O escritor que retorna à Jerusalem's Lot e lidera a resistência contra Barlow."
+                description: "The writer who returns to Jerusalem's Lot and leads the resistance against Barlow."
             },
             {
                 characterName: "Richard Straker",
                 characterId: "richard-straker",
                 relationshipType: "Colleague",
-                description: "O servo humano de Barlow que prepara sua chegada à cidade."
+                description: "Barlow's human servant who prepares for his arrival in town."
             }
         ],
-        traits: ["Antigo", "Manipulador", "Cruel", "Paciente", "Predador"],
+        traits: ["Ancient", "Manipulative", "Cruel", "Patient", "Predatory"],
         quotes: [
             {
-                text: "Olhe para mim. Sua fé contra a minha. Você tem sua cruz boa, eu tenho meus anos. Qual vencerá, você acha?",
+                text: "Look at me. Your faith against mine. You have your good cross, I have my years. Which do you think will win, do you think?",
                 book: "Salem's Lot",
-                context: "Desafiando o Padre Callahan durante seu confronto."
+                context: "Challenging Father Callahan during their confrontation."
             }
         ],
         isVillain: true,
@@ -205,14 +205,14 @@ const characters: Character[] = [
         id: "ben-mears",
         name: "Ben Mears",
         slug: "ben-mears",
-        description: "Um escritor que retorna à sua cidade natal, Jerusalem's Lot, para enfrentar seus medos de infância relacionados à Casa Marsten. Ele acaba liderando um pequeno grupo de sobreviventes contra a ameaça vampírica que toma conta da cidade. Simboliza a luta da pessoa comum contra o mal sobrenatural.",
+        description: "A writer who returns to his hometown, Jerusalem's Lot, to face his childhood fears related to the Marsten House. He ends up leading a small group of survivors against the vampiric threat that takes over the town. He symbolizes the ordinary person's struggle against supernatural evil.",
         imageUrl: "/images/characters/ben-mears.jpg",
         books: [
             {
                 bookTitle: "Salem's Lot",
                 role: "Protagonist",
                 significance: "Major",
-                notes: "Protagonista que lidera a luta contra os vampiros."
+                notes: "Protagonist who leads the fight against the vampires."
             }
         ],
         relationships: [
@@ -220,21 +220,21 @@ const characters: Character[] = [
                 characterName: "Kurt Barlow",
                 characterId: "kurt-barlow",
                 relationshipType: "Enemy",
-                description: "O vampiro que Ben busca destruir para salvar Jerusalem's Lot."
+                description: "The vampire Ben seeks to destroy to save Jerusalem's Lot."
             },
             {
                 characterName: "Susan Norton",
                 characterId: "susan-norton",
                 relationshipType: "Love Interest",
-                description: "Moradora de Jerusalem's Lot que se torna interesse amoroso de Ben."
+                description: "Resident of Jerusalem's Lot who becomes Ben's love interest."
             }
         ],
-        traits: ["Determinado", "Reflexivo", "Corajoso", "Traumatizado", "Resiliente"],
+        traits: ["Determined", "Reflective", "Brave", "Traumatized", "Resilient"],
         quotes: [
             {
-                text: "A cidade sabia o mal tinha chegado, mas cada pessoa interpretou como quis.",
+                text: "The town knew evil had come, but each person interpreted it as they wished.",
                 book: "Salem's Lot",
-                context: "Refletindo sobre como o mal pode se infiltrar em uma comunidade."
+                context: "Reflecting on how evil can infiltrate a community."
             }
         ],
         isVillain: false,
@@ -242,22 +242,22 @@ const characters: Character[] = [
     }
 ];
 
-// Função para obter todos os personagens
+// Function to get all characters
 export function getAllCharacters(): Character[] {
     return characters;
 }
 
-// Função para obter um personagem específico por slug
+// Function to get a specific character by slug
 export function getCharacterBySlug(slug: string): Character | undefined {
     return characters.find(character => character.slug === slug);
 }
 
-// Função para obter personagens por tipo (vilões ou heróis)
+// Function to get characters by type (villains or heroes)
 export function getCharactersByType(isVillain: boolean): Character[] {
     return characters.filter(character => character.isVillain === isVillain);
 }
 
-// Função para obter personagens que aparecem em um livro específico
+// Function to get characters that appear in a specific book
 export function getCharactersByBook(bookTitle: string): Character[] {
     return characters.filter(character =>
         character.books.some(appearance => appearance.bookTitle === bookTitle)

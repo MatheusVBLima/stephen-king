@@ -42,7 +42,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/30">
             <div className="relative mb-4 w-28 h-28">
               <Avatar className="w-full h-full border-4 border-background">
-                <AvatarImage src={character.imageUrl} alt={character.name} />
+                <AvatarImage src={character.imageUrl} alt={character.name} className="object-cover"/>
                 <AvatarFallback className="text-3xl bg-primary/10">
                   {getInitials(character.name)}
                 </AvatarFallback>
@@ -57,7 +57,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             </div>
             <h1 className="mb-2 text-3xl font-bold text-white">{character.name}</h1>
             <Badge variant={character.isVillain ? "destructive" : "default"}>
-              {character.isVillain ? 'Vilão' : 'Herói'}
+              {character.isVillain ? 'Villain' : 'Hero'}
             </Badge>
           </div>
         </div>
@@ -72,7 +72,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Primeira Aparição</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">First Appearance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.firstAppearance}</p>
@@ -81,7 +81,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Total de Obras</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Total Works</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.books.length}</p>
@@ -90,7 +90,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Relacionamentos</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Relationships</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.relationships.length}</p>
@@ -99,7 +99,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Citações</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Quotes</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.quotes.length}</p>
@@ -113,24 +113,24 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         <TabsList className="grid w-full h-auto grid-cols-1 sm:grid-cols-4">
           <TabsTrigger value="traits" className="py-3">
             <Bookmark className="w-4 h-4 mr-2" />
-            Características
+            Traits
           </TabsTrigger>
           <TabsTrigger value="books" className="py-3">
             <BookOpen className="w-4 h-4 mr-2" />
-            Obras
+            Books
           </TabsTrigger>
           <TabsTrigger value="relationships" className="py-3">
             <Users className="w-4 h-4 mr-2" />
-            Relacionamentos
+            Relationships
           </TabsTrigger>
           <TabsTrigger value="quotes" className="py-3">
             <Quote className="w-4 h-4 mr-2" />
-            Citações
+            Quotes
           </TabsTrigger>
         </TabsList>
         
         <TabsContent value="traits" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Características e Traços</h3>
+          <h3 className="mb-4 text-xl font-semibold">Characteristics and Traits</h3>
           <div className="flex flex-wrap gap-2">
             {character.traits.map((trait, index) => (
               <Badge key={index} variant="secondary" className="text-base py-1.5 px-3">
@@ -141,7 +141,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="books" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Aparições em Livros</h3>
+          <h3 className="mb-4 text-xl font-semibold">Book Appearances</h3>
           <div className="space-y-4">
             {character.books.map((book, index) => (
               <Card key={index} className="overflow-hidden">
@@ -152,7 +152,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                       {book.significance}
                     </Badge>
                   </div>
-                  <CardDescription>Papel: {book.role}</CardDescription>
+                  <CardDescription>Role: {book.role}</CardDescription>
                 </CardHeader>
                 {book.notes && (
                   <CardContent>
@@ -165,7 +165,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="relationships" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Relacionamentos</h3>
+          <h3 className="mb-4 text-xl font-semibold">Relationships</h3>
           <div className="space-y-4">
             {character.relationships.map((relationship, index) => (
               <Card key={index}>
@@ -185,7 +185,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                 <div className="p-4 pt-0 text-right">
                   <Button variant="ghost" size="sm" asChild>
                     <Link href={`/characters/${relationship.characterId}`}>
-                      Ver perfil
+                      View profile
                     </Link>
                   </Button>
                 </div>
@@ -195,7 +195,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="quotes" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Citações Memoráveis</h3>
+          <h3 className="mb-4 text-xl font-semibold">Memorable Quotes</h3>
           <div className="space-y-4">
             {character.quotes.map((quote, index) => (
               <Card key={index}>

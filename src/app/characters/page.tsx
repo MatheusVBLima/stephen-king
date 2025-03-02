@@ -48,14 +48,14 @@ export default function CharactersPage() {
           >
             <Link href="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              <span>Voltar para Home</span>
+              <span>Back to Home</span>
             </Link>
           </Button>
         </div>
         
-        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">Personagens do Universo de Stephen King</h1>
-        <p className="mb-8 text-center text-muted-foreground">
-          Explore os personagens recorrentes que habitam as histórias de Stephen King
+        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">Characters from Stephen King's Universe</h1>
+        <p className="max-w-2xl mx-auto mb-8 text-center text-muted-foreground">
+          Explore the recurring characters that inhabit Stephen King's stories
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -65,7 +65,7 @@ export default function CharactersPage() {
             className="flex items-center gap-2"
           >
             <Users className="w-4 h-4" />
-            Todos
+            All
           </Button>
           <Button
             variant={filter === 'heroes' ? 'default' : 'outline'}
@@ -73,7 +73,7 @@ export default function CharactersPage() {
             className="flex items-center gap-2"
           >
             <UserCheck className="w-4 h-4" />
-            Heróis
+            Heroes
           </Button>
           <Button
             variant={filter === 'villains' ? 'default' : 'outline'}
@@ -81,7 +81,7 @@ export default function CharactersPage() {
             className="flex items-center gap-2"
           >
             <Skull className="w-4 h-4" />
-            Vilões
+            Villains
           </Button>
         </div>
         
@@ -91,7 +91,7 @@ export default function CharactersPage() {
           </div>
         ) : characters.length === 0 ? (
           <div className="py-10 text-center">
-            <p className="text-muted-foreground">Nenhum personagem encontrado</p>
+            <p className="text-muted-foreground">No characters found</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

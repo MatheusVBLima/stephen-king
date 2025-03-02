@@ -27,7 +27,7 @@ export function Header() {
             <Button variant="ghost" asChild className="flex items-center gap-1">
               <Link href="/characters">
                 <Users className="w-4 h-4 mr-1" />
-                Personagens
+                Characters
               </Link>
             </Button>
           </nav>

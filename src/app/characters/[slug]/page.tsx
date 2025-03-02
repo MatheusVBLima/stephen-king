@@ -68,7 +68,7 @@ export default function CharacterDetailPage({ params }: CharacterDetailPageProps
             >
               <Link href="/characters">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                <span>Voltar para Personagens</span>
+                <span>Back to Characters</span>
               </Link>
             </Button>
           </div>
@@ -96,7 +96,7 @@ export default function CharacterDetailPage({ params }: CharacterDetailPageProps
           >
             <Link href="/characters">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              <span>Voltar para Personagens</span>
+              <span>Back to Characters</span>
             </Link>
           </Button>
         </div>

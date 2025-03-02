@@ -16,18 +16,17 @@ export function CharacterCard({ character }: CharacterCardProps) {
     <Link href={`/characters/${character.slug}`} className="block transition-transform hover:scale-[1.02]">
       <Card className="h-full overflow-hidden border">
         <div className="relative h-60">
-          {/* Fundo com partículas */}
-          <div className="absolute inset-0 bg-black">
-            <Particles
-              className="absolute inset-0 z-0"
-              quantity={80}
-              staticity={30}
-              color={character.isVillain ? '#ef4444' : '#3b82f6'} // Vermelho para vilões, azul para heróis
+          {/* Particles background effect */}
+          <div className="absolute inset-0">
+            <Particles 
+              className="absolute inset-0 -z-10" 
+              quantity={50}
+              color={character.isVillain ? '#ef4444' : '#3b82f6'} // Red for villains, blue for heroes
               size={0.6}
             />
           </div>
           
-          {/* Conteúdo sobreposto */}
+          {/* Overlay content */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-4">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-background/80">
               {character.isVillain ? (
@@ -39,7 +38,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
             <CardTitle className="mb-2 text-xl text-center text-white">{character.name}</CardTitle>
             
             <Badge variant={character.isVillain ? "destructive" : "default"} className="mb-2">
-              {character.isVillain ? 'Vilão' : 'Herói'}
+              {character.isVillain ? 'Villain' : 'Hero'}
             </Badge>
             
             <p className="text-sm text-center text-white/80">
@@ -53,7 +52,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
         <CardFooter className="flex flex-col items-start gap-2 pt-4 pb-4">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">Primeira aparição:</span>
+            <span className="text-sm text-muted-foreground">First appearance:</span>
           </div>
           <Badge variant="outline" className="font-normal">
             {character.firstAppearance}

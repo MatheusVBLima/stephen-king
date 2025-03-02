@@ -1,4 +1,4 @@
-// Tipos para as obras de Stephen King
+// Types for Stephen King's works
 
 export interface Work {
     year: number;
@@ -37,7 +37,7 @@ export interface Rating {
     link?: string;
 }
 
-// Interfaces para personagens recorrentes
+// Interfaces for recurring characters
 
 export interface Character {
     id: string;
