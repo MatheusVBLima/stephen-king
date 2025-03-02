@@ -35,4 +35,40 @@ export interface Rating {
     score: string;
     outOf?: string;
     link?: string;
+}
+
+// Interfaces para personagens recorrentes
+
+export interface Character {
+    id: string;
+    name: string;
+    slug: string;
+    description: string;
+    imageUrl?: string;
+    books: BookAppearance[];
+    relationships: Relationship[];
+    traits: string[];
+    quotes: Quote[];
+    isVillain: boolean;
+    firstAppearance: string;  // Título do livro da primeira aparição
+}
+
+export interface BookAppearance {
+    bookTitle: string;
+    role: 'Protagonist' | 'Antagonist' | 'Supporting' | 'Mentioned';
+    significance: 'Major' | 'Minor';
+    notes?: string;
+}
+
+export interface Relationship {
+    characterName: string;
+    characterId: string;
+    relationshipType: 'Friend' | 'Enemy' | 'Family' | 'Colleague' | 'Love Interest' | 'Other';
+    description: string;
+}
+
+export interface Quote {
+    text: string;
+    book: string;
+    context?: string;
 } 

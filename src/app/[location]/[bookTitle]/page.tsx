@@ -15,14 +15,17 @@ function capitalizeWords(str: string): string {
 }
 
 interface BookPageProps {
-  params: {
+  params: Promise<{
     location: string;
     bookTitle: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: BookPageProps): Promise<Metadata> {
-  const { location, bookTitle } = params;
+  // Aguardar resolução dos parâmetros
+  const resolvedParams = await params;
+  const { location, bookTitle } = resolvedParams;
+  
   const book = getBookBySlug(location, bookTitle);
   
   if (!book) {
@@ -39,7 +42,10 @@ export async function generateMetadata({ params }: BookPageProps): Promise<Metad
 }
 
 export default async function BookPage({ params }: BookPageProps) {
-  const { location, bookTitle } = params;
+  // Aguardar resolução dos parâmetros
+  const resolvedParams = await params;
+  const { location, bookTitle } = resolvedParams;
+  
   const book = getBookBySlug(location, bookTitle);
   
   if (!book) {
@@ -63,6 +69,7 @@ export default async function BookPage({ params }: BookPageProps) {
           </Link>
         </Button>
       </div>
+
       <BookDetail book={book} />
     </main>
   );

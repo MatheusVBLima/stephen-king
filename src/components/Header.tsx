@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SearchBar } from "./SearchBar";
 import { Button } from "@/components/ui/button";
-import { Clock } from "lucide-react";
+import { Clock, Users } from "lucide-react";
 
 export function Header() {
   const pathname = usePathname();
@@ -17,11 +17,17 @@ export function Header() {
           <Link href="/" className="text-xl font-bold">
             Stephen King's Works
           </Link>
-          <nav className="hidden md:flex">
+          <nav className="hidden md:flex gap-1">
             <Button variant="ghost" asChild className="flex items-center gap-1">
               <Link href="/timeline">
                 <Clock className="w-4 h-4 mr-1" />
                 Timeline
+              </Link>
+            </Button>
+            <Button variant="ghost" asChild className="flex items-center gap-1">
+              <Link href="/characters">
+                <Users className="w-4 h-4 mr-1" />
+                Personagens
               </Link>
             </Button>
           </nav>
