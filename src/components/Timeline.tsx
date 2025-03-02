@@ -93,16 +93,16 @@ export function Timeline({ books }: TimelineProps) {
     <div className="w-full">
       <div className="flex flex-col justify-between gap-4 mb-8 md:flex-row">
         <div className="w-full md:w-48">
-          <label className="block mb-2 text-sm font-medium">Período</label>
+          <label className="block mb-2 text-sm font-medium">Period</label>
           <Select
             value={periodFilter}
             onValueChange={setPeriodFilter}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Selecionar período" />
+              <SelectValue placeholder="Select period" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">Todos os períodos</SelectItem>
+              <SelectItem value="all">All periods</SelectItem>
               {decades.map(decade => (
                 <SelectItem key={decade} value={decade}>{decade}</SelectItem>
               ))}
@@ -111,16 +111,16 @@ export function Timeline({ books }: TimelineProps) {
         </div>
         
         <div className="w-full md:w-48">
-          <label className="block mb-2 text-sm font-medium">Localização</label>
+          <label className="block mb-2 text-sm font-medium">Location</label>
           <Select
             value={locationFilter}
             onValueChange={setLocationFilter}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Selecionar localização" />
+              <SelectValue placeholder="Select location" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">Todas as localizações</SelectItem>
+              <SelectItem value="all">All locations</SelectItem>
               {locations.map(location => (
                 <SelectItem key={location} value={location}>{location}</SelectItem>
               ))}
@@ -131,7 +131,7 @@ export function Timeline({ books }: TimelineProps) {
 
       {filteredBooks.length === 0 ? (
         <div className="py-10 text-center">
-          <p className="text-muted-foreground">Nenhum livro corresponde aos filtros</p>
+          <p className="text-muted-foreground">No books match the selected filters</p>
           <Button 
             variant="outline" 
             className="mt-4"
@@ -140,7 +140,7 @@ export function Timeline({ books }: TimelineProps) {
               setLocationFilter("all");
             }}
           >
-            Limpar filtros
+            Clear filters
           </Button>
         </div>
       ) : (
