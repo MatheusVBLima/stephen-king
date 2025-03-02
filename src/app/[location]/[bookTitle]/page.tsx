@@ -51,7 +51,7 @@ export default async function BookPage({ params }: BookPageProps) {
                          location === 'salems-lot' ? "Salem's Lot" : capitalizeWords(location);
 
   return (
-    <main className="p-4 mx-auto max-w-7xl md:p-8">
+    <main className="p-4 mx-auto max-w-7xl">
       <div className="mb-6">
         <Button 
           variant="outline" 
