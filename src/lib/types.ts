@@ -71,4 +71,17 @@ export interface Quote {
     text: string;
     book: string;
     context?: string;
+}
+
+// Interfaces for the Maine map
+
+export interface FictionalLocation {
+    id: string;
+    name: string;
+    coordinates: [number, number]; // [latitude, longitude]
+    description: string;
+    books: string[]; // List of book titles where this location appears
+    importance: 'major' | 'minor';
+    imageUrl?: string;
+    firstAppearance: string;
 } 

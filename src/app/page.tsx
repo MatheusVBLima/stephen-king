@@ -6,10 +6,20 @@ import CastleRockWorks from "@/components/castle-rock-works";
 import DerryWorks from "@/components/derry-works";
 import SalemsLotWorks from "@/components/salems-lot-works";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { getLocationById } from "@/lib/locations-data";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("castle-rock");
   const [isLoading, setIsLoading] = useState(true);
+
+  // Obter os dados dos locais
+  const castleRock = getLocationById('castle-rock');
+  const derry = getLocationById('derry');
+  const jerusalemsLot = getLocationById('jerusalems-lot');
+
+  // Generic blur placeholder para usar como fallback
+  const blurDataUrl = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
   // Detectar o fragmento da URL quando o componente for montado
   useEffect(() => {
@@ -119,6 +129,20 @@ export default function Home() {
             <TabsContent value="castle-rock">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Castle Rock</h2>
+                {castleRock?.imageUrl && (
+                  <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
+                    <Image 
+                      src={castleRock.imageUrl} 
+                      alt="Castle Rock, Maine" 
+                      fill 
+                      priority={activeTab === "castle-rock"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                      className="object-cover"
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
+                    />
+                  </div>
+                )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed">
                     Castle Rock is one of the most important fictional towns in Stephen King's universe, serving as the backdrop for numerous supernatural events and memorable characters across decades of stories. First appearing in "The Dead Zone" (1979), Castle Rock has become a cornerstone of King's fictional Maine topography.
@@ -131,7 +155,21 @@ export default function Home() {
             <TabsContent value="derry">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Derry</h2>
-                  <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
+                {derry?.imageUrl && (
+                  <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
+                    <Image 
+                      src={derry.imageUrl} 
+                      alt="Derry, Maine" 
+                      fill 
+                      priority={activeTab === "derry"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                      className="object-cover"
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
+                    />
+                  </div>
+                )}
+                <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed ">
                     Derry is a dark and frightening fictional town in Stephen King's universe, most famously known as the home of Pennywise the Dancing Clown from "IT". First appearing in the 1981 short story "The Bird and the Album", Derry has been the setting for numerous supernatural events and is based on King's portrayal of Bangor, Maine.
                   </p>
@@ -143,6 +181,20 @@ export default function Home() {
             <TabsContent value="salems-lot">
               <div className="mb-12 text-center">
                 <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Salem's Lot</h2>
+                {jerusalemsLot?.imageUrl && (
+                  <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
+                    <Image 
+                      src={jerusalemsLot.imageUrl} 
+                      alt="Salem's Lot, Maine" 
+                      fill 
+                      priority={activeTab === "salems-lot"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                      className="object-cover"
+                      placeholder="blur"
+                      blurDataURL={blurDataUrl}
+                    />
+                  </div>
+                )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed">
                     Salem's Lot (Jerusalem's Lot) is a fictional town infested with vampires in Stephen King's universe. Featured in King's second published novel in 1975, the town has become one of his most iconic settings and is referenced throughout many of his other works, completing his trinity of fictional Maine towns alongside Castle Rock and Derry.
