@@ -5,21 +5,21 @@ import { useRouter } from 'next/navigation';
 import { BookDetail } from '@/lib/types';
 import { slugify } from '@/lib/books-data';
 import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+    Table,
+    TableBody,
+    TableCaption,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
 } from "@/components/ui/table";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -44,7 +44,7 @@ export function ResponsiveWorksDisplay({ works, location }: ResponsiveWorksDispl
         <Table>
           <TableCaption>A list of Stephen King's works set in {location === 'castle-rock' ? 'Castle Rock' : 
                        location === 'derry' ? 'Derry' : 
-                       location === 'salems-lot' ? "Salem's Lot" : location}</TableCaption>
+                       location === 'jerusalems-lot' ? "Jerusalem's Lot" : location}</TableCaption>
           <TableHeader>
             <TableRow>
               <TableHead className="w-[100px]">Publication Year</TableHead>

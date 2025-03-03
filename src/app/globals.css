@@ -94,3 +94,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Timeline customizations */
+.custom-timeline .vertical-timeline-element-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.custom-timeline .vertical-timeline-element-content-arrow {
+  border-right-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-timeline .vertical-timeline-element-date {
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}

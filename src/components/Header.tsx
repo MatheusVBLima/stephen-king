@@ -4,13 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SearchBar } from "./SearchBar";
 import { Button } from "@/components/ui/button";
-import { Clock, Map, Menu, Users } from "lucide-react";
+import { Clock, Map, Menu, Users, BookOpen } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
 export function Header() {
@@ -42,6 +42,12 @@ export function Header() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link href="/works" className="flex items-center w-full">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Works
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/characters" className="flex items-center w-full">
                     <Users className="w-4 h-4 mr-2" />
                     Characters
@@ -67,6 +73,12 @@ export function Header() {
               <Link href="/timeline">
                 <Clock className="w-4 h-4 mr-1" />
                 Timeline
+              </Link>
+            </Button>
+            <Button variant="ghost" asChild className="flex items-center gap-1">
+              <Link href="/works">
+                <BookOpen className="w-4 h-4 mr-1" />
+                Works
               </Link>
             </Button>
             <Button variant="ghost" asChild className="flex items-center gap-1">

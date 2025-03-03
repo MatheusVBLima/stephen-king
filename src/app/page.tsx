@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
 import CastleRockWorks from "@/components/castle-rock-works";
 import DerryWorks from "@/components/derry-works";
-import SalemsLotWorks from "@/components/salems-lot-works";
+import JerusalamsLotWorks from "@/components/jerusalems-lot-works";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getLocationById } from "@/lib/locations-data";
@@ -23,26 +23,34 @@ export default function Home() {
 
   // Detectar o fragmento da URL quando o componente for montado
   useEffect(() => {
-    // Função para obter o fragmento da URL sem o # e atualizar a tab ativa
-    const updateTabFromHash = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (hash && (hash === 'derry' || hash === 'castle-rock' || hash === 'salems-lot')) {
+    // Function to handle URL hash changes
+    const handleHashChange = () => {
+      const hash = window.location.hash?.replace('#', '') || '';
+      if (hash && (hash === 'derry' || hash === 'castle-rock' || hash === 'jerusalems-lot')) {
         setActiveTab(hash);
       }
-      // Depois de verificar o hash, desativar o estado de loading
       setIsLoading(false);
     };
 
     // Verificar o fragmento quando a página carregar
-    updateTabFromHash();
+    handleHashChange();
 
     // Adicionar um listener para quando o fragmento mudar (navegação pelo histórico)
-    window.addEventListener('hashchange', updateTabFromHash);
+    window.addEventListener('hashchange', handleHashChange);
 
     // Cleanup do listener
     return () => {
-      window.removeEventListener('hashchange', updateTabFromHash);
+      window.removeEventListener('hashchange', handleHashChange);
     };
+  }, []);
+
+  // Garante que o conteúdo será exibido mesmo se houver algum problema com o hash
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -118,11 +126,11 @@ export default function Home() {
                 Derry
               </TabsTrigger>
               <TabsTrigger 
-                value="salems-lot" 
-                id="salems-lot" 
+                value="jerusalems-lot" 
+                id="jerusalems-lot" 
                 className="text-xs md:text-sm"
               >
-                Salem's Lot
+                Jerusalem's Lot
               </TabsTrigger>
             </TabsList>
 
@@ -178,16 +186,16 @@ export default function Home() {
               <DerryWorks />
             </TabsContent>
 
-            <TabsContent value="salems-lot">
+            <TabsContent value="jerusalems-lot">
               <div className="mb-12 text-center">
-                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Salem's Lot</h2>
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Jerusalem's Lot</h2>
                 {jerusalemsLot?.imageUrl && (
                   <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
                     <Image 
                       src={jerusalemsLot.imageUrl} 
-                      alt="Salem's Lot, Maine" 
+                      alt="Jerusalem's Lot, Maine" 
                       fill 
-                      priority={activeTab === "salems-lot"}
+                      priority={activeTab === "jerusalems-lot"}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
                       className="object-cover"
                       placeholder="blur"
@@ -197,11 +205,11 @@ export default function Home() {
                 )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed">
-                    Salem's Lot (Jerusalem's Lot) is a fictional town infested with vampires in Stephen King's universe. Featured in King's second published novel in 1975, the town has become one of his most iconic settings and is referenced throughout many of his other works, completing his trinity of fictional Maine towns alongside Castle Rock and Derry.
+                    Jerusalem's Lot is a fictional town infested with vampires in Stephen King's universe. Featured in King's second published novel in 1975, the town has become one of his most iconic settings and is referenced throughout many of his other works, completing his trinity of fictional Maine towns alongside Castle Rock and Derry.
                   </p>
                 </div>
               </div>
-              <SalemsLotWorks />
+              <JerusalamsLotWorks />
             </TabsContent>
           </Tabs>
         )}

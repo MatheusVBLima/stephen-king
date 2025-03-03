@@ -8,7 +8,7 @@ export const locations: FictionalLocation[] = [
         name: 'Derry',
         coordinates: [44.8023, -68.7778], // Fictional - based near Bangor
         description: 'A sinister town haunted by an ancient evil entity. Derry seems to have a curse that makes violent events occur in cycles of 27 years. The town has a dark energy that makes people ignore or forget tragic events.',
-        books: ['It', 'Insomnia', '11/22/63', 'Dreamcatcher'],
+        books: ['It', 'Insomnia', '11/22/63', 'Dreamcatcher', 'Fair Extension', 'Autopsy Room Four', 'Mute'],
         importance: 'major',
         imageUrl: '/images/locations/derry.jpg',
         firstAppearance: 'It'
@@ -18,7 +18,7 @@ export const locations: FictionalLocation[] = [
         name: 'Castle Rock',
         coordinates: [43.8073, -70.2567], // Fictional - based in western Maine
         description: 'A small town with a dark history, Castle Rock is the setting for numerous strange occurrences and supernatural events. The town appears calm on the surface but harbors deep secrets.',
-        books: ['The Dead Zone', 'Cujo', 'The Dark Half', 'Needful Things', 'Elevation'],
+        books: ['The Dead Zone', 'Cujo', 'The Dark Half', 'Needful Things', 'Elevation', "Mrs. Todd's Shortcut"],
         importance: 'major',
         imageUrl: '/images/locations/castle-rock.jpg',
         firstAppearance: 'The Dead Zone'
@@ -30,7 +30,7 @@ export const locations: FictionalLocation[] = [
         description: "Also known as Salem's Lot, this small town was overrun by vampires led by Kurt Barlow. The town has an evil history dating back to its founding, centered around the Marsten House that overlooks it.",
         books: ["Salem's Lot", 'One for the Road', 'Jerusalem\'s Lot'],
         importance: 'major',
-        imageUrl: '/images/locations/salems-lot.jpg',
+        imageUrl: '/images/locations/jerusalems-lot.jpg',
         firstAppearance: "Salem's Lot"
     }
 ];

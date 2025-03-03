@@ -15,16 +15,8 @@ import {
   TabsTrigger,
 } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
 
 interface BookDetailProps {
   book: BookDetailType;
@@ -47,17 +39,15 @@ export function BookDetail({ book }: BookDetailProps) {
     };
   }, []);
 
-  const getActiveTabTitle = () => {
-    switch(activeTab) {
-      case "synopsis": return "Synopsis";
-      case "characters": return "Characters";
-      case "connections": return "Connections";
-      case "adaptations": return "Adaptations";
-      case "ratings": return "Ratings";
-      default: return "Synopsis";
-    }
-  };
-  
+  // Tab options for both Select and Tabs
+  const tabOptions = [
+    { value: "synopsis", label: "Synopsis" },
+    { value: "characters", label: "Characters" },
+    { value: "connections", label: "Connections" },
+    { value: "adaptations", label: "Adaptations" },
+    { value: "ratings", label: "Ratings" }
+  ];
+
   return (
     <div className="space-y-8">
       {/* Book header */}
@@ -82,31 +72,30 @@ export function BookDetail({ book }: BookDetailProps) {
         className="w-full"
       >
         <div className="relative">
+          {/* Desktop Tabs */}
           <TabsList className="flex-wrap hidden w-full p-1 rounded-md md:flex bg-muted">
-            <TabsTrigger value="synopsis" className="flex-1">Synopsis</TabsTrigger>
-            <TabsTrigger value="characters" className="flex-1">Characters</TabsTrigger>
-            <TabsTrigger value="connections" className="flex-1">Connections</TabsTrigger>
-            <TabsTrigger value="adaptations" className="flex-1">Adaptations</TabsTrigger>
-            <TabsTrigger value="ratings" className="flex-1">Ratings</TabsTrigger>
+            {tabOptions.map(tab => (
+              <TabsTrigger key={tab.value} value={tab.value} className="flex-1">
+                {tab.label}
+              </TabsTrigger>
+            ))}
           </TabsList>
           
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild className="w-full mt-2 md:hidden">
-              <Button variant="outline" className="justify-between w-full">
-                {getActiveTabTitle()}
-                <ChevronDown className="w-4 h-4 opacity-50" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[94vw] max-w-[400px]">
-              <DropdownMenuRadioGroup value={activeTab} onValueChange={setActiveTab}>
-                <DropdownMenuRadioItem value="synopsis">Synopsis</DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="characters">Characters</DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="connections">Connections</DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="adaptations">Adaptations</DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="ratings">Ratings</DropdownMenuRadioItem>
-              </DropdownMenuRadioGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* Mobile Select */}
+          <div className="w-full mt-2 md:hidden">
+            <Select value={activeTab} onValueChange={setActiveTab}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select section" />
+              </SelectTrigger>
+              <SelectContent>
+                {tabOptions.map(tab => (
+                  <SelectItem key={tab.value} value={tab.value}>
+                    {tab.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         {/* Synopsis Tab */}

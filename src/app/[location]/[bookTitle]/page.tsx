@@ -50,13 +50,13 @@ export default async function BookPage({ params }: BookPageProps) {
     notFound();
   }
 
-  const displayLocation = location === 'castle-rock' ? 'Castle Rock' : 
-                         location === 'derry' ? 'Derry' : 
-                         location === 'salems-lot' ? "Salem's Lot" : capitalizeWords(location);
+  const locationLabel = location === 'castle-rock' ? "Castle Rock" :
+                      location === 'derry' ? "Derry" :
+                      location === 'jerusalems-lot' ? "Jerusalem's Lot" : capitalizeWords(location);
 
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: displayLocation, href: `/#${location}` },
+    { name: locationLabel, href: `/#${location}` },
     { name: book.title, href: `/${location}/${bookTitle}`, isCurrent: true }
   ];
 

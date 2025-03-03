@@ -87,7 +87,7 @@ export const bookDetails: Record<string, BookDetail> = {
             },
             {
                 title: "The Body",
-                description: "Set in the same town of Castle Rock."
+                description: "Set in the same town several years later."
             },
             {
                 title: "Needful Things",
@@ -369,10 +369,8 @@ export const bookDetails: Record<string, BookDetail> = {
         format: "Short Story",
         notes: "Revised for Nightmares & Dreamscapes (1993), set in Castle Rock.",
         location: "castle-rock",
-        synopsis: "This short story revolves around an old house on the outskirts of Castle Rock that mysteriously adds rooms to itself over time. As the house grows, it seems to absorb the evil memories and histories of its inhabitants, becoming a focal point for the town's dark past and the tragedies that befall those connected to it.",
+        synopsis: "This short story revolves around an old house on the outskirts of Castle Rock that mysteriously adds rooms to itself over time. As the house grows, it seems to absorb the evil memories and histories of its inhabitants, becoming a focal point for the town's dark past and supernatural events.",
         mainCharacters: [
-            "The house itself - The central 'character' that grows new additions",
-            "Joe Newall - The original owner of the house",
             "Various Castle Rock residents - Witnesses to the house's strange properties"
         ],
         connections: [
@@ -389,29 +387,11 @@ export const bookDetails: Record<string, BookDetail> = {
                 description: "Shares the Castle Rock setting and mythology."
             }
         ],
-        adaptations: [
-            {
-                title: "No formal adaptations yet",
-                type: "Movie",
-                year: 9999, // Placeholder
-                description: "It Grows on You has not yet been adapted for film or television as a standalone story."
-            }
-        ],
+        adaptations: [],
         ratings: [
             {
                 source: "Goodreads",
-                score: "3.95",
-                outOf: "5",
-                link: "https://www.goodreads.com/book/show/10588.Nightmares_and_Dreamscapes"
-            },
-            {
-                source: "Barnes & Noble",
-                score: "4.1",
-                outOf: "5"
-            },
-            {
-                source: "TheBestBooks.org",
-                score: "3.9",
+                score: "3.63",
                 outOf: "5"
             }
         ]
@@ -422,12 +402,11 @@ export const bookDetails: Record<string, BookDetail> = {
         format: "Novella",
         notes: "A return to Castle Rock after many years, focusing on themes of prejudice and community.",
         location: "castle-rock",
-        synopsis: "Scott Carey is experiencing a mysterious condition: he's losing weight but not mass—he weighs less and less while his appearance remains unchanged. As Scott's condition progresses, he becomes involved in the lives of his neighbors, a lesbian couple facing discrimination in the small town of Castle Rock. His strange affliction ultimately brings the community together in unexpected ways.",
+        synopsis: "Scott Carey is experiencing a mysterious condition: he's losing weight steadily without changing physically. Even more strange, he weighs the same regardless of what he's wearing or carrying. As his condition progresses, Scott becomes involved in healing a rift with his neighbors, a lesbian couple facing discrimination in the small town of Castle Rock. His strange affliction ultimately brings the community together in unexpected ways.",
         mainCharacters: [
-            "Scott Carey - A man with a mysterious weight-loss condition",
-            "Doctor Bob Ellis - Scott's friend and doctor",
-            "Deirdre McComb - One of Scott's neighbors who runs a restaurant",
-            "Missy Donaldson - Deirdre's wife and business partner",
+            "Scott Carey - A man experiencing a mysterious weight loss condition",
+            "Doctor Bob Ellis - Scott's friend and physician",
+            "Deirdre McComb and Missy Donaldson - Scott's neighbors facing discrimination",
             "Various Castle Rock residents"
         ],
         connections: [
@@ -440,33 +419,21 @@ export const bookDetails: Record<string, BookDetail> = {
                 description: "References to how Castle Rock has rebuilt and changed since the catastrophic events of Needful Things."
             },
             {
-                title: "The Dead Zone",
+                title: "The Dark Half",
                 description: "Shares the Castle Rock setting and mythology established in King's earlier works."
             }
         ],
-        adaptations: [
-            {
-                title: "No formal adaptations yet",
-                type: "Movie",
-                year: 9999, // Placeholder
-                description: "Elevation has not yet been adapted for film or television."
-            }
-        ],
+        adaptations: [],
         ratings: [
             {
                 source: "Goodreads",
-                score: "3.79",
+                score: "3.81",
                 outOf: "5",
                 link: "https://www.goodreads.com/book/show/38355410-elevation"
             },
             {
                 source: "Barnes & Noble",
                 score: "3.9",
-                outOf: "5"
-            },
-            {
-                source: "TheBestBooks.org",
-                score: "3.85",
                 outOf: "5"
             }
         ]
@@ -475,53 +442,35 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2017,
         title: "Gwendy's Button Box",
         format: "Novella",
-        notes: "Co-written with Richard Chizmar, introducing the character of Gwendy Peterson.",
+        notes: "First in the Gwendy trilogy, co-written with Richard Chizmar, set in Castle Rock.",
         location: "castle-rock",
-        synopsis: "In 1974, twelve-year-old Gwendy Peterson meets a mysterious stranger named Richard Farris at the top of Castle Rock's Suicide Stairs. He entrusts her with a strange device: a box with colored buttons that dispenses magical gifts and chocolates. But the box also holds immense danger, as each button can cause catastrophic events when pressed. Gwendy must learn to bear the responsibility of this powerful object throughout her formative years.",
+        synopsis: "In 1974, twelve-year-old Gwendy Peterson meets a mysterious stranger named Richard Farris at the top of Castle Rock's Suicide Stairs. He entrusts her with a strange device: a box with colored buttons that dispenses magical gifts and chocolates. But the box also holds immense danger, as each button can cause destruction on different scales. As Gwendy grows up with this responsibility, the box shapes her life in unexpected ways.",
         mainCharacters: [
-            "Gwendy Peterson - A young girl who receives a mysterious button box",
-            "Richard Farris - A mysterious man in black who gives Gwendy the box",
-            "Mrs. Peterson - Gwendy's mother",
-            "Mr. Peterson - Gwendy's father",
-            "Harry Streeter - Gwendy's friend and eventual prom date"
+            "Gwendy Peterson - A young girl entrusted with a mysterious box",
+            "Richard Farris - A mysterious man who gives Gwendy the button box",
+            "Luke Petersen - Gwendy's friend at school"
         ],
         connections: [
             {
-                title: "The Dark Tower series",
-                description: "Richard Farris resembles The Man in Black, a recurring character in King's Dark Tower series."
+                title: "The Body",
+                description: "Set in Castle Rock during a similar time period, with references to locations established in The Body."
             },
             {
                 title: "Needful Things",
-                description: "Thematic connections to the idea of objects with mysterious powers that come with a price."
-            },
-            {
-                title: "The Body",
-                description: "Set in Castle Rock during a similar time period, with references to locations established in The Body."
+                description: "Shares thematic elements with Leland Gaunt's mysterious objects."
             }
         ],
-        adaptations: [
-            {
-                title: "No formal adaptations yet",
-                type: "Movie",
-                year: 9999, // Placeholder
-                description: "Gwendy's Button Box has not yet been adapted for film or television."
-            }
-        ],
+        adaptations: [],
         ratings: [
             {
                 source: "Goodreads",
-                score: "4.01",
+                score: "3.95",
                 outOf: "5",
                 link: "https://www.goodreads.com/book/show/34430839-gwendy-s-button-box"
             },
             {
                 source: "Barnes & Noble",
                 score: "4.3",
-                outOf: "5"
-            },
-            {
-                source: "TheBestBooks.org",
-                score: "4.05",
                 outOf: "5"
             }
         ]
@@ -637,7 +586,7 @@ export const bookDetails: Record<string, BookDetail> = {
                 title: "No formal adaptations yet",
                 type: "Movie",
                 year: 9999, // Placeholder
-                description: "Insomnia has not yet received a film or television adaptation."
+                description: "Insomnia has not received a film or television adaptation."
             }
         ],
         ratings: [
@@ -781,7 +730,7 @@ export const bookDetails: Record<string, BookDetail> = {
         title: "Salem's Lot",
         format: "Novel",
         notes: "The second novel published by Stephen King, which established many elements of his fictional universe.",
-        location: "salems-lot",
+        location: "jerusalems-lot",
         synopsis: "Ben Mears returns to the town of Jerusalem's Lot, where he spent part of his childhood, to write about the Marsten House, an abandoned mansion that has haunted him since his youth. Meanwhile, a mysterious antique dealer named Richard Straker opens a shop in town, while his partner, Kurt Barlow, remains absent. When children and residents begin to disappear, Ben and a small group of allies discover that Barlow is an ancient vampire who is transforming the entire town's population.",
         mainCharacters: [
             "Ben Mears - A writer who returns to the town to face childhood traumas",
@@ -857,7 +806,7 @@ export const bookDetails: Record<string, BookDetail> = {
         title: "Jerusalem's Lot",
         format: "Short Story",
         notes: "A prelude to Salem's Lot, set in the 1850s.",
-        location: "salems-lot",
+        location: "jerusalems-lot",
         synopsis: "Presented as a series of letters and journals, the story follows Charles Boone who, along with his manservant Calvin McCann, inherits his grandfather's property in the town of Preacher's Corners, near Jerusalem's Lot. In the Chapelwaite mansion, Charles discovers documents from an ancestor that lead him to explore the abandoned town of Jerusalem's Lot and discover a sinister cult that worshipped a being called 'The Worm'.",
         mainCharacters: [
             "Charles Boone - The protagonist who inherits Chapelwaite",
@@ -903,7 +852,7 @@ export const bookDetails: Record<string, BookDetail> = {
         title: "One for the Road",
         format: "Short Story",
         notes: "A sequel to Salem's Lot, showing what happened to the town years later.",
-        location: "salems-lot",
+        location: "jerusalems-lot",
         synopsis: "During a severe snowstorm, a man named Gerard Lumley enters a local bar near Jerusalem's Lot, begging for help. His car broke down on the road and he left his wife and daughter there while seeking assistance. The bar owner, Herb Tooklander, and the story's narrator, Booth, reluctantly agree to help him, warning about the dangers of Jerusalem's Lot, now abandoned and infested with vampires.",
         mainCharacters: [
             "Booth - The narrator of the story",
@@ -935,6 +884,743 @@ export const bookDetails: Record<string, BookDetail> = {
             {
                 source: "TheBestBooks.org",
                 score: "3.9",
+                outOf: "5"
+            }
+        ]
+    },
+    "uncle-ottos-truck": {
+        year: 1983,
+        title: "Uncle Otto's Truck",
+        format: "Short Story",
+        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        location: "castle-rock",
+        synopsis: "This short story revolves around the mysterious relationship between Uncle Otto and an old Cresswell truck that seems to have a mind of its own. After Otto's business partner is killed under the vehicle, Otto becomes convinced that the truck is moving on its own, inching closer to his house each day with malevolent intent.",
+        mainCharacters: [
+            "Uncle Otto - A wealthy but paranoid man",
+            "Quentin Cottrell - Otto's nephew who narrates the story",
+            "George McCutcheon - Otto's former business partner"
+        ],
+        connections: [
+            {
+                title: "The Body",
+                description: "Set in the same town of Castle Rock."
+            },
+            {
+                title: "Cujo",
+                description: "References to Castle Rock locations."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.72",
+                outOf: "5"
+            }
+        ]
+    },
+    "mrs-todds-shortcut": {
+        year: 1984,
+        title: "Mrs. Todd's Shortcut",
+        format: "Short Story",
+        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        location: "castle-rock",
+        synopsis: "Homer Buckland, the elderly caretaker for the summer home of the wealthy Todds, recounts the strange tale of Mrs. Todd's obsession with finding shortcuts. Her increasingly impossible routes between Castle Rock and Bangor lead to encounters with otherworldly phenomena, suggesting she's found passages to other dimensions or realities.",
+        mainCharacters: [
+            "Homer Buckland - Elderly caretaker who narrates the story",
+            "Ophelia Todd - A woman obsessed with finding shortcuts",
+            "Worth Todd - Ophelia's wealthy husband"
+        ],
+        connections: [
+            {
+                title: "The Body",
+                description: "Set in the same town of Castle Rock."
+            },
+            {
+                title: "Needful Things",
+                description: "References to Castle Rock geography."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "4.0",
+                outOf: "5"
+            }
+        ]
+    },
+    "gramma": {
+        year: 1984,
+        title: "Gramma",
+        format: "Short Story",
+        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        location: "castle-rock",
+        synopsis: "Eleven-year-old George is left alone to care for his bedridden, blind grandmother while his mother takes his brother to the hospital after an injury. As the day progresses, George's fear of his grandmother grows, and with good reason - his 'Gramma' is connected to dark, supernatural forces that become active after her death.",
+        mainCharacters: [
+            "George Bruckner - An eleven-year-old boy left to care for his grandmother",
+            "Gramma - George's mysterious and frightening grandmother",
+            "Ruth Bruckner - George's mother who is absent for most of the story"
+        ],
+        connections: [
+            {
+                title: "The Body",
+                description: "Set in the same town of Castle Rock."
+            },
+            {
+                title: "Needful Things",
+                description: "Shares the Castle Rock setting."
+            }
+        ],
+        adaptations: [
+            {
+                title: "Gramma",
+                type: "TV Series",
+                year: 1986,
+                director: "Bradford May",
+                stars: ["Barret Oliver", "Peggy Stewart"],
+                description: "An episode of the 1985-1986 revival of The Twilight Zone."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.85",
+                outOf: "5"
+            }
+        ]
+    },
+    "nona": {
+        year: 1985,
+        title: "Nona",
+        format: "Short Story",
+        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        location: "castle-rock",
+        synopsis: "A drifter meets a mysterious and seductive woman named Nona at a roadside tavern. Under her influence, he embarks on a violent killing spree that takes him through Castle Rock and surrounding areas, only to discover that Nona may not be what she appears to be.",
+        mainCharacters: [
+            "Unnamed Narrator - The protagonist who falls under Nona's influence",
+            "Nona - A mysterious woman who may be supernatural",
+            "Various victims of the killing spree"
+        ],
+        connections: [
+            {
+                title: "The Dark Half",
+                description: "References to Castle Rock locations."
+            },
+            {
+                title: "Needful Things",
+                description: "Set in the same universe and geography."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.7",
+                outOf: "5"
+            }
+        ]
+    },
+    "premium-harmony": {
+        year: 2009,
+        title: "Premium Harmony",
+        format: "Short Story",
+        notes: "Published in The Bazaar of Bad Dreams, set in Castle Rock.",
+        location: "castle-rock",
+        synopsis: "Ray and Mary Burkett, a married couple with a strained relationship, are driving through Castle Rock when Mary insists on stopping at a convenience store to buy a ball for her niece. While inside, Mary suffers a fatal heart attack, leading Ray to reflect on their troubled marriage and the mundane events that can suddenly turn tragic.",
+        mainCharacters: [
+            "Ray Burkett - A husband with a cynical outlook on his marriage",
+            "Mary Burkett - Ray's wife who dies suddenly at the convenience store",
+            "Biz - The clerk at the convenience store"
+        ],
+        connections: [
+            {
+                title: "Needful Things",
+                description: "Set in Castle Rock after it has been rebuilt from the events in Needful Things."
+            },
+            {
+                title: "Elevation",
+                description: "Both stories showcase the modern-day Castle Rock."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.65",
+                outOf: "5"
+            }
+        ]
+    },
+    "the-man-in-the-black-suit": {
+        year: 1994,
+        title: "The Man in the Black Suit",
+        format: "Short Story",
+        notes: "Published in Everything's Eventual, set near Castle Rock.",
+        location: "castle-rock",
+        synopsis: "In this award-winning short story, an elderly man named Gary reflects on a terrifying encounter he had as a nine-year-old boy. While fishing alone in the woods near Castle Rock, he meets a strange man in a black suit who claims to be the devil. The encounter leaves a lasting impression that haunts him for the rest of his life.",
+        mainCharacters: [
+            "Gary - The protagonist, both as a nine-year-old boy and an elderly man",
+            "The Man in the Black Suit - A demonic entity who may be the devil",
+            "Dan Eakins - Gary's father"
+        ],
+        connections: [
+            {
+                title: "Needful Things",
+                description: "Shares thematic elements with the diabolical character Leland Gaunt."
+            },
+            {
+                title: "The Body",
+                description: "Set in the same geographical area around Castle Rock."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "4.11",
+                outOf: "5"
+            }
+        ]
+    },
+    "fair-extension": {
+        year: 2010,
+        title: "Fair Extension",
+        format: "Short Story",
+        notes: "Short story from 'Full Dark, No Stars' set in Derry.",
+        location: "derry",
+        synopsis: "Dave Streeter, a man with terminal cancer, makes a deal with a strange vendor named George Elvid who offers him a 'fair extension' of his life. In exchange, he must transfer his misfortune to someone else - his longtime best friend, Tom Goodhugh. The story explores themes of envy, resentment, and the moral consequences of wishing ill on others.",
+        mainCharacters: [
+            "Dave Streeter - A man with terminal cancer",
+            "George Elvid (an anagram of 'Devil God') - The mysterious vendor",
+            "Tom Goodhugh - Streeter's best friend who becomes the target of his resentment"
+        ],
+        connections: [
+            {
+                title: "IT",
+                description: "Set in the same town of Derry, with references to its sinister atmosphere."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "4.0",
+                outOf: "5"
+            }
+        ]
+    },
+    "bag-of-bones": {
+        year: 1998,
+        title: "Bag of Bones",
+        format: "Novel",
+        notes: "Partially related to Derry, where the protagonist lived before moving to TR-90.",
+        location: "tr-90",
+        synopsis: "Mike Noonan, a widowed writer suffering from writer's block, moves to his vacation home in TR-90, known as Sara Laughs, after his wife's death. There, he becomes involved with a young mother and her daughter, while uncovering dark secrets about the town and experiencing supernatural occurrences related to his deceased wife.",
+        mainCharacters: [
+            "Mike Noonan - A widowed writer with writer's block",
+            "Kyra Devore - A young girl Mike helps",
+            "Mattie Devore - Kyra's mother and Mike's love interest",
+            "Max Devore - An elderly magnate and Kyra's grandfather",
+            "Jo Noonan - Mike's deceased wife",
+            "Sara Tidwell - An early 20th century blues singer"
+        ],
+        connections: [
+            {
+                title: "IT",
+                description: "Mike Noonan lived in Derry, where he witnessed some of the events reported in IT."
+            },
+            {
+                title: "Insomnia",
+                description: "Contains references to events occurring in Derry after IT."
+            }
+        ],
+        adaptations: [
+            {
+                title: "Bag of Bones",
+                type: "Miniseries",
+                year: 2011,
+                director: "Mick Garris",
+                stars: ["Pierce Brosnan", "Melissa George", "Annabeth Gish"],
+                description: "A two-part miniseries starring Pierce Brosnan as Mike Noonan."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.92",
+                outOf: "5",
+                link: "https://www.goodreads.com/book/show/10589.Bag_of_Bones"
+            }
+        ]
+    },
+    "autopsy-room-four": {
+        year: 1997,
+        title: "Autopsy Room Four",
+        format: "Short Story",
+        notes: "Short story from 'Everything's Eventual' partially set in Derry.",
+        location: "derry",
+        synopsis: "Howard Cottrell wakes up naked on an autopsy table, completely paralyzed but conscious. Unable to communicate, he desperately tries to alert the doctors as they prepare to perform his autopsy. The story is narrated from Cottrell's perspective as he tries to understand what caused his paralysis while struggling to be noticed before the procedure begins.",
+        mainCharacters: [
+            "Howard Cottrell - The paralyzed man mistakenly declared dead",
+            "Dr. Katie Arlen - The doctor who will perform the autopsy",
+            "Peter Jefferies - The autopsy assistant",
+            "Mike Hopper - The police officer who found Cottrell"
+        ],
+        connections: [
+            {
+                title: "IT",
+                description: "Set in Derry's hospital."
+            }
+        ],
+        adaptations: [
+            {
+                title: "Autopsy Room Four",
+                type: "TV Series",
+                year: 2006,
+                description: "Episode of the series 'Nightmares & Dreamscapes', based on the short story."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.9",
+                outOf: "5"
+            }
+        ]
+    },
+    "geralds-game": {
+        year: 1992,
+        title: "Gerald's Game",
+        format: "Novel",
+        notes: "Contains references to Derry, although most of the action takes place elsewhere.",
+        location: "western-maine",
+        synopsis: "Jessie Burlingame becomes trapped to a bed when her husband Gerald dies of a heart attack during a sexual game in an isolated house. Handcuffed and unable to escape, Jessie faces not only thirst, hunger, and exhaustion, but also her own inner demons as she struggles for survival.",
+        mainCharacters: [
+            "Jessie Burlingame - The protagonist trapped to the bed",
+            "Gerald Burlingame - Jessie's husband who dies at the beginning of the book",
+            "Raymond Andrew Joubert - A necrophile and murderer whom Jessie calls 'Space Cowboy'",
+            "Ruth Neary - A voice in Jessie's head representing her practical side",
+            "Goody Burlingame - Another voice in Jessie's head, representing her submissive side"
+        ],
+        connections: [
+            {
+                title: "Dolores Claiborne",
+                description: "Contains a scene that directly connects with a moment in Dolores Claiborne."
+            },
+            {
+                title: "IT",
+                description: "References to events that occurred in Derry."
+            }
+        ],
+        adaptations: [
+            {
+                title: "Gerald's Game",
+                type: "Movie",
+                year: 2017,
+                director: "Mike Flanagan",
+                stars: ["Carla Gugino", "Bruce Greenwood"],
+                description: "Netflix adaptation directed by Mike Flanagan, praised for Carla Gugino's performance as Jessie."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.69",
+                outOf: "5",
+                link: "https://www.goodreads.com/book/show/33124137-gerald-s-game"
+            }
+        ]
+    },
+    "gwendys-final-task": {
+        year: 2022,
+        title: "Gwendy's Final Task",
+        format: "Novel",
+        notes: "Third part of the Gwendy trilogy, with parts set in Derry.",
+        location: "multiple",
+        synopsis: "Now a successful senator, Gwendy Peterson receives one final mission: she must take the button box to space, where it can be safely destroyed. As Gwendy deals with the early signs of Alzheimer's, she must complete this crucial mission to save not just our world, but all worlds.",
+        mainCharacters: [
+            "Gwendy Peterson - Now a US senator",
+            "Richard Farris - The mysterious man who originally gave Gwendy the box",
+            "Space station crew accompanying Gwendy"
+        ],
+        connections: [
+            {
+                title: "The Dark Tower",
+                description: "Includes references to the Dark Tower universe, the Beams, and the Crimson King."
+            },
+            {
+                title: "IT",
+                description: "Visit to the town of Derry, with references to the events of IT."
+            },
+            {
+                title: "Gwendy's Button Box and Gwendy's Magic Feather",
+                description: "Conclusion of the Gwendy trilogy."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.96",
+                outOf: "5",
+                link: "https://www.goodreads.com/book/show/58985627-gwendy-s-final-task"
+            }
+        ]
+    },
+    "liseys-story": {
+        year: 2006,
+        title: "Lisey's Story",
+        format: "Novel",
+        notes: "Contains references to Derry, although most of the action takes place elsewhere.",
+        location: "rural-maine",
+        synopsis: "Two years after the death of her husband, famous writer Scott Landon, Lisey Landon finally begins to clean out his office. As she does so, she relives moments from their marriage and discovers that Scott had created a portal to a parallel world called Boo'ya Moon, a place of beauty and danger. Meanwhile, she is stalked by an obsessive fan of her husband.",
+        mainCharacters: [
+            "Lisey Landon - Widow of famous author Scott Landon",
+            "Scott Landon - Lisey's deceased husband, a famous writer",
+            "Jim Dooley - A deranged fan who stalks Lisey",
+            "Amanda - Lisey's sister with mental problems",
+            "Darla - Another of Lisey's sisters",
+            "Professor Dashmiel - Scott's academic colleague"
+        ],
+        connections: [
+            {
+                title: "IT",
+                description: "Contains references to Derry and related events."
+            },
+            {
+                title: "The Dark Tower",
+                description: "The concept of parallel worlds connects with the Dark Tower universe."
+            }
+        ],
+        adaptations: [
+            {
+                title: "Lisey's Story",
+                type: "TV Series",
+                year: 2021,
+                stars: ["Julianne Moore", "Clive Owen", "Jennifer Jason Leigh"],
+                description: "8-episode miniseries for Apple TV+, with screenplay adapted by Stephen King himself."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.79",
+                outOf: "5",
+                link: "https://www.goodreads.com/book/show/10566.Lisey_s_Story"
+            }
+        ]
+    },
+    "mute": {
+        year: 2007,
+        title: "Mute",
+        format: "Short Story",
+        notes: "Short story from 'Just After Sunset' partially set in Derry.",
+        location: "derry",
+        synopsis: "After discovering his wife has cheated on him and depleted their savings, a salesman named Monette picks up a mute hitchhiker and confesses his troubles, including violent thoughts about his wife and her lover. He later discovers that the supposed mute might not have been mute at all, and that his confessions may have unexpected consequences.",
+        mainCharacters: [
+            "Monette - The protagonist salesman who was betrayed",
+            "The mute hitchhiker - A mysterious man who listens to Monette's confessions",
+            "Monette's wife - The woman who betrayed him",
+            "Father Higgins - The priest to whom Monette tells his story"
+        ],
+        connections: [
+            {
+                title: "IT",
+                description: "Partially set in Derry, with references to the town."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.8",
+                outOf: "5"
+            }
+        ]
+    },
+    "rage": {
+        year: 1977,
+        title: "Rage",
+        format: "Novel",
+        notes: "Published as Richard Bachman. The first Bachman book. No longer in print at King's request due to its sensitive content.",
+        location: "",
+        synopsis: "A high school student takes a class hostage at gunpoint, engaging them in discussions about life, death, and society.",
+        mainCharacters: [
+            "Charlie Decker - A troubled high school student",
+            "Ted Jones - The class antagonist",
+            "Mr. Carlson - The school principal",
+            "Mrs. Underwood - Charlie's math teacher"
+        ],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.78",
+                outOf: "5"
+            }
+        ]
+    },
+    "the-long-walk": {
+        year: 1979,
+        title: "The Long Walk",
+        format: "Novel",
+        notes: "Published as Richard Bachman. Often cited as one of King's most disturbing works.",
+        location: "maine",
+        synopsis: "In a dystopian future America, 100 teenage boys participate in an annual walking contest where the winner is the last one remaining. Contestants who stop walking receive warnings, and after three warnings, they are shot.",
+        mainCharacters: [
+            "Ray Garraty - The protagonist and Maine's representative in the Walk",
+            "Peter McVries - A competitor who befriends Garraty",
+            "Stebbins - The mysterious loner who seems to understand the Walk better than anyone",
+            "The Major - The organizer of the Walk"
+        ],
+        connections: [],
+        adaptations: [
+            {
+                title: "The Long Walk",
+                type: "Movie",
+                year: 2023,
+                director: "Francis Lawrence",
+                stars: ["TBA"],
+                description: "A film adaptation in development directed by Francis Lawrence."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "4.12",
+                outOf: "5"
+            }
+        ]
+    },
+    "roadwork": {
+        year: 1981,
+        title: "Roadwork",
+        format: "Novel",
+        notes: "Published as Richard Bachman. Subtitled 'A Novel of the First Energy Crisis'.",
+        location: "",
+        synopsis: "A man's descent into madness as he fights against a highway extension project that threatens to demolish his home and workplace.",
+        mainCharacters: [
+            "Barton Dawes - A man who refuses to give up his home and business",
+            "Mary Dawes - Barton's wife",
+            "Georgie Dawes - Barton's deceased son",
+            "Steve Ordner - Representative of the highway department"
+        ],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.61",
+                outOf: "5"
+            }
+        ]
+    },
+    "the-running-man": {
+        year: 1982,
+        title: "The Running Man",
+        format: "Novel",
+        notes: "Published as Richard Bachman. Set in a dystopian future where game shows are used to pacify the masses.",
+        location: "",
+        synopsis: "In a dystopian America of 2025, Ben Richards participates in a deadly game show called 'The Running Man' to earn money for his sick daughter's medical treatment. He must evade capture by hunters and the public for 30 days, earning money for each hour he stays alive.",
+        mainCharacters: [
+            "Ben Richards - A desperate man who joins the game show to help his family",
+            "Sheila Richards - Ben's wife",
+            "Cathy Richards - Ben's sick daughter",
+            "Dan Killian - The producer of The Running Man show",
+            "Evan McCone - Chief Hunter"
+        ],
+        connections: [],
+        adaptations: [
+            {
+                title: "The Running Man",
+                type: "Movie",
+                year: 1987,
+                director: "Paul Michael Glaser",
+                stars: ["Arnold Schwarzenegger", "Maria Conchita Alonso", "Richard Dawson"],
+                description: "A film adaptation that diverges significantly from the book's plot."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.97",
+                outOf: "5"
+            }
+        ]
+    },
+    "thinner": {
+        year: 1984,
+        title: "Thinner",
+        format: "Novel",
+        notes: "Published as Richard Bachman. The last Bachman book before King's pseudonym was exposed.",
+        location: "",
+        synopsis: "After an obese lawyer named Billy Halleck accidentally runs over and kills an old Romani woman, he is cursed by her father to grow 'thinner' every day, leading to a desperate search to reverse the curse before it's too late.",
+        mainCharacters: [
+            "Billy Halleck - An obese lawyer who is cursed to lose weight",
+            "Taduz Lemke - The old Romani man who places the curse",
+            "Heidi Halleck - Billy's wife",
+            "Linda Halleck - Billy's daughter",
+            "Richard Ginelli - Billy's friend with mob connections"
+        ],
+        connections: [],
+        adaptations: [
+            {
+                title: "Thinner",
+                type: "Movie",
+                year: 1996,
+                director: "Tom Holland",
+                stars: ["Robert John Burke", "Joe Mantegna", "Lucinda Jenney"],
+                description: "A film adaptation that follows the plot of the novel fairly closely."
+            }
+        ],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.57",
+                outOf: "5"
+            }
+        ]
+    },
+    "the-regulators": {
+        year: 1996,
+        title: "The Regulators",
+        format: "Novel",
+        notes: "Published as Richard Bachman. Companion novel to Desperation, featuring the same characters in different roles.",
+        location: "",
+        synopsis: "On a summer day in the suburban town of Wentworth, Ohio, a red van cruises through Poplar Street, and the peaceful neighborhood is suddenly transformed into a war zone of unearthly horrors.",
+        mainCharacters: [
+            "Seth Garin - An autistic boy possessed by the entity Tak",
+            "Aunt Audrey Garin - Seth's aunt and caretaker",
+            "Johnny Marinville - A writer and former 1960s radical",
+            "Cary Ripton - A paperboy",
+            "David Carver - A young boy with a spiritual connection"
+        ],
+        connections: [
+            {
+                title: "Desperation",
+                description: "Mirror novel featuring the same characters in different roles."
+            }
+        ],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.66",
+                outOf: "5"
+            }
+        ]
+    },
+    "blaze": {
+        year: 2007,
+        title: "Blaze",
+        format: "Novel",
+        notes: "Published as Richard Bachman. King wrote the original draft in the 1970s but revised it for publication in 2007.",
+        location: "",
+        synopsis: "Clayton Blaisdell Jr., known as Blaze, is a mentally challenged giant who kidnaps a baby for ransom, guided by the voice of his dead partner-in-crime, George.",
+        mainCharacters: [
+            "Clayton Blaisdell Jr. (Blaze) - A mentally challenged giant",
+            "George Rackley - Blaze's deceased partner who appears as a voice in his head",
+            "Joe Gerard - The wealthy father of the kidnapped baby",
+            "Joe Gerard Jr. - The kidnapped baby"
+        ],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.68",
+                outOf: "5"
+            }
+        ]
+    },
+    "danse-macabre": {
+        year: 1981,
+        title: "Danse Macabre",
+        format: "Non-fiction",
+        notes: "A non-fiction examination of horror in various media from the 1950s to the 1970s.",
+        location: "",
+        synopsis: "King's analysis of horror in literature, film, and television from 1950 to 1980, exploring what scares us and why. The book examines influences on King's own writing and the cultural significance of horror.",
+        mainCharacters: [],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.88",
+                outOf: "5"
+            }
+        ]
+    },
+    "on-writing": {
+        year: 2000,
+        title: "On Writing: A Memoir of the Craft",
+        format: "Non-fiction",
+        notes: "Part memoir, part writing guide. Often cited as one of the best books about writing.",
+        location: "",
+        synopsis: "Part memoir, part master class by one of the bestselling authors of all time, this superb volume is a revealing and practical view of the writer's craft, comprising the basic tools of the trade every writer must have.",
+        mainCharacters: [],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "4.32",
+                outOf: "5"
+            }
+        ]
+    },
+    "faithful": {
+        year: 2004,
+        title: "Faithful",
+        format: "Non-fiction",
+        notes: "Co-written with Stewart O'Nan. Chronicles the 2004 Boston Red Sox season.",
+        location: "",
+        synopsis: "A chronicle of the Boston Red Sox's 2004 baseball season, from spring training to their historic World Series victory, as experienced by two devoted fans.",
+        mainCharacters: [],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.77",
+                outOf: "5"
+            }
+        ]
+    },
+    "guns": {
+        year: 2013,
+        title: "Guns",
+        format: "Non-fiction",
+        notes: "An essay published as a Kindle Single in response to the Sandy Hook Elementary School shooting.",
+        location: "",
+        synopsis: "A powerful essay in which King addresses the controversial and divisive issue of gun control and gun violence in America.",
+        mainCharacters: [],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.86",
+                outOf: "5"
+            }
+        ]
+    },
+    "hearts-in-suspension": {
+        year: 2016,
+        title: "Hearts in Suspension",
+        format: "Non-fiction",
+        notes: "Collection of essays about King's time at the University of Maine in the 1960s.",
+        location: "maine",
+        synopsis: "A collection that includes King's recollections of his college years during the Vietnam War, along with contributions from friends and colleagues from that time.",
+        mainCharacters: [],
+        connections: [],
+        adaptations: [],
+        ratings: [
+            {
+                source: "Goodreads",
+                score: "3.82",
                 outOf: "5"
             }
         ]

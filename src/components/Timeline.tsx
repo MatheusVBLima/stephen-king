@@ -5,11 +5,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { BookDetail } from '@/lib/types';
 import { Button } from '@/components/ui/button';
-import { Card, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { BookOpen, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useRouter } from 'next/navigation';
 import { slugify } from '@/lib/books-data';
+import { getMajorLocations } from '@/lib/locations-data';
 import {
   Select,
   SelectContent,
@@ -17,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Particles } from '@/components/magicui/particles';
+import Link from 'next/link';
 
 interface TimelineProps {
   books: BookDetail[];
@@ -45,8 +46,9 @@ export function Timeline({ books }: TimelineProps) {
   }, [books]);
 
   const locations = useMemo(() => {
-    return [...new Set(books.map(book => book.location))];
-  }, [books]);
+    const majorLocations = getMajorLocations();
+    return majorLocations.map(location => location.id);
+  }, []);
 
   const filteredBooks = useMemo(() => {
     return books
@@ -72,20 +74,18 @@ export function Timeline({ books }: TimelineProps) {
     return baseStyle;
   };
 
-  const navigateToBook = (book: BookDetail) => {
-    router.push(`/${book.location}/${slugify(book.title)}`);
-  };
 
-  const getFormatColor = (format: string) => {
-    switch (format.toLowerCase()) {
-      case 'novel':
-        return '#6366f1'; // indigo-500
-      case 'short story':
-        return '#f59e0b'; // amber-500
-      case 'novella':
-        return '#10b981'; // emerald-500
+  // Function to format location name for display
+  const formatLocationName = (locationId: string): string => {
+    switch(locationId) {
+      case 'derry':
+        return 'Derry';
+      case 'castle-rock':
+        return 'Castle Rock';
+      case 'jerusalems-lot':
+        return "Jerusalem's Lot";
       default:
-        return '#6366f1'; // default indigo
+        return locationId;
     }
   };
 
@@ -122,7 +122,7 @@ export function Timeline({ books }: TimelineProps) {
             <SelectContent>
               <SelectItem value="all">All locations</SelectItem>
               {locations.map(location => (
-                <SelectItem key={location} value={location}>{location}</SelectItem>
+                <SelectItem key={location} value={location}>{formatLocationName(location)}</SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -144,43 +144,49 @@ export function Timeline({ books }: TimelineProps) {
           </Button>
         </div>
       ) : (
-        <VerticalTimeline>
+        <VerticalTimeline
+          className="custom-timeline"
+          lineColor="rgba(255, 255, 255, 0.2)"
+        >
           {filteredBooks.map((book) => (
             <VerticalTimelineElement
               key={book.title}
               date={book.year.toString()}
+              dateClassName="font-medium"
               iconStyle={getIconStyle(book.format)}
               icon={<BookOpen className="w-5 h-5" />}
-              className="transition-all cursor-pointer hover:scale-[1.02]"
-              onTimelineElementClick={() => navigateToBook(book)}
-              contentStyle={{ background: 'transparent', boxShadow: 'none' }}
-              contentArrowStyle={{ borderRight: '7px solid transparent' }}
+              contentStyle={{ 
+                background: 'transparent', 
+                boxShadow: 'none',
+                padding: 0,
+                border: 'none'
+              }}
+              contentArrowStyle={{
+                borderRight: '7px solid rgba(255, 255, 255, 0.1)'
+              }}
             >
-              <Card className="relative overflow-hidden bg-transparent border-0 shadow-none">
-                <div className="relative w-full h-40 overflow-hidden bg-black rounded-md">
-                  {/* Particles background */}
-                  <Particles
-                    className="absolute inset-0 z-0"
-                    quantity={80}
-                    staticity={30}
-                    color={getFormatColor(book.format)}
-                    size={0.6}
-                  />
-                  
-                  {/* Content overlay */}
-                  <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
-                    <CardTitle className="mb-4 text-xl font-bold text-center text-white">
-                      {book.title}
-                    </CardTitle>
-                    <div className="flex flex-wrap justify-center gap-2">
-                      <Badge variant="secondary" className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" /> {book.year}
+              <Link href={`/${book.location}/${slugify(book.title)}`} className="block">
+                <Card className="transition-all duration-200 cursor-pointer hover:scale-105 hover:shadow-lg">
+                  <CardContent>
+                    <div className="flex items-center justify-between mb-2">
+                      <CardTitle className="text-lg">{book.title}</CardTitle>
+                      <Badge variant="outline" className="ml-2">
+                        <Calendar className="w-3 h-3 mr-1" />
+                        {book.year}
                       </Badge>
-                      <Badge variant="secondary">{book.format}</Badge>
                     </div>
-                  </div>
-                </div>
-              </Card>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <Badge>{book.format}</Badge>
+                      <Badge variant="outline" className="capitalize">
+                        {formatLocationName(book.location)}
+                      </Badge>
+                    </div>
+                    <p className="mt-3 text-sm text-muted-foreground line-clamp-2">
+                      {book.notes}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
