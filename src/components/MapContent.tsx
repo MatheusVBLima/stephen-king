@@ -19,7 +19,7 @@ export default function MapContent() {
 
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: "Map", href: "/map", isCurrent: true }
+    { name: "Mapa", href: "/map", isCurrent: true }
   ];
 
   return (
@@ -27,9 +27,11 @@ export default function MapContent() {
       <div className="mx-auto max-w-7xl">
         <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
         
-        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">Stephen King's Maine</h1>
+        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">
+          Maine de Stephen King
+        </h1>
         <p className="max-w-2xl mx-auto mb-8 text-center text-muted-foreground">
-          Explore the main fictional locations that form the backbone of Stephen King's universe
+          Explore os principais locais ficcionais que sustentam o universo de Stephen King
         </p>
         
         <div className="mb-6">
@@ -37,9 +39,11 @@ export default function MapContent() {
         </div>
         
         <div className="mt-6 p-4 border rounded-lg bg-muted/50">
-          <h2 className="text-xl font-semibold mb-2">About Stephen King's Key Locations</h2>
+          <h2 className="text-xl font-semibold mb-2">
+            Sobre os principais locais de Stephen King
+          </h2>
           <p className="text-sm mb-6 text-muted-foreground">
-            Many of Stephen King's stories are set in fictional towns in Maine, creating an interconnected universe where characters and events often overlap.
+            Muitas histórias de Stephen King se passam em cidades ficcionais do Maine, criando um universo em que personagens e eventos frequentemente se cruzam.
           </p>
           
           <div className="grid gap-4 md:grid-cols-3">
@@ -62,7 +66,7 @@ export default function MapContent() {
                 Derry
               </h3>
               <p className="text-sm text-muted-foreground">
-                A sinister town haunted by the entity known as Pennywise. Violent events occur here in 27-year cycles, and the town has a dark energy that makes people ignore tragic events.
+                Uma cidade sinistra assombrada pela entidade conhecida como Pennywise. Eventos violentos ocorrem em ciclos de 27 anos, e a cidade tem uma energia sombria que faz as pessoas ignorarem tragédias.
               </p>
             </div>
             
@@ -85,7 +89,7 @@ export default function MapContent() {
                 Castle Rock
               </h3>
               <p className="text-sm text-muted-foreground">
-                A small town with a dark history, Castle Rock is the setting for numerous strange occurrences and supernatural events, appearing calm on the surface but harboring deep secrets.
+                Pequena cidade com história sombria, Castle Rock é cenário de inúmeros acontecimentos estranhos e sobrenaturais: calma na superfície, mas cheia de segredos.
               </p>
             </div>
             
@@ -94,7 +98,7 @@ export default function MapContent() {
                 <div className="relative w-full h-40 mb-3 rounded-md overflow-hidden">
                   <Image 
                     src={jerusalemsLot.imageUrl} 
-                    alt="Jerusalem's Lot, Maine" 
+                    alt={"Jerusalem's Lot, Maine"} 
                     fill 
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
                     className="object-cover"
@@ -105,10 +109,10 @@ export default function MapContent() {
               )}
               <h3 className="text-lg font-medium mb-1 flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-red-500" />
-                Jerusalem's Lot
+                {"Jerusalem's Lot"}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Also known as Salem's Lot, this small town was overrun by vampires led by Kurt Barlow, with an evil history dating back to its founding and centered around the ominous Marsten House.
+                Também conhecida como Salem&apos;s Lot, essa pequena cidade foi tomada por vampiros liderados por Kurt Barlow, com uma história maligna que remonta à fundação e gira em torno da sinistra Casa Marsten.
               </p>
             </div>
           </div>

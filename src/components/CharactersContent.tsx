@@ -39,7 +39,7 @@ export default function CharactersContent() {
 
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: "Characters", href: "/characters", isCurrent: true }
+    { name: "Personagens", href: "/characters", isCurrent: true }
   ];
 
   return (
@@ -48,10 +48,10 @@ export default function CharactersContent() {
         <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
         
         <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">
-          Characters from Stephen King's Universe
+          Personagens do universo de Stephen King
         </h1>
         <p className="max-w-2xl mx-auto mb-8 text-center text-muted-foreground">
-          Explore the memorable heroes, villains, and supernatural beings that populate King's fiction
+          Explore heróis, vilões e entidades sobrenaturais memoráveis que povoam a ficção de King
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -61,7 +61,7 @@ export default function CharactersContent() {
             className="flex items-center gap-2"
           >
             <Users className="w-4 h-4" />
-            All
+            Todos
           </Button>
           <Button
             variant={filter === 'heroes' ? 'default' : 'outline'}
@@ -69,7 +69,7 @@ export default function CharactersContent() {
             className="flex items-center gap-2"
           >
             <UserCheck className="w-4 h-4" />
-            Heroes
+            Heróis
           </Button>
           <Button
             variant={filter === 'villains' ? 'default' : 'outline'}
@@ -77,7 +77,7 @@ export default function CharactersContent() {
             className="flex items-center gap-2"
           >
             <Skull className="w-4 h-4" />
-            Villains
+            Vilões
           </Button>
         </div>
         
@@ -87,7 +87,7 @@ export default function CharactersContent() {
           </div>
         ) : characters.length === 0 ? (
           <div className="py-10 text-center">
-            <p className="text-muted-foreground">No characters found</p>
+            <p className="text-muted-foreground">Nenhum personagem encontrado</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

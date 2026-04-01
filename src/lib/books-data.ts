@@ -5,7 +5,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1979,
         title: "The Dead Zone",
         format: "Novel",
-        notes: "Introduces Castle Rock as a key setting.",
+        notes: "Apresenta Castle Rock como cenário central.",
         location: "castle-rock",
         synopsis: "After a car crash puts Johnny Smith in a coma for nearly five years, he awakens with the ability to see the future and the terrible fate that awaits mankind in the form of politician Greg Stillson. When Johnny has a vision of Stillson becoming president and causing a nuclear war, he must decide: should he assassinate a candidate to save millions of lives?",
         mainCharacters: [
@@ -69,7 +69,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1981,
         title: "Cujo",
         format: "Novel",
-        notes: "Focuses on Castle Rock families impacted by a rabid dog.",
+        notes: "Centrada em famílias de Castle Rock atingidas por um cão raivoso.",
         location: "castle-rock",
         synopsis: "Cujo is a good dog, a big Saint Bernard, until a bat bite drives him mad. The once friendly dog turns into a killer, trapping a mother and her young son in their Ford Pinto with no food, water, or means of escape. As the hot summer days unfold, their situation becomes increasingly desperate and terrifying.",
         mainCharacters: [
@@ -131,7 +131,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1982,
         title: "The Body",
         format: "Novella",
-        notes: "Published in Different Seasons, set in Castle Rock in the 1960s.",
+        notes: "Publicada em Quatro Estações, ambientada em Castle Rock nos anos 1960.",
         location: "castle-rock",
         synopsis: "During the summer of 1960, four twelve-year-old boys from Castle Rock set out on a journey to find the body of a missing boy from a neighboring town. As they follow the railway tracks towards their destination, they face various challenges and share personal stories that reveal their troubled lives and dreams for the future.",
         mainCharacters: [
@@ -188,7 +188,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1989,
         title: "The Dark Half",
         format: "Novel",
-        notes: "Features Sheriff Alan Pangborn, a recurring Castle Rock character.",
+        notes: "Inclui o xerife Alan Pangborn, personagem recorrente de Castle Rock.",
         location: "castle-rock",
         synopsis: "When author Thad Beaumont attempts to put his pseudonym George Stark to rest, Stark comes to life and begins a murderous rampage. The novel explores the duality of human nature as Thad and Sheriff Alan Pangborn of Castle Rock must find a way to stop Stark's reign of terror before more people die.",
         mainCharacters: [
@@ -245,7 +245,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1990,
         title: "The Sun Dog",
         format: "Novella",
-        notes: "Published in Four Past Midnight, features recurring characters from Castle Rock.",
+        notes: "Publicada em Quatro da Manhã, com personagens recorrentes de Castle Rock.",
         location: "castle-rock",
         synopsis: "Fifteen-year-old Kevin Delevan receives a Polaroid Sun 660 camera for his birthday, but discovers that it only produces pictures of a menacing black dog that appears to be getting closer with each shot. The camera eventually comes into the possession of Castle Rock merchant Pop Merrill, who becomes obsessed with its supernatural properties, with deadly consequences.",
         mainCharacters: [
@@ -299,7 +299,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1991,
         title: "Needful Things",
         format: "Novel",
-        notes: 'Originally marketed as "The Last Castle Rock Story," wrapping up the Castle Rock saga.',
+        notes: 'Divulgado como "A última história de Castle Rock", encerrando a saga da cidade.',
         location: "castle-rock",
         synopsis: "A new shop called 'Needful Things' opens in Castle Rock, run by the mysterious Leland Gaunt. The shop sells items that seem perfectly suited to each customer's deepest desires, but at a terrible price beyond the monetary cost. As the townspeople fall under Gaunt's influence, they begin to turn against each other, leading to chaos and violence that threatens to destroy the entire town.",
         mainCharacters: [
@@ -367,7 +367,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1993,
         title: "It Grows on You",
         format: "Short Story",
-        notes: "Revised for Nightmares & Dreamscapes (1993), set in Castle Rock.",
+        notes: "Revisado para Pesadelos e Paisagens oníricas (1993), ambientado em Castle Rock.",
         location: "castle-rock",
         synopsis: "This short story revolves around an old house on the outskirts of Castle Rock that mysteriously adds rooms to itself over time. As the house grows, it seems to absorb the evil memories and histories of its inhabitants, becoming a focal point for the town's dark past and supernatural events.",
         mainCharacters: [
@@ -400,7 +400,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2018,
         title: "Elevation",
         format: "Novella",
-        notes: "A return to Castle Rock after many years, focusing on themes of prejudice and community.",
+        notes: "Retorno a Castle Rock após muitos anos, com temas de preconceito e comunidade.",
         location: "castle-rock",
         synopsis: "Scott Carey is experiencing a mysterious condition: he's losing weight steadily without changing physically. Even more strange, he weighs the same regardless of what he's wearing or carrying. As his condition progresses, Scott becomes involved in healing a rift with his neighbors, a lesbian couple facing discrimination in the small town of Castle Rock. His strange affliction ultimately brings the community together in unexpected ways.",
         mainCharacters: [
@@ -442,7 +442,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2017,
         title: "Gwendy's Button Box",
         format: "Novella",
-        notes: "First in the Gwendy trilogy, co-written with Richard Chizmar, set in Castle Rock.",
+        notes: "Primeiro volume da trilogia da Gwendy, coescrito com Richard Chizmar, em Castle Rock.",
         location: "castle-rock",
         synopsis: "In 1974, twelve-year-old Gwendy Peterson meets a mysterious stranger named Richard Farris at the top of Castle Rock's Suicide Stairs. He entrusts her with a strange device: a box with colored buttons that dispenses magical gifts and chocolates. But the box also holds immense danger, as each button can cause destruction on different scales. As Gwendy grows up with this responsibility, the box shapes her life in unexpected ways.",
         mainCharacters: [
@@ -479,7 +479,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1986,
         title: "IT",
         format: "Novel",
-        notes: "One of King's most iconic works set primarily in Derry.",
+        notes: "Uma das obras mais icônicas de King, ambientada principalmente em Derry.",
         location: "derry",
         synopsis: "In the town of Derry, Maine, seven teenagers discover an ancient evil that feeds on children's fears and takes the shape of Pennywise the Dancing Clown. Nearly three decades later, when children begin disappearing again, the now-adults must reunite to face their childhood nightmare once more – this time to destroy It for good.",
         mainCharacters: [
@@ -555,7 +555,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1994,
         title: "Insomnia",
         format: "Novel",
-        notes: "Set in Derry, years after the events of IT.",
+        notes: "Passa-se em Derry, anos depois dos eventos de IT.",
         location: "derry",
         synopsis: "Ralph Roberts, an elderly man suffering from insomnia, begins to see colored auras around people and notices strange creatures - the 'bald doctors' - who seem to determine when people die. Together with his friend Lois Chasse, Ralph discovers he is involved in a cosmic battle related to the fate of a child who could save or destroy the universe.",
         mainCharacters: [
@@ -612,7 +612,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2001,
         title: "Dreamcatcher",
         format: "Novel",
-        notes: "Partially set in Derry, with references to IT.",
+        notes: "Parcialmente em Derry, com referências a IT.",
         location: "derry",
         synopsis: "Four childhood friends, who possess telepathic abilities since they saved a boy with Down syndrome named Duddits, reunite for their annual hunting trip at an isolated cabin in the Maine woods. Their retreat is interrupted by the arrival of a disoriented hunter who brings with him an alien infection. The story follows the friends' struggle against the alien invasion and a ruthless military man determined to cover up the incident.",
         mainCharacters: [
@@ -671,7 +671,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2011,
         title: "11/22/63",
         format: "Novel",
-        notes: "Part of the novel takes place in Derry shortly after the events of IT.",
+        notes: "Parte do romance ocorre em Derry pouco depois dos eventos de IT.",
         location: "derry",
         synopsis: "Jake Epping, a high school English teacher, discovers a time portal in his friend Al's diner that leads to 1958. Al, who is dying of cancer, convinces Jake to take on his mission: to prevent the assassination of President John F. Kennedy. During his journey to change history, Jake spends time in Derry, meets characters from 'IT', falls in love with Sadie Dunhill, and discovers that the past resists change, creating obstacles for those who try to alter it.",
         mainCharacters: [
@@ -729,7 +729,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1975,
         title: "Salem's Lot",
         format: "Novel",
-        notes: "The second novel published by Stephen King, which established many elements of his fictional universe.",
+        notes: "O segundo romance publicado por Stephen King, que consolidou elementos do universo ficcional.",
         location: "jerusalems-lot",
         synopsis: "Ben Mears returns to the town of Jerusalem's Lot, where he spent part of his childhood, to write about the Marsten House, an abandoned mansion that has haunted him since his youth. Meanwhile, a mysterious antique dealer named Richard Straker opens a shop in town, while his partner, Kurt Barlow, remains absent. When children and residents begin to disappear, Ben and a small group of allies discover that Barlow is an ancient vampire who is transforming the entire town's population.",
         mainCharacters: [
@@ -805,7 +805,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1978,
         title: "Jerusalem's Lot",
         format: "Short Story",
-        notes: "A prelude to Salem's Lot, set in the 1850s.",
+        notes: "Prelúdio de O cemitério das almas, nos anos 1850.",
         location: "jerusalems-lot",
         synopsis: "Presented as a series of letters and journals, the story follows Charles Boone who, along with his manservant Calvin McCann, inherits his grandfather's property in the town of Preacher's Corners, near Jerusalem's Lot. In the Chapelwaite mansion, Charles discovers documents from an ancestor that lead him to explore the abandoned town of Jerusalem's Lot and discover a sinister cult that worshipped a being called 'The Worm'.",
         mainCharacters: [
@@ -851,7 +851,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1978,
         title: "One for the Road",
         format: "Short Story",
-        notes: "A sequel to Salem's Lot, showing what happened to the town years later.",
+        notes: "Sequência de O cemitério das almas, mostrando a cidade anos depois.",
         location: "jerusalems-lot",
         synopsis: "During a severe snowstorm, a man named Gerard Lumley enters a local bar near Jerusalem's Lot, begging for help. His car broke down on the road and he left his wife and daughter there while seeking assistance. The bar owner, Herb Tooklander, and the story's narrator, Booth, reluctantly agree to help him, warning about the dangers of Jerusalem's Lot, now abandoned and infested with vampires.",
         mainCharacters: [
@@ -892,7 +892,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1983,
         title: "Uncle Otto's Truck",
         format: "Short Story",
-        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        notes: "Publicada em Tripulação de esqueleto, ambientada em Castle Rock.",
         location: "castle-rock",
         synopsis: "This short story revolves around the mysterious relationship between Uncle Otto and an old Cresswell truck that seems to have a mind of its own. After Otto's business partner is killed under the vehicle, Otto becomes convinced that the truck is moving on its own, inching closer to his house each day with malevolent intent.",
         mainCharacters: [
@@ -923,7 +923,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1984,
         title: "Mrs. Todd's Shortcut",
         format: "Short Story",
-        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        notes: "Publicada em Tripulação de esqueleto, ambientada em Castle Rock.",
         location: "castle-rock",
         synopsis: "Homer Buckland, the elderly caretaker for the summer home of the wealthy Todds, recounts the strange tale of Mrs. Todd's obsession with finding shortcuts. Her increasingly impossible routes between Castle Rock and Bangor lead to encounters with otherworldly phenomena, suggesting she's found passages to other dimensions or realities.",
         mainCharacters: [
@@ -954,7 +954,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1984,
         title: "Gramma",
         format: "Short Story",
-        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        notes: "Publicada em Tripulação de esqueleto, ambientada em Castle Rock.",
         location: "castle-rock",
         synopsis: "Eleven-year-old George is left alone to care for his bedridden, blind grandmother while his mother takes his brother to the hospital after an injury. As the day progresses, George's fear of his grandmother grows, and with good reason - his 'Gramma' is connected to dark, supernatural forces that become active after her death.",
         mainCharacters: [
@@ -994,7 +994,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1985,
         title: "Nona",
         format: "Short Story",
-        notes: "Published in Skeleton Crew, set in Castle Rock.",
+        notes: "Publicada em Tripulação de esqueleto, ambientada em Castle Rock.",
         location: "castle-rock",
         synopsis: "A drifter meets a mysterious and seductive woman named Nona at a roadside tavern. Under her influence, he embarks on a violent killing spree that takes him through Castle Rock and surrounding areas, only to discover that Nona may not be what she appears to be.",
         mainCharacters: [
@@ -1025,7 +1025,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2009,
         title: "Premium Harmony",
         format: "Short Story",
-        notes: "Published in The Bazaar of Bad Dreams, set in Castle Rock.",
+        notes: "Publicada em O bazar dos sonhos ruins, ambientada em Castle Rock.",
         location: "castle-rock",
         synopsis: "Ray and Mary Burkett, a married couple with a strained relationship, are driving through Castle Rock when Mary insists on stopping at a convenience store to buy a ball for her niece. While inside, Mary suffers a fatal heart attack, leading Ray to reflect on their troubled marriage and the mundane events that can suddenly turn tragic.",
         mainCharacters: [
@@ -1056,7 +1056,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1994,
         title: "The Man in the Black Suit",
         format: "Short Story",
-        notes: "Published in Everything's Eventual, set near Castle Rock.",
+        notes: "Publicada em Tudo é eventual, perto de Castle Rock.",
         location: "castle-rock",
         synopsis: "In this award-winning short story, an elderly man named Gary reflects on a terrifying encounter he had as a nine-year-old boy. While fishing alone in the woods near Castle Rock, he meets a strange man in a black suit who claims to be the devil. The encounter leaves a lasting impression that haunts him for the rest of his life.",
         mainCharacters: [
@@ -1087,7 +1087,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2010,
         title: "Fair Extension",
         format: "Short Story",
-        notes: "Short story from 'Full Dark, No Stars' set in Derry.",
+        notes: "Conto de Noite escura, sem estrelas, ambientado em Derry.",
         location: "derry",
         synopsis: "Dave Streeter, a man with terminal cancer, makes a deal with a strange vendor named George Elvid who offers him a 'fair extension' of his life. In exchange, he must transfer his misfortune to someone else - his longtime best friend, Tom Goodhugh. The story explores themes of envy, resentment, and the moral consequences of wishing ill on others.",
         mainCharacters: [
@@ -1114,7 +1114,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1998,
         title: "Bag of Bones",
         format: "Novel",
-        notes: "Partially related to Derry, where the protagonist lived before moving to TR-90.",
+        notes: "Relacionada em parte a Derry, onde o protagonista viveu antes de ir para TR-90.",
         location: "tr-90",
         synopsis: "Mike Noonan, a widowed writer suffering from writer's block, moves to his vacation home in TR-90, known as Sara Laughs, after his wife's death. There, he becomes involved with a young mother and her daughter, while uncovering dark secrets about the town and experiencing supernatural occurrences related to his deceased wife.",
         mainCharacters: [
@@ -1158,7 +1158,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1997,
         title: "Autopsy Room Four",
         format: "Short Story",
-        notes: "Short story from 'Everything's Eventual' partially set in Derry.",
+        notes: "Conto de Tudo é eventual, parcialmente em Derry.",
         location: "derry",
         synopsis: "Howard Cottrell wakes up naked on an autopsy table, completely paralyzed but conscious. Unable to communicate, he desperately tries to alert the doctors as they prepare to perform his autopsy. The story is narrated from Cottrell's perspective as he tries to understand what caused his paralysis while struggling to be noticed before the procedure begins.",
         mainCharacters: [
@@ -1193,7 +1193,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1992,
         title: "Gerald's Game",
         format: "Novel",
-        notes: "Contains references to Derry, although most of the action takes place elsewhere.",
+        notes: "Contém referências a Derry, embora a maior parte da ação ocorra em outro lugar.",
         location: "western-maine",
         synopsis: "Jessie Burlingame becomes trapped to a bed when her husband Gerald dies of a heart attack during a sexual game in an isolated house. Handcuffed and unable to escape, Jessie faces not only thirst, hunger, and exhaustion, but also her own inner demons as she struggles for survival.",
         mainCharacters: [
@@ -1236,7 +1236,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2022,
         title: "Gwendy's Final Task",
         format: "Novel",
-        notes: "Third part of the Gwendy trilogy, with parts set in Derry.",
+        notes: "Terceiro volume da trilogia da Gwendy, com trechos em Derry.",
         location: "multiple",
         synopsis: "Now a successful senator, Gwendy Peterson receives one final mission: she must take the button box to space, where it can be safely destroyed. As Gwendy deals with the early signs of Alzheimer's, she must complete this crucial mission to save not just our world, but all worlds.",
         mainCharacters: [
@@ -1272,7 +1272,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2006,
         title: "Lisey's Story",
         format: "Novel",
-        notes: "Contains references to Derry, although most of the action takes place elsewhere.",
+        notes: "Contém referências a Derry, embora a maior parte da ação ocorra em outro lugar.",
         location: "rural-maine",
         synopsis: "Two years after the death of her husband, famous writer Scott Landon, Lisey Landon finally begins to clean out his office. As she does so, she relives moments from their marriage and discovers that Scott had created a portal to a parallel world called Boo'ya Moon, a place of beauty and danger. Meanwhile, she is stalked by an obsessive fan of her husband.",
         mainCharacters: [
@@ -1315,7 +1315,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2007,
         title: "Mute",
         format: "Short Story",
-        notes: "Short story from 'Just After Sunset' partially set in Derry.",
+        notes: "Conto de Logo após o pôr do sol, parcialmente em Derry.",
         location: "derry",
         synopsis: "After discovering his wife has cheated on him and depleted their savings, a salesman named Monette picks up a mute hitchhiker and confesses his troubles, including violent thoughts about his wife and her lover. He later discovers that the supposed mute might not have been mute at all, and that his confessions may have unexpected consequences.",
         mainCharacters: [
@@ -1343,7 +1343,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1977,
         title: "Rage",
         format: "Novel",
-        notes: "Published as Richard Bachman. The first Bachman book. No longer in print at King's request due to its sensitive content.",
+        notes: "Publicado como Richard Bachman. Primeiro livro Bachman. Fora de catálogo a pedido de King pelo conteúdo sensível.",
         location: "",
         synopsis: "A high school student takes a class hostage at gunpoint, engaging them in discussions about life, death, and society.",
         mainCharacters: [
@@ -1366,7 +1366,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1979,
         title: "The Long Walk",
         format: "Novel",
-        notes: "Published as Richard Bachman. Often cited as one of King's most disturbing works.",
+        notes: "Publicado como Richard Bachman. Entre as obras mais perturbadoras de King.",
         location: "maine",
         synopsis: "In a dystopian future America, 100 teenage boys participate in an annual walking contest where the winner is the last one remaining. Contestants who stop walking receive warnings, and after three warnings, they are shot.",
         mainCharacters: [
@@ -1398,7 +1398,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1981,
         title: "Roadwork",
         format: "Novel",
-        notes: "Published as Richard Bachman. Subtitled 'A Novel of the First Energy Crisis'.",
+        notes: "Publicado como Richard Bachman. Subtítulo: Um romance da primeira crise energética.",
         location: "",
         synopsis: "A man's descent into madness as he fights against a highway extension project that threatens to demolish his home and workplace.",
         mainCharacters: [
@@ -1421,7 +1421,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1982,
         title: "The Running Man",
         format: "Novel",
-        notes: "Published as Richard Bachman. Set in a dystopian future where game shows are used to pacify the masses.",
+        notes: "Publicado como Richard Bachman. Futuro distópico em que programas de TV acalmam as massas.",
         location: "",
         synopsis: "In a dystopian America of 2025, Ben Richards participates in a deadly game show called 'The Running Man' to earn money for his sick daughter's medical treatment. He must evade capture by hunters and the public for 30 days, earning money for each hour he stays alive.",
         mainCharacters: [
@@ -1454,7 +1454,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1984,
         title: "Thinner",
         format: "Novel",
-        notes: "Published as Richard Bachman. The last Bachman book before King's pseudonym was exposed.",
+        notes: "Publicado como Richard Bachman. Último livro antes da revelação do pseudônimo.",
         location: "",
         synopsis: "After an obese lawyer named Billy Halleck accidentally runs over and kills an old Romani woman, he is cursed by her father to grow 'thinner' every day, leading to a desperate search to reverse the curse before it's too late.",
         mainCharacters: [
@@ -1487,7 +1487,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1996,
         title: "The Regulators",
         format: "Novel",
-        notes: "Published as Richard Bachman. Companion novel to Desperation, featuring the same characters in different roles.",
+        notes: "Publicado como Richard Bachman. Companheiro de Desespero, mesmos personagens em papéis diferentes.",
         location: "",
         synopsis: "On a summer day in the suburban town of Wentworth, Ohio, a red van cruises through Poplar Street, and the peaceful neighborhood is suddenly transformed into a war zone of unearthly horrors.",
         mainCharacters: [
@@ -1516,7 +1516,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2007,
         title: "Blaze",
         format: "Novel",
-        notes: "Published as Richard Bachman. King wrote the original draft in the 1970s but revised it for publication in 2007.",
+        notes: "Publicado como Richard Bachman. Rascunho dos anos 1970, revisado para publicação em 2007.",
         location: "",
         synopsis: "Clayton Blaisdell Jr., known as Blaze, is a mentally challenged giant who kidnaps a baby for ransom, guided by the voice of his dead partner-in-crime, George.",
         mainCharacters: [
@@ -1539,7 +1539,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 1981,
         title: "Danse Macabre",
         format: "Non-fiction",
-        notes: "A non-fiction examination of horror in various media from the 1950s to the 1970s.",
+        notes: "Ensaio sobre o horror em várias mídias, dos anos 1950 aos 1970.",
         location: "",
         synopsis: "King's analysis of horror in literature, film, and television from 1950 to 1980, exploring what scares us and why. The book examines influences on King's own writing and the cultural significance of horror.",
         mainCharacters: [],
@@ -1557,7 +1557,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2000,
         title: "On Writing: A Memoir of the Craft",
         format: "Non-fiction",
-        notes: "Part memoir, part writing guide. Often cited as one of the best books about writing.",
+        notes: "Memórias e guia de escrita; frequentemente citado entre os melhores livros sobre o ofício.",
         location: "",
         synopsis: "Part memoir, part master class by one of the bestselling authors of all time, this superb volume is a revealing and practical view of the writer's craft, comprising the basic tools of the trade every writer must have.",
         mainCharacters: [],
@@ -1575,7 +1575,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2004,
         title: "Faithful",
         format: "Non-fiction",
-        notes: "Co-written with Stewart O'Nan. Chronicles the 2004 Boston Red Sox season.",
+        notes: "Coescrito com Stewart O'Nan. A temporada 2004 do Boston Red Sox.",
         location: "",
         synopsis: "A chronicle of the Boston Red Sox's 2004 baseball season, from spring training to their historic World Series victory, as experienced by two devoted fans.",
         mainCharacters: [],
@@ -1593,7 +1593,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2013,
         title: "Guns",
         format: "Non-fiction",
-        notes: "An essay published as a Kindle Single in response to the Sandy Hook Elementary School shooting.",
+        notes: "Ensaio publicado como Kindle Single após o tiroteio na escola Sandy Hook.",
         location: "",
         synopsis: "A powerful essay in which King addresses the controversial and divisive issue of gun control and gun violence in America.",
         mainCharacters: [],
@@ -1611,7 +1611,7 @@ export const bookDetails: Record<string, BookDetail> = {
         year: 2016,
         title: "Hearts in Suspension",
         format: "Non-fiction",
-        notes: "Collection of essays about King's time at the University of Maine in the 1960s.",
+        notes: "Coletânea de textos sobre a passagem de King pela Universidade do Maine nos anos 1960.",
         location: "maine",
         synopsis: "A collection that includes King's recollections of his college years during the Vietnam War, along with contributions from friends and colleagues from that time.",
         mainCharacters: [],

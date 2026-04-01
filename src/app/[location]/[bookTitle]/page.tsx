@@ -1,16 +1,9 @@
-import { getBookBySlug } from "@/lib/books-data";
 import { BookDetail } from "@/components/BookDetail";
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Breadcrumb } from "@/components/ui/breadcrumb";
-
-// Function to capitalize the first letter of each word
-function capitalizeWords(str: string): string {
-  return str
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
+import { getWorkDetailViewModelByLegacyRoute } from "@/lib/imported-content";
+import { formatLocationName } from "@/lib/work-utils";
 
 interface BookPageProps {
   params: Promise<{
@@ -24,18 +17,18 @@ export async function generateMetadata({ params }: BookPageProps): Promise<Metad
   const resolvedParams = await params;
   const { location, bookTitle } = resolvedParams;
   
-  const book = getBookBySlug(location, bookTitle);
+  const book = getWorkDetailViewModelByLegacyRoute(location, bookTitle);
   
   if (!book) {
     return {
-      title: 'Book Not Found',
-      description: 'The requested book could not be found',
+      title: 'Obra não encontrada',
+      description: 'A obra solicitada não foi encontrada',
     };
   }
   
   return {
-    title: `${book.title} - Stephen King's Works`,
-    description: book.synopsis || `Details about ${book.title} by Stephen King`,
+    title: `${book.title} | Stephen King`,
+    description: book.summary || `Detalhes sobre ${book.title}`,
   };
 }
 
@@ -44,26 +37,24 @@ export default async function BookPage({ params }: BookPageProps) {
   const resolvedParams = await params;
   const { location, bookTitle } = resolvedParams;
   
-  const book = getBookBySlug(location, bookTitle);
+  const book = getWorkDetailViewModelByLegacyRoute(location, bookTitle);
   
   if (!book) {
     notFound();
   }
 
-  const locationLabel = location === 'castle-rock' ? "Castle Rock" :
-                      location === 'derry' ? "Derry" :
-                      location === 'jerusalems-lot' ? "Jerusalem's Lot" : capitalizeWords(location);
-
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: locationLabel, href: `/#${location}` },
+    { name: formatLocationName(location), href: "/works" },
     { name: book.title, href: `/${location}/${bookTitle}`, isCurrent: true }
   ];
 
   return (
-    <main className="p-4 mx-auto md:px-0 max-w-7xl">
-      <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
-      <BookDetail book={book} />
+    <main className="px-4 py-6 sm:px-6 md:py-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-8">
+        <Breadcrumb segments={breadcrumbSegments} />
+        <BookDetail book={book} />
+      </div>
     </main>
   );
 } 

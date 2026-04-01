@@ -126,14 +126,17 @@ export const Particles: React.FC<ParticlesProps> = ({
       }
       window.removeEventListener("resize", handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- canvas lifecycle; initCanvas/animate close over refs
   }, [color]);
 
   useEffect(() => {
     onMouseMove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- sync mouse; onMouseMove uses latest refs
   }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
     initCanvas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- refresh prop triggers redraw only
   }, [refresh]);
 
   const initCanvas = () => {

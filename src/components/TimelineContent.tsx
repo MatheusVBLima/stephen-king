@@ -15,7 +15,7 @@ export default function TimelineContent() {
 
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: "Timeline", href: "/timeline", isCurrent: true }
+    { name: "Linha do tempo", href: "/timeline", isCurrent: true }
   ];
 
   useEffect(() => {
@@ -48,11 +48,11 @@ export default function TimelineContent() {
       {/* Filters skeleton */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
         <div className="space-y-2">
-          <div className="font-medium">Period</div>
+          <div className="font-medium">Período</div>
           <Skeleton className="h-10 w-[200px]" />
         </div>
         <div className="space-y-2">
-          <div className="font-medium">Location</div>
+          <div className="font-medium">Local</div>
           <Skeleton className="h-10 w-[200px]" />
         </div>
       </div>
@@ -146,9 +146,9 @@ export default function TimelineContent() {
     <main className="min-h-screen p-4 md:p-8">
       <div className="mx-auto max-w-7xl">
         <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
-        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">Stephen King Timeline</h1>
+        <h1 className="mb-4 text-3xl font-bold text-center md:text-5xl">Linha do tempo de Stephen King</h1>
         <p className="mb-8 text-center text-muted-foreground">
-          Explore Stephen King's works in chronological order
+          Explore as obras de Stephen King em ordem cronológica
         </p>
         
         {loading ? <TimelineSkeleton /> : <Timeline books={books} />}

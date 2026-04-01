@@ -10,7 +10,7 @@ export const locations: FictionalLocation[] = [
         description: 'A sinister town haunted by an ancient evil entity. Derry seems to have a curse that makes violent events occur in cycles of 27 years. The town has a dark energy that makes people ignore or forget tragic events.',
         books: ['It', 'Insomnia', '11/22/63', 'Dreamcatcher', 'Fair Extension', 'Autopsy Room Four', 'Mute'],
         importance: 'major',
-        imageUrl: '/images/locations/derry.jpg',
+        imageUrl: '/images/locations/derry-hd.png',
         firstAppearance: 'It'
     },
     {
@@ -20,7 +20,7 @@ export const locations: FictionalLocation[] = [
         description: 'A small town with a dark history, Castle Rock is the setting for numerous strange occurrences and supernatural events. The town appears calm on the surface but harbors deep secrets.',
         books: ['The Dead Zone', 'Cujo', 'The Dark Half', 'Needful Things', 'Elevation', "Mrs. Todd's Shortcut"],
         importance: 'major',
-        imageUrl: '/images/locations/castle-rock.jpg',
+        imageUrl: '/images/locations/castle-rock-hd.png',
         firstAppearance: 'The Dead Zone'
     },
     {

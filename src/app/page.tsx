@@ -56,7 +56,9 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8">
       <div className="mx-auto max-w-7xl">
-        <h1 className="mb-8 text-3xl font-bold text-center md:text-5xl md:mb-10">Stephen King's Works By Location</h1>
+        <h1 className="mb-8 text-3xl font-bold text-center md:text-5xl md:mb-10">
+          Obras de Stephen King por local
+        </h1>
         
         {isLoading ? (
           <div className="w-full">
@@ -130,13 +132,13 @@ export default function Home() {
                 id="jerusalems-lot" 
                 className="text-xs md:text-sm"
               >
-                Jerusalem's Lot
+                {"Jerusalem's Lot"}
               </TabsTrigger>
             </TabsList>
 
             <TabsContent value="castle-rock">
               <div className="mb-12 text-center">
-                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Castle Rock</h2>
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Obras ambientadas em Castle Rock</h2>
                 {castleRock?.imageUrl && (
                   <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
                     <Image 
@@ -153,7 +155,7 @@ export default function Home() {
                 )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed">
-                    Castle Rock is one of the most important fictional towns in Stephen King's universe, serving as the backdrop for numerous supernatural events and memorable characters across decades of stories. First appearing in "The Dead Zone" (1979), Castle Rock has become a cornerstone of King's fictional Maine topography.
+                    {`Castle Rock é uma das cidades mais importantes do universo ficcional de Stephen King, cenário de inúmeros eventos sobrenaturais e personagens memoráveis ao longo de décadas. Tendo aparecido primeiro em A Zona Morta (1979), Castle Rock tornou-se um pilar da topografia do Maine ficcional de King.`}
                   </p>
                 </div>
               </div>
@@ -162,7 +164,7 @@ export default function Home() {
 
             <TabsContent value="derry">
               <div className="mb-12 text-center">
-                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Derry</h2>
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Obras ambientadas em Derry</h2>
                 {derry?.imageUrl && (
                   <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
                     <Image 
@@ -179,7 +181,7 @@ export default function Home() {
                 )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed ">
-                    Derry is a dark and frightening fictional town in Stephen King's universe, most famously known as the home of Pennywise the Dancing Clown from "IT". First appearing in the 1981 short story "The Bird and the Album", Derry has been the setting for numerous supernatural events and is based on King's portrayal of Bangor, Maine.
+                    {`Derry é uma cidade escura e aterradora no universo de Stephen King, mais famosa como lar de Pennywise, o palhaço dançarino de IT. Aparecendo primeiro no conto de 1981 O Pássaro e o Álbum, Derry foi cenário de muitos eventos sobrenaturais e inspira-se na representação de King sobre Bangor, Maine.`}
                   </p>
                 </div>
               </div>
@@ -188,12 +190,14 @@ export default function Home() {
 
             <TabsContent value="jerusalems-lot">
               <div className="mb-12 text-center">
-                <h2 className="mb-4 text-2xl font-bold md:text-3xl">Works Set in Jerusalem's Lot</h2>
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+                  Obras ambientadas em Jerusalem&apos;s Lot
+                </h2>
                 {jerusalemsLot?.imageUrl && (
                   <div className="relative w-full h-64 max-w-3xl mx-auto mb-4 overflow-hidden rounded-lg md:h-80">
                     <Image 
                       src={jerusalemsLot.imageUrl} 
-                      alt="Jerusalem's Lot, Maine" 
+                      alt={"Jerusalem's Lot, Maine"} 
                       fill 
                       priority={activeTab === "jerusalems-lot"}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
@@ -205,7 +209,7 @@ export default function Home() {
                 )}
                 <div className="max-w-3xl p-6 mx-auto rounded-lg bg-stone-900">
                   <p className="leading-relaxed">
-                    Jerusalem's Lot is a fictional town infested with vampires in Stephen King's universe. Featured in King's second published novel in 1975, the town has become one of his most iconic settings and is referenced throughout many of his other works, completing his trinity of fictional Maine towns alongside Castle Rock and Derry.
+                    {`Jerusalem's Lot é uma cidade tomada por vampiros no universo de Stephen King. Destacada no segundo romance publicado por King em 1975, tornou-se um dos cenários mais icônicos e é citada em várias outras obras, completando a tríade de cidades do Maine ficcional junto à Castle Rock e Derry.`}
                   </p>
                 </div>
               </div>

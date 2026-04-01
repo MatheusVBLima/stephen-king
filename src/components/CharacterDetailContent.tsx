@@ -58,8 +58,8 @@ export default function CharacterDetailContent({ params }: CharacterDetailConten
 
   // Breadcrumb segments
   const breadcrumbSegments = [
-    { name: "Characters", href: "/characters" },
-    { name: character?.name || "Loading...", href: `/characters/${clientParams?.slug || ""}`, isCurrent: true }
+    { name: "Personagens", href: "/characters" },
+    { name: character?.name || "Carregando…", href: `/characters/${clientParams?.slug || ""}`, isCurrent: true }
   ];
 
   if (loading) {

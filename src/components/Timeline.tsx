@@ -8,8 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { BookOpen, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { useRouter } from 'next/navigation';
-import { slugify } from '@/lib/books-data';
 import { getMajorLocations } from '@/lib/locations-data';
 import {
   Select,
@@ -19,6 +17,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from 'next/link';
+import { formatLocationName, getCanonicalWorkHref } from '@/lib/work-utils';
+import { formatBookFormatForDisplay } from '@/lib/book-display-pt';
 
 interface TimelineProps {
   books: BookDetail[];
@@ -27,7 +27,6 @@ interface TimelineProps {
 export function Timeline({ books }: TimelineProps) {
   const [periodFilter, setPeriodFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
-  const router = useRouter();
 
   const decades = useMemo(() => {
     const allYears = books.map(book => book.year);
@@ -74,53 +73,40 @@ export function Timeline({ books }: TimelineProps) {
     return baseStyle;
   };
 
-
-  // Function to format location name for display
-  const formatLocationName = (locationId: string): string => {
-    switch(locationId) {
-      case 'derry':
-        return 'Derry';
-      case 'castle-rock':
-        return 'Castle Rock';
-      case 'jerusalems-lot':
-        return "Jerusalem's Lot";
-      default:
-        return locationId;
-    }
-  };
-
   return (
     <div className="w-full">
       <div className="flex flex-col justify-between gap-4 mb-8 md:flex-row">
         <div className="w-full md:w-48">
-          <label className="block mb-2 text-sm font-medium">Period</label>
+          <label className="block mb-2 text-sm font-medium">Período</label>
           <Select
             value={periodFilter}
             onValueChange={setPeriodFilter}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select period" />
+              <SelectValue placeholder="Selecione o período" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All periods</SelectItem>
+              <SelectItem value="all">Todos os períodos</SelectItem>
               {decades.map(decade => (
-                <SelectItem key={decade} value={decade}>{decade}</SelectItem>
+                <SelectItem key={decade} value={decade}>
+                  Anos {decade.replace(/s$/, "")}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
         </div>
         
         <div className="w-full md:w-48">
-          <label className="block mb-2 text-sm font-medium">Location</label>
+          <label className="block mb-2 text-sm font-medium">Local</label>
           <Select
             value={locationFilter}
             onValueChange={setLocationFilter}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select location" />
+              <SelectValue placeholder="Selecione o local" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All locations</SelectItem>
+              <SelectItem value="all">Todos os locais</SelectItem>
               {locations.map(location => (
                 <SelectItem key={location} value={location}>{formatLocationName(location)}</SelectItem>
               ))}
@@ -131,7 +117,7 @@ export function Timeline({ books }: TimelineProps) {
 
       {filteredBooks.length === 0 ? (
         <div className="py-10 text-center">
-          <p className="text-muted-foreground">No books match the selected filters</p>
+          <p className="text-muted-foreground">Nenhuma obra corresponde aos filtros selecionados</p>
           <Button 
             variant="outline" 
             className="mt-4"
@@ -140,7 +126,7 @@ export function Timeline({ books }: TimelineProps) {
               setLocationFilter("all");
             }}
           >
-            Clear filters
+            Limpar filtros
           </Button>
         </div>
       ) : (
@@ -165,7 +151,7 @@ export function Timeline({ books }: TimelineProps) {
                 borderRight: '7px solid rgba(255, 255, 255, 0.1)'
               }}
             >
-              <Link href={`/${book.location}/${slugify(book.title)}`} className="block">
+              <Link href={getCanonicalWorkHref(book.title)} className="block">
                 <Card className="transition-all duration-200 cursor-pointer hover:scale-105 hover:shadow-lg">
                   <CardContent>
                     <div className="flex items-center justify-between mb-2">
@@ -176,7 +162,7 @@ export function Timeline({ books }: TimelineProps) {
                       </Badge>
                     </div>
                     <div className="flex flex-wrap gap-2 mt-2">
-                      <Badge>{book.format}</Badge>
+                      <Badge>{formatBookFormatForDisplay(book.format)}</Badge>
                       <Badge variant="outline" className="capitalize">
                         {formatLocationName(book.location)}
                       </Badge>

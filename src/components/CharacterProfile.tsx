@@ -57,7 +57,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             </div>
             <h1 className="mb-2 text-3xl font-bold text-white">{character.name}</h1>
             <Badge variant={character.isVillain ? "destructive" : "default"}>
-              {character.isVillain ? 'Villain' : 'Hero'}
+              {character.isVillain ? 'Vilão' : 'Herói'}
             </Badge>
           </div>
         </div>
@@ -72,7 +72,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">First Appearance</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Primeira aparição</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.firstAppearance}</p>
@@ -81,7 +81,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Total Works</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Total de obras</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.books.length}</p>
@@ -90,7 +90,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Relationships</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Relações</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.relationships.length}</p>
@@ -99,7 +99,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Quotes</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Citações</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-semibold">{character.quotes.length}</p>
@@ -113,24 +113,24 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         <TabsList className="grid w-full h-auto grid-cols-1 sm:grid-cols-4">
           <TabsTrigger value="traits" className="py-3">
             <Bookmark className="w-4 h-4 mr-2" />
-            Traits
+            Traços
           </TabsTrigger>
           <TabsTrigger value="books" className="py-3">
             <BookOpen className="w-4 h-4 mr-2" />
-            Books
+            Obras
           </TabsTrigger>
           <TabsTrigger value="relationships" className="py-3">
             <Users className="w-4 h-4 mr-2" />
-            Relationships
+            Relações
           </TabsTrigger>
           <TabsTrigger value="quotes" className="py-3">
             <Quote className="w-4 h-4 mr-2" />
-            Quotes
+            Citações
           </TabsTrigger>
         </TabsList>
         
         <TabsContent value="traits" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Characteristics and Traits</h3>
+          <h3 className="mb-4 text-xl font-semibold">Características e traços</h3>
           <div className="flex flex-wrap gap-2">
             {character.traits.map((trait, index) => (
               <Badge key={index} variant="secondary" className="text-base py-1.5 px-3">
@@ -141,18 +141,18 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="books" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Book Appearances</h3>
+          <h3 className="mb-4 text-xl font-semibold">Aparições em obras</h3>
           <div className="space-y-4">
             {character.books.map((book, index) => (
               <Card key={index} className="overflow-hidden">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-between">
                     <CardTitle>{book.bookTitle}</CardTitle>
-                    <Badge variant={book.significance === 'Major' ? 'default' : 'outline'}>
+                    <Badge variant={book.significance === 'Major' || book.significance === 'Principal' ? 'default' : 'outline'}>
                       {book.significance}
                     </Badge>
                   </div>
-                  <CardDescription>Role: {book.role}</CardDescription>
+                  <CardDescription>Papel: {book.role}</CardDescription>
                 </CardHeader>
                 {book.notes && (
                   <CardContent>
@@ -165,7 +165,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="relationships" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Relationships</h3>
+          <h3 className="mb-4 text-xl font-semibold">Relações</h3>
           <div className="space-y-4">
             {character.relationships.map((relationship, index) => (
               <Card key={index}>
@@ -173,7 +173,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                   <div className="flex items-center justify-between">
                     <CardTitle>{relationship.characterName}</CardTitle>
                     <Badge 
-                      variant={relationship.relationshipType === 'Enemy' ? 'destructive' : 'default'}
+                      variant={relationship.relationshipType === 'Enemy' || relationship.relationshipType === 'Inimigo' ? 'destructive' : 'default'}
                     >
                       {relationship.relationshipType}
                     </Badge>
@@ -185,7 +185,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                 <div className="p-4 pt-0 text-right">
                   <Button variant="ghost" size="sm" asChild>
                     <Link href={`/characters/${relationship.characterId}`}>
-                      View profile
+                      Ver perfil
                     </Link>
                   </Button>
                 </div>
@@ -195,14 +195,14 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         </TabsContent>
         
         <TabsContent value="quotes" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Memorable Quotes</h3>
+          <h3 className="mb-4 text-xl font-semibold">Citações memoráveis</h3>
           <div className="space-y-4">
             {character.quotes.map((quote, index) => (
               <Card key={index}>
                 <CardHeader className="pb-2">
                   <div className="flex items-center">
                     <Quote className="w-5 h-5 mr-2 text-muted-foreground" />
-                    <CardTitle className="text-lg italic">"{quote.text}"</CardTitle>
+                    <CardTitle className="text-lg italic">{`"${quote.text}"`}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>

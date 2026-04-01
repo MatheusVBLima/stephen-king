@@ -25,15 +25,15 @@ const Breadcrumb = ({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={cn("flex items-center text-sm", className)}
+      className={cn("flex items-center text-sm text-muted-foreground", className)}
       {...props}
     >
-      <ol className="flex items-center space-x-1">
+      <ol className="flex min-w-0 flex-wrap items-center gap-y-1">
         {showHome && (
           <li className="flex items-center">
             <Link
               href={homeHref}
-              className="flex items-center transition-colors text-muted-foreground hover:text-foreground"
+              className="flex items-center transition-colors hover:text-foreground"
             >
               <Home className="w-4 h-4" />
               <span className="sr-only">Home</span>
@@ -48,16 +48,16 @@ const Breadcrumb = ({
           const isLast = index === segments.length - 1
           
           return (
-            <li key={segment.href} className="flex items-center">
+            <li key={segment.href} className="flex min-w-0 items-center">
               {isLast ? (
-                <span className="font-medium text-foreground" aria-current="page">
+                <span className="truncate font-medium text-foreground" aria-current="page">
                   {segment.name}
                 </span>
               ) : (
                 <>
                   <Link
                     href={segment.href}
-                    className="transition-colors text-muted-foreground hover:text-foreground"
+                    className="truncate transition-colors hover:text-foreground"
                   >
                     {segment.name}
                   </Link>

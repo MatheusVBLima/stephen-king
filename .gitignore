@@ -42,3 +42,7 @@ next-env.d.ts
 
 .vercel
 implementacao-melhorias.md
+
+# scraping / imported content artifacts
+/scripts/
+/scraped-content/

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Page served by ip-172-31-17-222.us-east-2.compute.internal, 1412 () -->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<title>
+		Home - Carmel Clay Public Library
+	</title>
+	<link rel="shortcut icon" href="/images/favicon/carmel/CarmelClay-Favicon-32px.png" type="image/x-icon">
+	<link rel="icon" href="/images/favicon/carmel/CarmelClay-Favicon-32px.png" type="image/x-icon">
+	<meta name="client" content="carmel">
+	<meta name="location" content="<!--location-->">
+	<meta name="apiserver" content="https://api.communico.co">
+	<meta name="region" content="us">
+	<meta name="location-id" content="<!--location_id-->">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+	<!--custom_head-->
+	<link href="/css/animate.css" rel="stylesheet" type="text/css">
+<link href="//cdn.libnet.info/css/rome/2.1.14/rome.min.css" rel="stylesheet" type="text/css" integrity="sha512-/XkQhXweIRQd7p8YCmwaBLyUwfTdUg8t7ad6POQK1cOTCEMu7A/wlexnDQhfc1smusfg2V4m3ztSpDby+lXo7Q==" crossorigin="anonymous">
+<link href="//cdn.libnet.info/css/twitter-bootstrap/3.4.1/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous">
+<link href="/css/amfont.css" rel="stylesheet" type="text/css">
+<link href="//cdn.libnet.info/css/qtip2/3.0.3/jquery.qtip.css" rel="stylesheet" type="text/css" integrity="sha512-+eoiXLTtw/fDauKv6qMjHuO5pCnqJLz83WWIEpCF+fCAoIkK4UNy04CtJbNZ73Oo/WeNom5FwKie4NVorKjomA==" crossorigin="anonymous">
+<link href="//cdn.libnet.info/css/jqueryui/1.14.1/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" integrity="sha512-hQrNVZL4jUAHcqbF25UiEFZ/NGCbhAWI9aVAUfI5H+sG17C1Lc4Tm4HpU5A69E1jquKr3f0LnxD3uzfoCj/koQ==" crossorigin="anonymous">
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+<link href="/css/lib/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+<link href="//cdn.libnet.info/css/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" integrity="sha512-6qkvBbDyl5TDJtNJiC8foyEVuB6gxMBkrKy67XpqnIDxyvLLPJzmTjAj1dRJfNdmXWqD10VbJoeN4pOQqDwvRA==" crossorigin="anonymous">
+<link href="//cdn.libnet.info/css/bootstrap-datetimepicker/4.17.37/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" integrity="sha512-WWc9iSr5tHo+AliwUnAQN1RfGK9AnpiOFbmboA0A0VJeooe69YR2rLgHw13KxF1bOSLmke+SNnLWxmZd8RTESQ==" crossorigin="anonymous">
+<link href="/css/lib/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
+<link href="//cdn.libnet.info/css/bootstrap-multiselect/0.9.13/bootstrap-multiselect.css" rel="stylesheet" type="text/css" integrity="sha512-S1l1mfpQS+XBPSgS8cCqElwRx24IcAYrwxLJg6WaFkG9J8bfNuilkoqkGny/rz7jS7Bo03qnzeBtE9LElt/fDg==" crossorigin="anonymous">
+<link href="//cdn.libnet.info/css/noUiSlider/14.0.2/nouislider.min.css" rel="stylesheet" type="text/css" integrity="sha512-bqcVAZj+T8z4LwjUVg2KqRRaBRvZcrH3pqKzMrDBJc01Fkcd9ioJsX5eYx6x7GDQSISa6GaFj1b3lEWgoa+hxw==" crossorigin="anonymous">
+<link href="/css/shared.css" rel="stylesheet" type="text/css">
+<link href="/css/anywhere.css?version=2.36.5" rel="stylesheet" type="text/css">
+
+	<link id="contrastsheet" href="" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="//cdn.libnet.info/js/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/jquery-ui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/babel-polyfill/7.12.1/polyfill.min.js" integrity="sha512-uzOpZ74myvXTYZ+mXUsPhDF+/iL/n32GDxdryI2SJronkEyKC8FBFRLiBQ7l7U/PTYebDbgTtbqTa6/vGtU23A==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/bluebird/3.7.2/bluebird.min.js" integrity="sha512-TFp7JOp8so/oHJrngLI0kn9diZrc0YDr1NrGj1YbzbvSBdGfligjYVRp1xtqlmNCPWpx4xJDhiWSGgUYvqCbBg==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/fetch/2.0.4/fetch.min.js" integrity="sha512-IsoGB9P1Kjw962zrslxT91OfoKkAnlBfQDdh5HwFvOxwJ8xGV6MuDeAli4TkEMiUqhJVkvpxJBsIS14bSERgxA==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/moment.js/2.30.1/moment.js" integrity="sha512-3CuraBvy05nIgcoXjVN33mACRyI89ydVHg7y/HMN9wcTVbHeur0SeBzweSd/rxySapO7Tmfu68+JlKkLTnDFNg==" crossorigin="anonymous"></script>
+<style>
+				#\31 5456 > iframe {
+ height: 8000px !important;
+}
+
+.amfaq-section-answer:before{
+  display: none;
+}
+
+.dropdown-submenu:active > .dropdown-menu  {
+  display: block; 
+}
+
+
+@media(max-width:767px) {
+  li.dropdown-submenu.active .dropdown-menu {
+    display: block;
+  }
+}
+
+
+.events2-reg-thanks-pin:after {
+  content: "\0023"
+}
+.ammev-door-code b:after {
+  content: "\0023"
+}
+
+.widget table[cellpadding] td, 
+.widget table[cellpadding] th,
+.amh-block > .amh-content table[cellpadding] td,
+.amh-block > .amh-content table[cellpadding] th {
+  padding: revert-layer; 
+}
+			</style>
+<script>
+				$(document).ready(function(){
+					try{
+						$("#search-type").on("change", function(event) {
+  if(event.target.value === "catalog") {
+    $("#searchbar").attr("placeholder", "Search The Catalog"); 
+    $("#searchbar").attr("name", "qu");
+    $("#header-search").attr("action", "https://carmel.ent.sirsi.net/client/en_US/ccpl/search/results/");
+  }
+  else {
+    $("#searchbar").attr("placeholder", "Search The Site"); 
+    $("#searchbar").attr("name", "term");
+    $("#header-search").attr("action", "/sitesearch");
+  }
+});
+
+$('a[href=""]').click(ev => ev.preventDefault());
+
+$('.dropdown-submenu > a').bind('touchstart', () => true);
+
+$('li.dropdown-submenu').click(function(e) {
+  if($(window).width() < 768) {
+    console.log(e.target.href);
+	//e.preventDefault();
+    e.stopPropagation();
+  }
+});
+					} catch (e) {
+						if (console) console.log('custom js error', e);
+					}
+				});
+				</script><script>
+			window.addEventListener('WebComponentsReady', function() {
+
+				var components = [
+					'coAddress',
+					'coBirthdate'
+				];
+
+				for(var c=0;c<components.length;c++) {
+					var link = document.createElement('link');
+					link.setAttribute('rel', 'import');
+					link.setAttribute('href', '/js/es6/components/' + components[c] + '/' + components[c] + '.html');
+					document.getElementsByTagName('head')[0].appendChild(link);
+				}
+			});
+		</script><link id="customstyle" href="/css/style/755" rel="stylesheet" type="text/css">
+
+	<!--[if lt IE 9]>
+ 	<script src="/js/lib/html5.js"></script>
+ 	<script src="/js/lib/respond.min.js"></script>
+    <![endif]-->
+	<!--[if lte IE 9]>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.3/jquery.xdomainrequest.min.js'></script>
+    <![endif]-->
+	<!--custom_js_includes-->
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-9846192-1', 'auto');
+ga('send', 'pageview');
+ga('set', 'userId', 'carmel');
+</script>
+<script>
+ga('create', 'UA-16443352-1', 'auto', {'name': 'clientTracker', 'allowLinker': true});
+ga('clientTracker.require', 'linker');
+ga('clientTracker.send', 'pageview');
+</script>
+</head>
+
+<body>
+	<a class="skip-main" href="#body">Skip to main content</a>
+
+	<div id="header">
+		<div class="amh-row row" id="idmPUi4" style="background-color: rgb(255, 255, 255);"><div class="amh-block amh-container col-md-12" data-block-type="container" id="idiFShT" style=""><div class="amh-content" style="border-width: 0px; border-style: solid; background-color: rgb(255, 255, 255); border-color: rgb(16, 41, 89);">
+<div class="amh-row row" id="idCsznP"><div class="amh-block amh-text col-md-12" data-block-type="text" id="idgdfVY" data-tile-url="news-and-announcements" style=""><div class="amh-content" style="margin: 5px; padding: 10px 5px 0px 6px; position: relative; border-width: 3px; border-style: solid; border-color: rgb(15, 42, 89); border-radius: 2px;" id="mce_23" spellcheck="false"><p style="text-align: center;"><span style="color: #0f2a59;">The library will be closed for Easter on Sunday, April 5.</span></p></div></div></div>
+<div class="amh-row row" id="id8B0YW"><div class="amh-block amh-text col-md-12" data-block-type="text" id="idE5y54"><div class="amh-content" style="margin: 0px; padding: 0px; position: relative; border-width: 0px; border-style: solid;" id="mce_0" spellcheck="false"><div class="amh-content mce-content-body" id="mce_0" spellcheck="false">
+<p>
+<script>document.documentElement.scrollTop = 0;</script>
+</p>
+<div id="bibliocommons_user_nav"><a class="btn btn-primary btn-flat" href="https://carmel.bibliocommons.com/dashboard/user_dashboard" id="bibliocommons_user_nav_trigger" aria-expanded="true" style=""> Log In / My CCPL <span class="caret"></span> </a></div>
+</div></div></div></div>
+<div class="amh-row row" id="idyMRlL">
+<div class="amh-block col-md-5 amh-widget" data-block-type="widget" id="idluCuu"><div class="amh-content mce-content-body" style="margin: 5px; padding: 5px; position: relative; border-width: 0px; border-style: solid;" id="mce_0" spellcheck="false"><div class="dynamic-widget" data-frame="false" data-fill-with="8155" data-location="">
+			<a class="widget-skip-link" href="#skip_target_8155">Skip logo widget</a>
+			<div data-widgetid="8155" id="8155"><p><a href="https://carmelclaylibrary.org/" title="Home"><img src="https://carmel.libnet.info/images/editor/carmel/logo1.png" width="304" height="73" alt="Carmel Clay Public Library home" title="Carmel Clay Public Library logo"></a></p></div>
+			<div id="skip_target_8155" class="widget-skip-target" tabindex="-1"></div>
+			</div></div></div>
+<div class="amh-block amh-widget col-md-7" data-block-type="widget" id="idgNrlE" style=""><div class="amh-content mce-content-body" style="margin: 0px; padding: 0px 15px 6px; border-width: 0px; border-style: solid; position: relative;" id="mce_0" spellcheck="false"><div class="dynamic-widget" data-frame="false" data-fill-with="8296" data-location="">
+			<a class="widget-skip-link" href="#skip_target_8296">Skip Search Widget Bibliocore widget</a>
+			<div data-widgetid="8296" id="8296"><form id="header-search" method="get" action="https://carmel.bibliocommons.com/search">
+<input type="hidden" name="t" value="smart">
+<div>
+<span><label for="search">Search The</label> </span><select id="search-type">
+<option value="catalog" selected>Catalog</option>
+<option value="site">Site</option>
+</select>
+</div>
+<div class="input-group">
+<input placeholder="Search the Catalog" class="form-control form-text" type="text" id="searchbar" name="q" size="33" maxlength="100"> <button class="input-group-addon" id="searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+<div><a href="https://carmel.bibliocommons.com/search" target="_blank" rel="noopener">Advanced Search</a></div>
+</form></div>
+			<div id="skip_target_8296" class="widget-skip-target" tabindex="-1"></div>
+			</div></div></div>
+</div>
+<div class="amh-row row" id="id7npve"><div class="amh-block amh-text col-md-12" data-block-type="text" id="ida30FY"><div class="amh-content mce-content-body" id="mce_24" style="margin: 0px; padding: 0px; position: relative; border-width: 0px; border-style: solid; border-color: rgb(16, 41, 89); border-radius: 0px; background-color: rgb(16, 41, 89); box-shadow: rgb(16, 41, 89) 0px 0px 0px 0px;" spellcheck="false"><p><div id='navbar' class='content'><div class="navbar yamm navbar-top"><div class="navbar-header visible-xs nav-mobile"><span tabindex="0" class="burger-button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle" aria-label="Toggle menu" role="button"><i class="fa fa-bars"></i></span><script type='text/javascript'>
+				$(function(){
+					$('.burger-button').on('keyup', function(event) {
+						event.preventDefault();
+						var isSpace = event.type === 'keyup' && (event.which === 32 || event.keyCode === 32 || event.key === ' ');
+                		var isEnter = event.type === 'keyup' && (event.which === 13 || event.keyCode === 13 || event.key === 'Enter');
+
+						if (isSpace || isEnter) {
+							var nav = $('.navbar-collapse');
+							nav.toggleClass('in');
+							var isExpanded = nav.hasClass('in');
+							$(this).attr('aria-expanded', isExpanded);
+
+							nav.css('height', (isExpanded ? '' : '1px'));
+						}
+					})
+				});
+			</script><div class="navbar-brand">Menu</div></div><div id="navbar-collapse-grid" class="navbar-collapse collapse"><ul class="nav navbar-nav"><li class="dropdown"><li><a href="/home-16319">Default Home(hidden)</a></li><li class="menuspace"></li><li><a href="https://carmel.bibliocommons.com">Catalog</a></li><li class="menuspace"></li><li><a href="/events?r=thismonth">Calendar</a></li><li class="menuspace"></li><li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle js-activated noselect">Using the Library <i class="fa fa-sort-desc"></i></a><ul role="menu" class="dropdown-menu"><li><a href="/locations">Locations & Hours</a></li><li><a href="https://carmelclaylibrary.org/get-a-library-card">Get a Library Card</a></li><li><a href="/text-notices">Sign Up for Text Notices</a></li><li><a href="/borrowing">Borrowing</a></li><li><a href="/dml">Digital Media Lab</a></li><li role="menuitem" class="dropdown-submenu"><a href="">Services</a><ul role="menu" class="dropdown-menu"><li><a href="/technology">Technology</a></li><li><a href="/reserve-a-room">Reserve a Room</a></li><li><a href="/homebound-delivery">Homebound Delivery</a></li><li><a href="/accessibility">Accessibility</a></li><li><a href="/test-proctoring">Test Proctoring</a></li><li><a href="/book-a-librarian">Book a Librarian</a></li><li><a href="/local-author-collection">Local Author Collection</a></li><li><a href="/community-resources">Community Resources</a></li><li><a href="/tax-prep">Tax Preparation</a></li><li><a href="/seed-library">Seed Library</a></li></ul></li></ul></li><li class="menuspace"></li><li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle js-activated noselect">Books & Media <i class="fa fa-sort-desc"></i></a><ul role="menu" class="dropdown-menu"><li><a href="/download-and-stream">Download & Stream</a></li><li><a href="/book-discussions">Book Discussions</a></li><li><a href="/books-in-a-bag">Books in a Bag</a></li><li><a href="/homebound-delivery">Homebound Delivery</a></li><li><a href="https://carmel.bibliocommons.com/v2/search?query=new+books&searchType=smart">New Books</a></li><li><a href="https://carmel.bibliocommons.com/v2/search?query=new+movies&searchType=smart">New Movies</a></li><li><a href="/recommendations-for-adults">Recommendations for Adults</a></li><li><a href="/personalized-picks">Personalized Picks</a></li></ul></li><li class="menuspace"></li><li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle js-activated noselect">Kids <i class="fa fa-sort-desc"></i></a><ul role="menu" class="dropdown-menu"><li><a href="/kids">Kids</a></li><li><a href="/kids-recommended">Recommended Books, Movies, and Music</a></li><li><a href="/research-kids">Research for Kids</a></li><li><a href="/programs-for-kids">Programs for Kids</a></li><li><a href="https://carmelclaylibrary.org/early-literacy">Early Literacy and School Readiness</a></li><li><a href="/school-age-resources">School-Age Resources</a></li><li><a href="/homeschool-resources">Homeschool Resources</a></li><li><a href="/parent-resources">Parent Resources</a></li><li><a href="/preschool-and-elementary-teacher-resources">Preschool and Elementary Teacher Resources</a></li><li><a href="/gecko">Library Gecko</a></li></ul></li><li class="menuspace"></li><li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle js-activated noselect">Teens <i class="fa fa-sort-desc"></i></a><ul role="menu" class="dropdown-menu"><li><a href="/teens">Teens</a></li><li><a href="https://carmelclaylibrary.org/100-books-challenges">100 Books Challenges</a></li><li><a href="/homework-help">Homework Help</a></li><li><a href="/student-led-programming">Student-Led Programming</a></li><li><a href="https://carmelclaylibrary.org/teen-artist-in-residence">Teen Artist in Residence</a></li><li><a href="/teen-library-council">Teen Library Council</a></li><li><a href="https://carmelclaylibrary.org/recommendations-for-teens">Teen Recommended Reads</a></li><li role="menuitem" class="dropdown-submenu"><a href="">Teen Voices</a><ul role="menu" class="dropdown-menu"><li><a href="https://youtube.com/playlist?list=PL7oWY4iYGnHZJRbxUNHQdLhXYCyRm1doc">Teen Voices Video Playlist</a></li><li><a href="/teen-zine">Teen Zine</a></li><li><a href="https://static.libnet.info/images/pdfs/carmel/TeenWritingContestWinners2025.pdf">Teen Writing Contest Winners</a></li></ul></li><li><a href="/teen-volunteer-corps">Teen Volunteer Corps</a></li></ul></li><li class="menuspace"></li><li><a href="/research">Research</a></li><li class="menuspace"></li><li class="dropdown"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle js-activated noselect">About <i class="fa fa-sort-desc"></i></a><ul role="menu" class="dropdown-menu"><li><a href="/about">About the Library</a></li><li><a href="/foundation">Support Us</a></li><li><a href="/subscribe">Subscribe to Newsletters</a></li><li><a href="/jobs">Work for CCPL</a></li></ul></li><li class="menuspace"></li><li><a href="/contact-us">Contact Us</a></li><li class="menuspace"></li></div></ul></div></div></p></div></div></div>
+</div></div></div>
+		<div id="htmlheader">
+			<!--html_header-->
+		</div>
+	</div>
+	<div class="content"></div>
+	<div id="accessibility" class="content">
+		<div class="accessibility-topbar">
+			<a class="button" href="#" onclick="openAccessibility()">close</a>
+		</div>
+
+		<div class="fluid-container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="accessibility-icons">
+								<a href="#" onclick="document.body.style.fontSize='100%';return false;"><img border="0" src="/images/accessibility/accessibility-a-small-icon.png" alt="font 1"></a>
+								<a href="#" onclick="document.body.style.fontSize='140%';return false;"><img border="0" src="/images/accessibility/accessibility-a-medium-icon.png" alt="font 2"></a>
+								<a href="#" onclick="document.body.style.fontSize='160%';return false;"><img border="0" src="/images/accessibility/accessibility-a-large-icon.png" alt="font 3"></a>
+								<br>
+								<a href="#" onclick="document.body.style.fontSize='100%';return false;">Reset to
+									standard size</a>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="accessibility-text">
+								<span class="accessibility-heading">Font size options</span>
+								<div>Increase or decrease the font size for this website by clicking on the 'A's.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="accessibility-icons">
+								<a href="#" onclick="setStyleSheet('/accessibility.pcss?style=yellow%20on%20black')"><img border="0" src="/images/accessibility/accessibility-contrast-y-b.png" alt="Yellow on Black"></a>
+								<a href="#" onclick="setStyleSheet('/accessibility.pcss?style=white%20on%20black')"><img border="0" src="/images/accessibility/accessibility-contrast-w-b.png" alt="White on Black"></a>
+								<a href="#" onclick="setStyleSheet('/accessibility.pcss?style=soft%20greys')"><img border="0" src="/images/accessibility/accessibility-contrast-softgreys.png" alt="Soft Greys"></a>
+								<a href="#" onclick="setStyleSheet('/accessibility.pcss?style=black%20on%20linen')"><img border="0" src="/images/accessibility/accessibility-contrast-b-l.png" alt="Black on Linen"></a>
+								<a href="#" onclick="setStyleSheet('/accessibility.pcss?style=black%20on%20white')"><img border="0" src="/images/accessibility/accessibility-contrast-b-w.png" alt="Black on White"></a>
+								<br>
+								<a href="#" onclick="setStyleSheet('')">Reset to default contrast</a>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="accessibility-text">
+								<span class="accessibility-heading">Contrast options</span>
+								<div id="accessibilityText">Choose a color combination to give the most comfortable
+									contrast.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="body" class="content default desktop home-16319">
+		<div data-portal="carmelclaylibraryorg" data-pageid="16319">
+<div class="amh-row row" id="idMfc0y"><div class="amh-block amh-container col-md-12" data-block-type="container" id="idkZEWZ"><div class="amh-content"><div class="amh-row row" id="idQX0EQ"><div class="amh-block amh-widget col-md-12" data-block-type="widget" id="idyROpz"><div class="amh-content" style="margin: 0px; padding: 0px 0px 10px; border-width: 0px; border-style: solid;"><div class="dynamic-widget" data-frame="false" data-fill-with="8392" data-location="">
+			<a class="widget-skip-link" href="#skip_target_pager_261">Skip Home Page Slider widget</a>
+			<div data-widgetid="pager_261" id="pager_261"><div id="slide_588" class="slideshowwidget">
+<ul data-cycle-next=".slideshow-right.pager_261" data-cycle-prev=".slideshow-left.pager_261" data-cycle-timeout="7000" data-paused="false" data-pause-on-hover="false" data-cycle-slides="li" data-fx="fade" data-cycle-log="false" class="slidelist">
+<li><a href="https://carmelclaylibrary.org/friends-bookstore#sales"><img src="/images/slideshow/carmel/Book_Sale_April2026_Slider.png" alt="Book Sale April 3 and 4"></a></li>
+<li><a href="https://www.carmelclaylibrary.org/event/15299376"><img src="/images/slideshow/carmel/Memory_Cafe_2026_Slider.png" alt="Memory Cafe, get details."></a></li>
+<li><a href="https://carmelclaylibrary.org/event/15883979"><img src="/images/slideshow/carmel/Indy_Raqs_Apr2026_Digital_Sign.png" alt=" Indy Raqs Sunday April, 12 Sunday Vibes concert series."></a></li>
+<li><a href="https://carmelclaylibrary.org/download-and-stream"><img src="/images/slideshow/carmel/Easter_Closure_slider_2026.png" alt="The Library is Closed for Easter On Sunday, April 5."></a></li>
+<li><a href="https://carmelclaylibrary.org/event/15984936"><img src="/images/slideshow/carmel/Using_AI_in_Real_Life_Apr2026_Slider.png" alt="Using AI in real life, Tuesday, April 14"></a></li>
+<li><a href="https://carmelclaylibrary.org/event/15916249"><img src="/images/slideshow/carmel/Behind_the_Book_Sarah_Penner_Apr2026_Slider.png" alt="Behind the Book with Sarah Penner Wednesday, April 08"></a></li>
+</ul> <img caption="false" alt="left" title="left" class="slideshow-button slideshow-left pager_261" src="/images/next-left.png"><img caption="false" alt="right" title="right" class="slideshow-button slideshow-right pager_261" src="/images/next-right.png"> </div></div>
+			<div id="skip_target_pager_261" class="widget-skip-target" tabindex="-1"></div>
+			</div></div></div></div></div></div></div>
+<div class="amh-row row" id="idiIVvG"><div class="amh-block amh-container col-md-12" data-block-type="container" id="idy4wQI"><div class="amh-content" style="border-width: 0px 0px 0px 2px; border-style: solid; border-color: rgb(239, 239, 239);"><div class="amh-row row" id="id99raa">
+<div class="amh-block amh-container col-md-8" data-block-type="container" id="idpp4gf" style=""><div class="amh-content">
+<div class="amh-row row" id="idp16hT"><div class="amh-block amh-container col-md-12" data-block-type="container" id="idtVocK"><div class="amh-content" style="border-width: 0px 0px 2px; border-style: solid; border-color: rgb(15, 42, 89);"><div class="amh-row row" id="idCXRzF"><div class="amh-block amh-text col-md-12" data-block-type="text" data-tile-url="west" id="idHkbxo" style=""><div class="amh-content mce-content-body" id="mce_25" style="margin: 5px; padding: 5px; position: relative; border-width: 0px; border-style: solid;" spellcheck="false"><p><img src="https://static.libnet.info/images/slideshow/carmel/West_Branch_Now_Open_Slider.png" alt="The Joyce Winner West Branch is now open." title="" width="800" height="225" style="display: block; margin-left: auto; margin-right: auto;" data-mce-src="https://static.libnet.info/images/slideshow/carmel/West_Branch_Now_Open_Slider.png" data-mce-style="display: block; margin-left: auto; margin-right: auto;"></p></div></div></div></div></div></div>
+<div class="amh-row row" id="idnbtf1"><div class="amh-block amh-widget col-md-12" data-block-type="widget" id="id1X0pL"><div class="amh-content" style="margin: 5px 20px 5px 5px; padding: 5px; border-width: 0px; border-style: solid;"><div class="dynamic-widget" data-frame="false" data-fill-with="8297" data-location="">
+			<a class="widget-skip-link" href="#skip_target_8297">Skip Home Page Featured Booklist widget</a>
+			<div data-widgetid="8297" id="8297"><p style="text-align: center; padding-left: 30px;"><iframe width="725" height="315" src="//carmel.bibliocommons.com/list/list_browse/user/2984779287" frameborder="0" scrolling="no"></iframe></p></div>
+			<div id="skip_target_8297" class="widget-skip-target" tabindex="-1"></div>
+			</div></div></div></div>
+<div class="amh-row row" id="id7vnpp"><div class="amh-block amh-container col-md-12" data-block-type="container" id="idinfVX" style=""><div class="amh-content" style="border-width: 0px; border-style: solid; margin-left: 20px;"><div class="amh-row row" id="idO5N0L">
+<div class="amh-block amh-text col-md-6" data-block-type="text" id="id7gYcM" style="" data-tile-url="locations"><div class="amh-content" style='margin: 0px; padding: 0px 10px 10px; border-width: 0px; border-style: solid; background-image: url("https://carmel.libnet.info/images/tile/carmel/"); position: relative;' id="mce_23" spellcheck="false"><div><span><img src="https://static.libnet.info/images/editor/carmel/Main_Library_Location_button.png" width="350" alt="Main Library, 425 E. Main St, Carmel, IN 46032. Phone number 317-814-3900. Get details about hours and services." style="display: block; margin-left: auto; margin-right: auto;" title="" height="363"></span></div></div></div>
+<div class="amh-block amh-text col-md-6" data-block-type="text" id="idiDCNt" style="" data-tile-url="locations"><div class="amh-content" style='margin: 0px; padding: 0px 10px 10px; border-width: 0px; border-style: solid; background-image: url("https://carmel.libnet.info/images/tile/carmel/"); position: relative;' id="mce_0" spellcheck="false"><div><span><img src="https://static.libnet.info/images/editor/carmel/West_Branch_Location_button.png" width="350" alt="Joyce Winner West Branch. 12770 Horseferry Rd, Carmel Indiana 46032. Phone number 317-814-3965.  Get details about hours and services." style="display: block; margin-left: auto; margin-right: auto;" title="" height="363"></span></div></div></div>
+</div></div></div></div>
+</div></div>
+<div class="amh-block amh-widget col-md-4" data-block-type="widget" id="id6rPCf"><div class="amh-content" style="margin: 5px; padding: 5px; border-width: 0px 0px 0px 2px; border-style: solid; border-color: rgb(15, 42, 89);"><div class="dynamic-widget" data-frame="true" data-fill-with="8264" data-location="">
+<div class="widget" data-widgetid="8264" id="8264">
+				<div class="widgetheader">
+					Upcoming Events
+					
+				</div>
+				<a class="widget-skip-link" href="#skip_target_8264">Skip Upcoming Events widget</a>
+				<div class="widgetbody">
+					<div class="amev-event-list">
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15321658">Tales for Twos and Threes<span class="amev-event-subtitle"> - For kids ages 2–3 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Tue, Mar 31, 9:30am - 10:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15327638">Book Buddies<span class="amev-event-subtitle"> - For kids ages 4–6 on their own</span></a></div>
+<div class="amev-event-time headingtext">Tue, Mar 31, 10:30am - 11:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Exploration Lab</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 4–6) Join us for stories, activities, and crafts based on weekly special themes. For... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 4–6) Join us for stories, activities, and crafts based on weekly special themes. For important info about required tickets and program details, read the full description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15321659">Tales for Twos and Threes<span class="amev-event-subtitle"> - For kids ages 2–3 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Tue, Mar 31, 10:30am - 11:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15321660">Tales for Twos and Threes<span class="amev-event-subtitle"> - For kids ages 2–3 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Tue, Mar 31, 11:30am - 12:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–3) Join us for exhilarating books, stories, and rhymes. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15892310">Maker Rally Kickoff: Draw and Design a Cute Wooden Toy<span class="amev-event-subtitle"> - The first step in the Hamilton County Libraries Maker Rally</span></a></div>
+<div class="amev-event-time headingtext">Tue, Mar 31, 5:30pm - 7:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Digital Media Lab</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series,... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series, by making a cute toy design in Procreate along with a Digital Media Lab specialist. </div>
+<div class="regclosed">Registration is now closed</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15527299">Hamilton County Libraries Maker Rally<span class="amev-event-subtitle"> - February 2–April 25</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 01, All day</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Design, cut, and paint your way across Hamilton County in this hands-on, self-paced activity.... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Design, cut, and paint your way across Hamilton County in this hands-on, self-paced activity. Collect stamps from each participating library's creation space while making your own simple wooden toy.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15328658">Little Ones<span class="amev-event-subtitle"> - For kids ages 12–24 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 01, 9:30am - 9:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15328659">Little Ones<span class="amev-event-subtitle"> - For kids ages 12–24 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 01, 10:30am - 10:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15328660">Little Ones<span class="amev-event-subtitle"> - For kids ages 12–24 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 01, 11:30am - 11:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 12–24 mo.) Join us for an active storytime and lively songs. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/13514926">Critical Mass<span class="amev-event-subtitle"> - Book discussion group for adults</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 01, 6:30pm - 7:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Meeting Room A</i>
+</div>
+<div class="amev-event-description">Evening book group that reads literary novels, classics, award winners, and thought-provoking reads.</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15332138">Library Babies<span class="amev-event-subtitle"> - For kids ages 0–12 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 9:30am - 9:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15332139">Library Babies<span class="amev-event-subtitle"> - For kids ages 0–12 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 10:30am - 10:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15332140">Library Babies<span class="amev-event-subtitle"> - For kids ages 0–12 months and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 11:30am - 11:50am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 0–12 mo.) Join us for rhymes, songs, and stories for babies. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14783740">Early Shopping Night at the Book Sale<span class="amev-event-subtitle"> - For Friends members, donors, and Carmel school employees</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 4:00pm - 7:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">Presented by the CCPL Foundation Friends. </div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14912503">Overbooked<span class="amev-event-subtitle"> - Student-led book club for teens in grades 9–12</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 4:15pm - 5:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Teens Program Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">This student-led book club for grades 9–12 meets every other Thursday. Discuss books, color... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">This student-led book club for grades 9–12 meets every other Thursday. Discuss books, color and craft, eat snacks, and meet new friends.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15503929">Maker Rally Kick-Off: Draw and Design a Cute Wooden Toy<span class="amev-event-subtitle"> - The first step in the Hamilton County Libraries Maker Rally</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 02, 5:30pm - 7:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Digital Media Lab</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series,... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series, by making a cute toy design in Procreate along with a Digital Media Lab specialist.</div>
+<div class="regclosed">This event is full</div>
+<button data-eventid="15503929" data-regtype="2" data-locationid="2108" data-total_registrants="8" data-max_attendee="8" class="button eventRegButton registerForEvent eventWaitButton" aria-label="Join the wait list for Maker Rally Kick-Off: Draw and Design a Cute Wooden Toy - The first step in the Hamilton County Libraries Maker Rally, Thu, Apr 02, 5:30pm - 7:00pm">Join the wait list</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15183727">Book Sale<span class="amev-event-subtitle"> - Shop for gently used books and more</span></a></div>
+<div class="amev-event-time headingtext">Fri, Apr 03, 9:00am - 5:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Discover great bargains on used books (and more) during these special sale dates. Presented by... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Discover great bargains on used books (and more) during these special sale dates. Presented by the CCPL Foundation Friends.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15183728">Book Sale<span class="amev-event-subtitle"> - Shop for gently used books and more</span></a></div>
+<div class="amev-event-time headingtext">Sat, Apr 04, 9:00am - 1:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Discover great bargains on used books (and more) during these special sale dates. Presented by... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Discover great bargains on used books (and more) during these special sale dates. Presented by the CCPL Foundation Friends.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15316396">Family Storytime<span class="amev-event-subtitle"> - For kids ages 2–5 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Sat, Apr 04, 10:30am - 11:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–5) Join us for exhilarating books, stories, and rhymes. For important info about... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–5) Join us for exhilarating books, stories, and rhymes. For important info about required tickets and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15321031">Paws to Read<span class="amev-event-subtitle"> - For kids ages 6–12</span></a></div>
+<div class="amev-event-time headingtext">Sat, Apr 04, 2:30pm - 3:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A,Discovery Room B,Kids Study Room 1A,Kids Study Room 1B</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 6–12) Like dogs? Come read for 15 minutes to a Paws &amp; Think therapy dog! For important... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 6–12) Like dogs? Come read for 15 minutes to a Paws &amp; Think therapy dog! For important info about required registration and program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14608908">Genealogy Drop-In</a></div>
+<div class="amev-event-time headingtext">Mon, Apr 06, 1:00pm - 3:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Meeting Room C</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">A weekly drop-in session for genealogy enthusiasts or those who would like to get started with... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">A weekly drop-in session for genealogy enthusiasts or those who would like to get started with this popular hobby.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15874981">Big Kid Rave<span class="amev-event-subtitle"> - For kids ages 7–11 on their own</span></a></div>
+<div class="amev-event-time headingtext">Mon, Apr 06, 1:00pm - 2:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room B</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 7–11) Come hit the dance floor for a rave dance party just for the big kids! Read the... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 7–11) Come hit the dance floor for a rave dance party just for the big kids! Read the full event description for details. No tickets are required; no younger or older siblings may attend.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15892311">Maker Rally Kickoff: Draw and Design a Cute Wooden Toy<span class="amev-event-subtitle"> - The first step in the Hamilton County Libraries Maker Rally</span></a></div>
+<div class="amev-event-time headingtext">Mon, Apr 06, 2:00pm - 3:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Digital Media Lab</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series,... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series, by making a cute toy design in Procreate along with a Digital Media Lab specialist. </div>
+<div class="regclosed">This event is full</div>
+<button data-eventid="15892311" data-regtype="2" data-locationid="2108" data-total_registrants="8" data-max_attendee="8" class="button eventRegButton registerForEvent eventWaitButton" aria-label="Join the wait list for Maker Rally Kickoff: Draw and Design a Cute Wooden Toy - The first step in the Hamilton County Libraries Maker Rally, Mon, Apr 06, 2:00pm - 3:30pm">Join the wait list</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14503993">Death Café</a></div>
+<div class="amev-event-time headingtext">Mon, Apr 06, 6:30pm - 7:45pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Board Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Gather together to discuss various topics related to death in an environment without an agenda... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Gather together to discuss various topics related to death in an environment without an agenda or criticism.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15657364">Storytime Adventures<span class="amev-event-subtitle"> - For kids ages 2–5 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Mon, Apr 06, 6:30pm - 7:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Discovery Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–5) Join us for stories, rhymes, and songs. No tickets are required. Please enjoy all... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–5) Join us for stories, rhymes, and songs. No tickets are required. Please enjoy all snacks before and after the program.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15818301">Indy Opera Sing Me A Story Series: Camilla Paints the Town<span class="amev-event-subtitle"> - For families with kids ages 4+</span></a></div>
+<div class="amev-event-time headingtext">Tue, Apr 07, 10:30am - 11:15am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 4+) Join us for a story about a chameleon who brings a little color to the lives of... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 4+) Join us for a story about a chameleon who brings a little color to the lives of everyone she meets. Then meet artists from the Indianapolis Opera. No registration or tickets are required.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15299376">Memory Café</a></div>
+<div class="amev-event-time headingtext">Tue, Apr 07, 10:30am - 12:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Meeting Room C</i>
+</div>
+<div class="amev-event-description">A social gathering for people living with memory loss and their care partners.</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/13495029">Page Turners<span class="amev-event-subtitle"> - Book discussion group for adults</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 9:30am - 10:30am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Meeting Room A</i>
+</div>
+<div class="amev-event-description">Page Turners is the library's Wednesday morning book group.</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15585932">Pokemon Trading Hour<span class="amev-event-subtitle"> - For kids ages 6–11 on their own</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 10:00am - 11:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room A</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 6–11) Drop in, meet other Pokemon fans, and trade cards! For important info about active... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 6–11) Drop in, meet other Pokemon fans, and trade cards! For important info about active card trading and other program details, read the full event description or call 317.814.3992.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14631874">Read-In at CCPL with Word on the Shelf<span class="amev-event-subtitle"> - In-person volunteer opportunity for teens </span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 1:30pm - 3:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Teens Program Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Exactly what it sounds like – time to read! This volunteer opportunity is open to all... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Exactly what it sounds like – time to read! This volunteer opportunity is open to all interested teens in grades 6-12. </div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15916249">Behind the Book with Sarah Penner</a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 2:00pm - 3:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Bestselling author Sarah Penner shares her new book "The Amalfi Curse." Registration is required... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Bestselling author Sarah Penner shares her new book "The Amalfi Curse." Registration is required for this free author event.</div>
+<button data-eventid="15916249" data-regtype="1" data-recurringid="3618704" data-testmode="0" data-locationid="2108" data-total_registrants="56" data-max_attendee="300" class="button eventRegButton registerForEvent" aria-label="Register for Behind the Book with Sarah Penner, Wed, Apr 08, 2:00pm - 3:00pm">Register</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15380655">Sip 'n' Stitch</a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 6:00pm - 7:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Meeting Room A</i>
+</div>
+<div class="amev-event-description">A casual craft group for adults.</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15801818">An Evening with Andrew McCarthy</a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 6:00pm - 7:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Author and actor Andrew McCarthy shares his new book "Who Needs Friends." Tickets are $35 per... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Author and actor Andrew McCarthy shares his new book "Who Needs Friends." Tickets are $35 per person and include a pre-signed copy of the book. Presented by the CCPL Foundation and Morgenstern Books.</div>
+<a href="https://crm.bloomerang.co/HostedDonation?ApiKey=pub_aa51487b-0b54-11e7-bb7f-024e165d44b3&amp;WidgetId=51966976" target="_blank" class="button eventRegButton" aria-label="Register for An Evening with Andrew McCarthy, Wed, Apr 08, 6:00pm - 7:30pm">Register</a>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15088496">Tabletop Gaming: Middle School D&amp;D Club<span class="amev-event-subtitle"> - Dungeons &amp; Dragons Club for students in grades 6–8</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 6:00pm - 7:30pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">All skill levels and experience are welcome at this D&amp;D Club designed for and run by middle... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">All skill levels and experience are welcome at this D&amp;D Club designed for and run by middle school students. Registration is recommended.</div>
+<button data-eventid="15088496" data-regtype="1" data-recurringid="3431169" data-testmode="0" data-locationid="2108" data-total_registrants="8" data-max_attendee="30" class="button eventRegButton registerForEvent" aria-label="Register for Tabletop Gaming: Middle School D&amp;D Club - Dungeons &amp; Dragons Club for students in grades 6–8, Wed, Apr 08, 6:00pm - 7:30pm">Register</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/14955965">Read Between the Wines<span class="amev-event-subtitle"> - A book discussion group for adults</span></a></div>
+<div class="amev-event-time headingtext">Wed, Apr 08, 7:00pm - 9:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Upland Clay Terrace</div>
+<div class="amev-event-description">Social group that focuses on casual discussion in a restaurant setting. Registration is required.<button data-eventid="14955965" data-regtype="1" data-recurringid="3524918" data-testmode="0" data-locationid="2258" data-total_registrants="17" data-max_attendee="19" class="button eventRegButton registerForEvent" aria-label="Register for Read Between the Wines - A book discussion group for adults, Wed, Apr 08, 7:00pm - 9:00pm">Register</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15902960">Drop-In Legos and Blocks<span class="amev-event-subtitle"> - For families with kids of all ages</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 09, 10:00am - 11:30am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Big kids, littles, families! Drop into the Discovery Room to build with Legos and blocks! Please... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Big kids, littles, families! Drop into the Discovery Room to build with Legos and blocks! Please enjoy all snacks before and after the program. Caregivers are required to attend with kids under age 6.</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/15892312">Maker Rally Kickoff: Draw and Design a Cute Wooden Toy<span class="amev-event-subtitle"> - The first step in the Hamilton County Libraries Maker Rally</span></a></div>
+<div class="amev-event-time headingtext">Thu, Apr 09, 4:30pm - 6:00pm</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Digital Media Lab</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series,... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">Take a first step in the Hamilton County Libraries Maker Rally, a county-wide toy-making series, by making a cute toy design in Procreate along with a Digital Media Lab specialist. </div>
+<div class="regclosed">This event is full</div>
+<button data-eventid="15892312" data-regtype="2" data-locationid="2108" data-total_registrants="8" data-max_attendee="8" class="button eventRegButton registerForEvent eventWaitButton" aria-label="Join the wait list for Maker Rally Kickoff: Draw and Design a Cute Wooden Toy - The first step in the Hamilton County Libraries Maker Rally, Thu, Apr 09, 4:30pm - 6:00pm">Join the wait list</button>
+</div>
+</div>
+<hr>
+</div>
+<div class="amev-event">
+<div class="amev-event-data ">
+<div class="amev-event-title"><a href="https://carmelclaylibrary.org/event/16070002">Cardboard Car Drive-In<span class="amev-event-subtitle"> - For kids ages 2–5 and their caregivers</span></a></div>
+<div class="amev-event-time headingtext">Fri, Apr 10, 10:00am - 11:00am</div>
+<div class="amev-event-location headingtext">
+<i class="am-locations"></i>Main Library - <i>Community Room B</i>
+</div>
+<div class="amev-event-description">
+<div class="amev-event-description-truncated">(Ages 2–5) Turn a cardboard box into a car! Then park it at our indoor drive-in and watch... <span class="link amev-show-full">more</span>
+</div>
+<div class="amev-event-description-full">(Ages 2–5) Turn a cardboard box into a car! Then park it at our indoor drive-in and watch some Bluey episodes! Read the full event description for info about required registration and program details.</div>
+<button data-eventid="16070002" data-regtype="1" data-recurringid="3658594" data-testmode="0" data-locationid="2108" data-total_registrants="0" data-max_attendee="50" disabled class="button eventRegButton registerForEvent" aria-label="Register for Cardboard Car Drive-In - For kids ages 2–5 and their caregivers, Fri, Apr 10, 10:00am - 11:00am">Register</button><div class="events-reg-open-message">Registration opens Friday, April 3 2026 at 9:00am</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="amev-all-events-link eeeventall"><a href="https://carmelclaylibrary.org/events">See all events</a></div>
+				</div>
+				<div id="skip_target_8264" class="widget-skip-target" tabindex="-1"></div>
+			</div>
+</div></div></div>
+</div></div></div></div>
+</div>
+	</div>
+
+
+	<div id="footer">
+		<!--social_media-->
+		<div id="footer"><div class="amh-row row" id="idruk84" style="background-color: rgb(15, 42, 89);"><div class="amh-block amh-container col-md-12" data-block-type="container" id="id7jFvy" style=""><div class="amh-content" style="border-width: 0px; border-style: solid;"><div class="amh-row row" id="id0zUAb">
+<div class="amh-block amh-text col-md-10" data-block-type="text" id="idI6zwB"><div class="amh-content mce-content-body" id="mce_23" style="margin: 0px; padding: 10px; position: relative; border-width: 0px; border-style: solid;" spellcheck="false"><div><span style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;">Copyright 2026, Carmel Clay Public Library</span></div></div></div>
+<div class="amh-block amh-text col-md-2" data-block-type="text" id="idPjYjL"><div class="amh-content mce-content-body" style="margin: 5px; padding: 5px; position: relative;" id="mce_23" spellcheck="false"><div><span><a href="https://www.facebook.com/pages/Carmel-Clay-Public-Library/67353468874" target="_blank" rel="noopener" data-mce-href="https://www.facebook.com/pages/Carmel-Clay-Public-Library/67353468874"><img src="https://carmel.libnet.info/images/editor/carmel/facebook-32.png" width="24" height="24" alt="Go to Facebook" data-mce-src="https://carmel.libnet.info/images/editor/carmel/facebook-32.png">﻿</a>   <a href="https://www.youtube.com/user/CarmelClayLibrary" target="_blank" rel="noopener" data-mce-href="https://www.youtube.com/user/CarmelClayLibrary" data-mce-selected="inline-boundary"><img src="https://carmelclaylibrary.org/images/editor/carmel/youtube-6-24.png" alt="Go to YouTube" width="24" height="24" data-mce-src="https://carmelclaylibrary.org/images/editor/carmel/youtube-6-24.png"></a>   <a href="https://www.instagram.com/carmel_library/" target="_blank" rel="noopener" title="Instagram" data-mce-href="https://www.instagram.com/carmel_library/"><img src="https://carmel.libnet.info/images/editor/carmel/instagram-32.png" width="24" height="24" alt="Go to Instagram" data-mce-src="https://carmel.libnet.info/images/editor/carmel/instagram-32.png"></a> </span></div></div></div>
+</div></div></div></div></div>
+	</div>
+	<div id="default_footer">
+		<a class="sideload" href="/privacy">Privacy and cookie policy</a> | <a href="#" onclick="openAccessibility()">Accessibility</a> | <a href="http://communico.co">Communico</a><br><br>
+				<span style="font-size:80%">Connected content from Communico. © 2026.</span>
+	</div>
+	<script type="text/javascript" src="/js/lib/jquery.shapeshift.min.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/bootstrap-multiselect/0.9.13/bootstrap-multiselect.min.js" integrity="sha512-p/rWSzeAUmYFvtMy6D5VfINfnHEWSz1h87a7fyGMaQQGmniI54CGQyecfvy5MTtGzZ80CyL/JG39SfVJjqiUJw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/am-shared.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/twitter-bootstrap/3.4.1/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/lib/bootstrap-timepicker.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js" integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/lib/bootstrap-datepicker.min.js?v=1412"></script>
+<script type="text/javascript" src="/js/lib/jquery.cycle2.min.js?v=1412"></script>
+<script type="text/javascript" src="/js/jquery.tweet.min.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/jQuery.dotdotdot/1.7.2/jquery.dotdotdot.min.js" integrity="sha512-En43ubdM+iORz+sRSvgoT8rNOSRoFhSZqpSYE/peTL+18AhGWH4iL80jUfgLLE6NguB8IYZpJ/W72LpNRdYAaw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/rome/2.1.14/rome.min.js" integrity="sha512-YK82PgTowJa7qObvSJ87e49YSPhZXMWv1tkn+Np8pXgg32Q3vZKTco/yORo17F+rZtbC3krSX+ZMEqtQ1PDrbQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/jquery.zrssfeed.min.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/qtip2/3.0.3/jquery.qtip.min.js" integrity="sha512-BxJRFdTKV85fhFUw+olPr0B+UEzk8FTLxRB7dAdhoQ7SXmwMECj1I4BlSmZfeoSfy0OVA8xFLTDyObu3Nv1FoQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/lib/jquery.cookie.min.js?v=1412"></script>
+<script type="text/javascript" src="/js/lib/json3.min.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-events-listings.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha512-MAhdSIQcK5z9i33WN0KzveJUhM2852CJ1lJp4o60cXhQT20Y3friVRdeZ5TEWz4Pi+nvaQqnIqWJJw4HVTKg1Q==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha512-vBu5d4hztWcpvKmp+qUS8afvWUMjTd59Z7ci0j6YnKu83yy6Xh/VxtgZqIteIFaK3gMYDm0AnOp3pEF4z6afMw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/am-reserve-booker.v3.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-reserve-room.v3.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/jquery.sticky/1.0.4/jquery.sticky.min.js" integrity="sha512-QABeEm/oYtKZVyaO8mQQjePTPplrV8qoT7PrwHDJCBLqZl5UmuPi3APEcWwtTNOiH24psax69XPQtEo5dAkGcA==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/am-room-info.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-room-picker.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/bootstrap-datetimepicker/4.17.37/bootstrap-datetimepicker.min.js" integrity="sha512-Y+0b10RbVUTf3Mi0EgJue0FoheNzentTMMIE2OreNbqnUPNbQj8zmjK3fs5D2WhQeGWIem2G2UkKjAL/bJ/UXQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/moment-timezone/0.6.0/moment-timezone-with-data.min.js" integrity="sha512-+FcC+reETRqrbKDor++Otoek++yhj4Q1pu/VjNTYHywub+2uoKV+0o0C+yLDun7b+MzAQ0qz9G5ShZUUJpxN1Q==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/am-reserve-picker.v3.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-subscriptions.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-subscriptions.js?v=1412"></script>
+<script type="text/javascript" src="/js/am-channel.js?v=1412"></script>
+<script type="text/javascript" src="/js/card-signup.js?v=1412"></script>
+<script type="text/javascript" src="/js/custom.js?v=1412"></script>
+<script type="text/javascript" src="/js/es6/dist/coUtilsComp.js?v=1412"></script>
+<script type="text/javascript" src="/js/es6/dist/coEventBillingComp.js?v=1412"></script>
+<script type="text/javascript" src="/js/es6/coRooms/coRooms-comp.js?v=1412"></script>
+<script type="text/javascript" src="//cdn.libnet.info/js/noUiSlider/14.0.2/nouislider.min.js" integrity="sha512-cxew3BIHteKU8gsydtZpj/BZPPmgKMF04NT6oPB/9BDIq8VKHzX9Q58l574b7xnklw81ZQ33gD1YumK8ea34hw==" crossorigin="anonymous"></script>
+
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.3.3/custom-elements-es5-adapter.js"></script>
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.3.3/webcomponents-lite.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var accessibilityText = '';
+			switch (document.querySelector('meta[name=region]').content) {
+				case 'us':
+					accessibilityText = 'Choose a color combination to give the most comfortable contrast.';
+					break;
+				default:
+					accessibilityText = 'Choose a colour combination to give the most comfortable contrast.';
+					break;
+			}
+			document.getElementById('accessibilityText').innerText = accessibilityText;
+		});
+	</script>
+</body>
+
+</html>

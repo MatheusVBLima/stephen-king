@@ -1,8 +1,8 @@
 import CharactersContent from '@/components/CharactersContent';
 
 export const metadata = {
-  title: "Stephen King's Characters | Complete Guide",
-  description: "Explore iconic characters from Stephen King's fiction, including heroes, villains, and supernatural beings from his novels and short stories.",
+  title: "Personagens | Stephen King",
+  description: "Explore personagens importantes do universo ficcional de Stephen King.",
 }
 
 export default function CharactersPage() {

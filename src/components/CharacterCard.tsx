@@ -38,7 +38,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
             <CardTitle className="mb-2 text-xl text-center text-white">{character.name}</CardTitle>
             
             <Badge variant={character.isVillain ? "destructive" : "default"} className="mb-2">
-              {character.isVillain ? 'Villain' : 'Hero'}
+              {character.isVillain ? 'Vilão' : 'Herói'}
             </Badge>
             
             <p className="text-sm text-center text-white/80">
@@ -52,7 +52,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
         <CardFooter className="flex flex-col items-start gap-2 pt-4 pb-4">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">First appearance:</span>
+            <span className="text-sm text-muted-foreground">Primeira aparição:</span>
           </div>
           <Badge variant="outline" className="font-normal">
             {character.firstAppearance}

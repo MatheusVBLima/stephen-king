@@ -8,6 +8,114 @@ export interface Work {
     location: string;
 }
 
+export interface ContentImage {
+    src: string;
+    alt: string;
+}
+
+export interface ImportedSection {
+    id: string;
+    title: string;
+    paragraphs: string[];
+}
+
+export interface ImportedPageSource {
+    sourceId: number;
+    sourceType: 'page';
+    sourceSlug: string;
+    title: string;
+    url: string;
+    date: string | null;
+    summary: string;
+    categories: string[];
+    originalTitle: string | null;
+    translatedTitle: string | null;
+    technicalFacts: Record<string, string>;
+    sections: ImportedSection[];
+    paragraphs: string[];
+    images: ContentImage[];
+    searchText: string;
+}
+
+export interface ImportedPostSource {
+    sourceId: number;
+    sourceType: 'post';
+    sourceSlug: string;
+    title: string;
+    url: string;
+    date: string | null;
+    summary: string;
+    categories: string[];
+    tags: string[];
+    sections: ImportedSection[];
+    paragraphs: string[];
+    images: ContentImage[];
+    searchText: string;
+}
+
+export interface ImportedGeneratedContent {
+    generatedAt: string;
+    stats: {
+        pages: number;
+        posts: number;
+        copiedAssets: number;
+    };
+    pages: ImportedPageSource[];
+    posts: ImportedPostSource[];
+}
+
+export interface ImportedWorkContent {
+    sourceId: number;
+    sourceSlug: string;
+    sourceUrl: string;
+    title: string;
+    summary: string;
+    originalTitle: string | null;
+    translatedTitle: string | null;
+    technicalFacts: Record<string, string>;
+    sections: ImportedSection[];
+    images: ContentImage[];
+    searchText: string;
+}
+
+export interface ImportedArticle {
+    slug: string;
+    kind: 'especial';
+    title: string;
+    summary: string;
+    date: string | null;
+    url: string;
+    categories: string[];
+    tags: string[];
+    sections: ImportedSection[];
+    images: ContentImage[];
+    searchText: string;
+}
+
+export interface ImportedWorkMappingStatus {
+    sourceSlug: string;
+    sourceTitle: string;
+    matchedWorkSlug: string | null;
+    matchedWorkTitle: string | null;
+    status: 'matched' | 'unmatched';
+}
+
+export interface WorkDetailViewModel extends Work {
+    slug: string;
+    canonicalHref: string;
+    legacyHref: string | null;
+    summary: string;
+    hasImportedContent: boolean;
+    importedContent: ImportedWorkContent | null;
+    importedSections: ImportedSection[];
+    technicalFacts: Record<string, string>;
+    mainCharacters: string[];
+    connections: Connection[];
+    adaptations: Adaptation[];
+    ratings: Rating[];
+    images: ContentImage[];
+}
+
 export interface BookDetail extends Work {
     synopsis: string;
     mainCharacters: string[];
@@ -55,15 +163,15 @@ export interface Character {
 
 export interface BookAppearance {
     bookTitle: string;
-    role: 'Protagonist' | 'Antagonist' | 'Supporting' | 'Mentioned';
-    significance: 'Major' | 'Minor';
+    role: 'Protagonist' | 'Antagonist' | 'Supporting' | 'Mentioned' | 'Protagonista' | 'Antagonista' | 'Coadjuvante' | 'Mencionado';
+    significance: 'Major' | 'Minor' | 'Principal' | 'Secundário';
     notes?: string;
 }
 
 export interface Relationship {
     characterName: string;
     characterId: string;
-    relationshipType: 'Friend' | 'Enemy' | 'Family' | 'Colleague' | 'Love Interest' | 'Other';
+    relationshipType: 'Friend' | 'Enemy' | 'Family' | 'Colleague' | 'Love Interest' | 'Other' | 'Inimigo' | 'Colega' | 'Aliado' | 'Interesse amoroso';
     description: string;
 }
 

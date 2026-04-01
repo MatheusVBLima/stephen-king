@@ -63,11 +63,11 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
                     {selectedLocation.name}
                   </CardTitle>
                   <Badge variant={selectedLocation.importance === 'major' ? 'destructive' : 'default'}>
-                    {selectedLocation.importance === 'major' ? 'Major' : 'Minor'} Location
+                    {selectedLocation.importance === 'major' ? 'Local principal' : 'Local secundário'}
                   </Badge>
                 </div>
                 <CardDescription>
-                  First Appearance: {selectedLocation.firstAppearance}
+                  Primeira aparição: {selectedLocation.firstAppearance}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -75,7 +75,7 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
                   <div className="relative w-full h-48 rounded-md overflow-hidden mb-3">
                     <Image 
                       src={selectedLocation.imageUrl} 
-                      alt={`Image of ${selectedLocation.name}`}
+                      alt={`Imagem de ${selectedLocation.name}`}
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover"
@@ -87,7 +87,7 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
                 <p className="text-sm">{selectedLocation.description}</p>
                 {selectedLocation.books.length > 0 && (
                   <div>
-                    <p className="text-sm font-medium mb-1">Featured in:</p>
+                    <p className="text-sm font-medium mb-1">Destaque em:</p>
                     <div className="flex flex-wrap gap-1">
                       {selectedLocation.books.map((book, index) => (
                         <Badge key={index} variant="outline">
@@ -104,7 +104,7 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
                     className="flex items-center gap-1"
                     onClick={() => setSelectedLocation(null)}
                   >
-                    Close
+                    Fechar
                   </Button>
                 </div>
               </CardContent>
