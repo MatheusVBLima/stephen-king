@@ -1,4 +1,4 @@
-import { slugify } from "@/lib/books-data"
+import { getCanonicalWorkHref as getPolicyWorkHref } from "@/lib/skbr-editorial-policy"
 
 const NON_SPECIFIC_LOCATIONS = new Set(["", "none", "various", "multiple"])
 
@@ -15,7 +15,7 @@ const DISPLAY_LOCATION_NAMES: Record<string, string> = {
 }
 
 export function getCanonicalWorkHref(title: string) {
-  return `/works/${slugify(title)}`
+  return getPolicyWorkHref(title)
 }
 
 export function hasSpecificLocation(location: string) {

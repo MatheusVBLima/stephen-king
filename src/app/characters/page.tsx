@@ -1,10 +1,12 @@
-import CharactersContent from '@/components/CharactersContent';
+import CharactersContent from "@/components/CharactersContent";
+import { getImportedCharacters } from "@/lib/imported-content";
 
 export const metadata = {
-  title: "Personagens | Stephen King",
-  description: "Explore personagens importantes do universo ficcional de Stephen King.",
-}
+  title: "Personagens | Arquivo Stephen King",
+  description:
+    "Personagens recorrentes e figuras centrais das fichas do arquivo brasileiro.",
+};
 
 export default function CharactersPage() {
-  return <CharactersContent />;
-} 
+  return <CharactersContent characters={getImportedCharacters()} />;
+}

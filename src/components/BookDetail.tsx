@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { EditorialProse } from "@/components/EditorialProse";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -30,8 +32,8 @@ export function BookDetail({ book }: BookDetailProps) {
   const quickFacts = [
     { label: "Ano", value: String(book.year) },
     { label: "Formato", value: formatBookFormatForDisplay(book.format || "") || "N/A" },
-    { label: "Seções importadas", value: String(book.importedSections.length) },
-    { label: "Imagens locais", value: String(book.images.length) },
+    { label: "Seções no arquivo", value: String(book.importedSections.length) },
+    { label: "Imagens", value: String(book.images.length) },
   ];
 
   const locationFact = hasSpecificLocation(book.location)
@@ -52,84 +54,72 @@ export function BookDetail({ book }: BookDetailProps) {
     ...(book.adaptations.length > 0 || groupedSections.adaptations.length > 0
       ? [{ value: "adaptations", label: "Adaptações" }]
       : []),
-    { value: "ratings", label: "Avaliações" },
   ];
 
   const resolvedActiveTab =
     activeTab && tabOptions.some((tab) => tab.value === activeTab) ? activeTab : (tabOptions[0]?.value ?? "");
 
   return (
-    <div className="flex flex-col gap-10 md:gap-12">
-      <section className="grid gap-8 xl:grid-cols-[minmax(0,1.2fr)_360px] xl:items-start">
-        <div className="flex flex-col gap-6">
-          <div className="rounded-[2rem] border border-border/60 bg-card/45 px-5 py-6 shadow-sm backdrop-blur-sm sm:px-8 sm:py-8 lg:px-10 lg:py-10">
-            <div className="flex flex-col gap-6 lg:gap-8">
-              <div className="flex flex-wrap items-center gap-2.5">
-                <Badge variant="secondary" className="text-sm">
-                  {book.year}
-                </Badge>
-                <Badge variant="outline" className="text-sm">
-                  {formatBookFormatForDisplay(book.format)}
-                </Badge>
-                {book.hasImportedContent && <Badge>Conteúdo importado</Badge>}
-              </div>
-
-              <div className="flex flex-col gap-4 lg:gap-5">
-                <h1 className="max-w-4xl text-balance text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
-                  {book.title}
-                </h1>
-                <p className="max-w-3xl text-base leading-8 text-muted-foreground">{book.notes}</p>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                {[...quickFacts.slice(0, 2), ...(locationFact ? [locationFact] : []), ...quickFacts.slice(2)].map(
-                  (fact) => (
-                    <div
-                      key={fact.label}
-                      className="rounded-2xl border border-border/50 bg-background/35 px-4 py-3"
-                    >
-                      <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                        {fact.label}
-                      </p>
-                      <p className="mt-2 text-sm font-medium text-foreground">{fact.value}</p>
-                    </div>
-                  ),
-                )}
-              </div>
-            </div>
+    <div className="flex flex-col gap-8">
+      <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_20rem] xl:items-start">
+        <div className="flex min-w-0 flex-col gap-4">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="secondary">{book.year}</Badge>
+            <Badge variant="outline">{formatBookFormatForDisplay(book.format)}</Badge>
+            {book.hasImportedContent ? <Badge>Arquivo brasileiro</Badge> : null}
           </div>
 
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
-            <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
+          <h1 className="max-w-3xl text-pretty font-display text-4xl font-bold tracking-tight sm:text-5xl">
+            {book.displayTitle || book.title}
+          </h1>
+          {book.originalTitle && book.originalTitle !== book.title ? (
+            <p className="text-sm text-muted-foreground" translate="no">
+              Título original: {book.originalTitle}
+            </p>
+          ) : null}
+
+          <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-2 xl:grid-cols-3">
+            {[...quickFacts.slice(0, 2), ...(locationFact ? [locationFact] : []), ...quickFacts.slice(2)].map(
+              (fact) => (
+                <div key={fact.label} className="min-w-0">
+                  <dt className="text-xs text-muted-foreground">{fact.label}</dt>
+                  <dd className="text-sm font-medium tabular-nums">{fact.value}</dd>
+                </div>
+              ),
+            )}
+          </dl>
+
+          {book.summary && groupedSections.about.length === 0 ? (
+            <Card>
+            <CardHeader>
               <CardTitle>Resumo</CardTitle>
-              <CardDescription className="max-w-2xl leading-7">
-                {book.hasImportedContent
-                  ? "Síntese principal da obra a partir do conteúdo importado e da base local."
-                  : "Conteúdo vindo apenas da base local do projeto."}
+              <CardDescription>
+                Texto editorial do arquivo brasileiro.
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col gap-5 px-5 pb-6 sm:px-8 sm:pb-8">
-              <p className="leading-8 text-muted-foreground">{book.summary}</p>
+            <CardContent>
+              <EditorialProse paragraphs={[book.summary]} />
             </CardContent>
           </Card>
+          ) : null}
 
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
-            <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
+          <Card>
+            <CardHeader>
               <CardTitle>Ficha técnica</CardTitle>
-              <CardDescription className="max-w-2xl leading-7">
-                Dados estruturados extraídos do material importado quando disponíveis.
+              <CardDescription>
+                Dados do arquivo brasileiro, quando a ficha técnica estiver disponível.
               </CardDescription>
             </CardHeader>
-            <CardContent className="px-5 pb-6 sm:px-8 sm:pb-8">
+            <CardContent>
               {Object.keys(book.technicalFacts).length > 0 ? (
-                <div className="grid gap-4 sm:grid-cols-2">
+                <dl className="grid gap-4 sm:grid-cols-2">
                   {Object.entries(book.technicalFacts).map(([label, value]) => (
-                    <div key={label} className="rounded-2xl border border-border/50 bg-background/35 p-4">
-                      <p className="text-sm font-medium text-foreground">{label}</p>
-                      <p className="mt-2 text-sm leading-7 text-muted-foreground">{value}</p>
+                    <div key={label} className="min-w-0">
+                      <dt className="text-sm font-medium">{label}</dt>
+                      <dd className="mt-1 text-sm leading-6 text-muted-foreground">{value}</dd>
                     </div>
                   ))}
-                </div>
+                </dl>
               ) : (
                 <p className="text-sm leading-7 text-muted-foreground">
                   Ainda não há ficha técnica importada para esta obra.
@@ -138,27 +128,42 @@ export function BookDetail({ book }: BookDetailProps) {
             </CardContent>
           </Card>
 
+          {book.sourceUrl ? (
+            <p className="px-1 text-sm leading-7 text-muted-foreground">
+              Fonte:{" "}
+              <a href={book.sourceUrl} className="underline underline-offset-4 hover:text-foreground" rel="noreferrer" translate="no">
+                stephenking.com.br
+              </a>
+            </p>
+          ) : null}
+
           {groupedSections.about.length > 0 && (
             <SectionAccordionCard
               title="Sobre a obra"
-              description="Seções narrativas estruturadas a partir do material importado."
+              description="Texto editorial do arquivo brasileiro."
               sections={groupedSections.about}
               emptyMessage="Esta obra ainda não recebeu seções narrativas importadas."
             />
           )}
         </div>
 
-        <Card className="overflow-hidden rounded-[2rem] border-border/60 bg-card/55 xl:sticky xl:top-28">
+        <Card className="overflow-hidden xl:sticky xl:top-24">
           {book.images[0] ? (
-            <div className="relative aspect-[4/5] w-full bg-muted/20">
-              <Image
-                src={book.images[0].src}
-                alt={book.images[0].alt || book.title}
-                fill
-                sizes="(max-width: 1279px) 100vw, 360px"
-                className="object-contain p-6"
-              />
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="h-auto w-full">
+                <CardItem translateZ={40} className="w-full">
+                  <div className="relative aspect-[4/5] w-full bg-muted/20">
+                    <Image
+                      src={book.images[0].src}
+                      alt={book.images[0].alt || book.title}
+                      fill
+                      sizes="(max-width: 1279px) 100vw, 360px"
+                      className="object-contain p-6"
+                    />
+                  </div>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           ) : (
             <div className="flex aspect-[4/5] items-center justify-center bg-muted/20 px-6 text-sm text-muted-foreground">
               Sem imagem importada
@@ -181,6 +186,7 @@ export function BookDetail({ book }: BookDetailProps) {
         </Card>
       </section>
 
+      {tabOptions.length > 0 ? (
       <Tabs value={resolvedActiveTab} onValueChange={setActiveTab} className="w-full">
         <div className="relative">
           <TabsList className="hidden h-auto w-full flex-wrap justify-start gap-1 rounded-2xl border border-border/60 bg-card/50 p-1 md:flex">
@@ -217,11 +223,11 @@ export function BookDetail({ book }: BookDetailProps) {
         </TabsContent>
 
         <TabsContent value="characters" className="mt-6">
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+          <Card>
             <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
               <CardTitle>Personagens principais</CardTitle>
               <CardDescription className="leading-7">
-                Lista consolidada da base local e da importação.
+                Personagens citados na ficha do arquivo brasileiro.
               </CardDescription>
             </CardHeader>
             <CardContent className="px-5 pb-6 sm:px-8 sm:pb-8">
@@ -248,11 +254,11 @@ export function BookDetail({ book }: BookDetailProps) {
         </TabsContent>
 
         <TabsContent value="connections" className="mt-6">
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+          <Card>
             <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
               <CardTitle>Conexões com outras obras</CardTitle>
               <CardDescription className="max-w-2xl leading-7">
-                Como esta obra se conecta ao universo expandido de Stephen King.
+                Ligações com outras obras, segundo o arquivo brasileiro.
               </CardDescription>
             </CardHeader>
             <CardContent className="px-5 pb-6 sm:px-8 sm:pb-8">
@@ -282,11 +288,11 @@ export function BookDetail({ book }: BookDetailProps) {
         </TabsContent>
 
         <TabsContent value="editions" className="mt-6">
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+          <Card>
             <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
               <CardTitle>Edições e galeria</CardTitle>
               <CardDescription className="leading-7">
-                Texto importado sobre edições brasileiras e imagens locais associadas à obra.
+                Capas e notas sobre edições publicadas no Brasil.
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col gap-8 px-5 pb-6 sm:px-8 sm:pb-8">
@@ -319,11 +325,11 @@ export function BookDetail({ book }: BookDetailProps) {
         </TabsContent>
 
         <TabsContent value="adaptations" className="mt-6">
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+          <Card>
             <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
               <CardTitle>Adaptações</CardTitle>
               <CardDescription className="leading-7">
-                Filmes, séries e outras adaptações conhecidas.
+                Filmes, séries e outras adaptações descritas no arquivo brasileiro.
               </CardDescription>
             </CardHeader>
             <CardContent className="px-5 pb-6 sm:px-8 sm:pb-8">
@@ -370,46 +376,8 @@ export function BookDetail({ book }: BookDetailProps) {
             </CardContent>
           </Card>
         </TabsContent>
-
-        <TabsContent value="ratings" className="mt-6">
-          <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
-            <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
-              <CardTitle>Avaliações</CardTitle>
-              <CardDescription className="leading-7">Notas públicas e referências externas.</CardDescription>
-            </CardHeader>
-            <CardContent className="px-5 pb-6 sm:px-8 sm:pb-8">
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {book.ratings.map((rating, index) => (
-                  <Card key={index} className="overflow-hidden rounded-2xl border-border/60 bg-background/40">
-                    <CardHeader className="bg-muted/40 py-4">
-                      <CardTitle className="text-base">{rating.source}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-5 text-center">
-                      <div className="mb-1 text-3xl font-bold">{rating.score}</div>
-                      {rating.outOf && <p className="text-xs text-muted-foreground">de {rating.outOf}</p>}
-                      {rating.link && (
-                        <a
-                          href={rating.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-3 inline-block text-xs font-medium text-primary hover:underline"
-                        >
-                          Ver no site
-                        </a>
-                      )}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              {book.ratings.length === 0 && (
-                <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                  Ainda não há avaliações cadastradas para esta obra.
-                </p>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
       </Tabs>
+      ) : null}
     </div>
   );
 }
@@ -430,7 +398,7 @@ function SectionAccordionCard({
   const normalizedCardTitle = normalizeSectionHeading(title);
 
   return (
-    <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+    <Card>
       <CardHeader className="space-y-3 px-5 pt-6 sm:px-8 sm:pt-8">
         <CardTitle>{title}</CardTitle>
         <CardDescription className="max-w-2xl leading-7">{description}</CardDescription>
@@ -463,11 +431,7 @@ function SectionAccordion({
               <h3 className="text-lg font-semibold text-foreground">{getSectionDisplayTitle(section.title)}</h3>
               )}
             <div className="flex flex-col gap-4">
-              {section.paragraphs.map((paragraph, index) => (
-                <p key={`${section.id}-${index}`} className="leading-8 text-muted-foreground">
-                  {paragraph}
-                </p>
-              ))}
+              <EditorialProse paragraphs={section.paragraphs} />
             </div>
           </div>
           {sectionIndex < sections.length - 1 && <Separator />}

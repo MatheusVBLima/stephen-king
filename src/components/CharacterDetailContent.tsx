@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { getCharacterBySlug } from '@/lib/characters-data';
 import { CharacterProfile } from '@/components/CharacterProfile';
+import { PageShell } from '@/components/PageShell';
 import { useParams } from 'next/navigation';
 import { notFound } from 'next/navigation';
 import { Character } from '@/lib/types';
@@ -64,15 +65,10 @@ export default function CharacterDetailContent({ params }: CharacterDetailConten
 
   if (loading) {
     return (
-      <main className="min-h-screen p-4 md:p-8">
-        <div className="mx-auto max-w-7xl">
-          <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
-          
-          <div className="flex items-center justify-center min-h-[60vh]">
-            <div className="w-8 h-8 border-4 rounded-full border-primary border-t-transparent animate-spin"></div>
-          </div>
-        </div>
-      </main>
+      <PageShell>
+        <Breadcrumb segments={breadcrumbSegments} />
+        <p className="text-sm text-muted-foreground">Carregando…</p>
+      </PageShell>
     );
   }
 
@@ -80,16 +76,12 @@ export default function CharacterDetailContent({ params }: CharacterDetailConten
     return notFound();
   }
 
-  // Update breadcrumb with character name once loaded
   breadcrumbSegments[1].name = character.name;
 
   return (
-    <main className="min-h-screen p-4 md:p-8">
-      <div className="mx-auto max-w-7xl">
-        <Breadcrumb segments={breadcrumbSegments} className="mb-6" />
-        
-        <CharacterProfile character={character} />
-      </div>
-    </main>
+    <PageShell>
+      <Breadcrumb segments={breadcrumbSegments} />
+      <CharacterProfile character={character} />
+    </PageShell>
   );
 } 

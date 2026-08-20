@@ -16,7 +16,7 @@ interface BreadcrumbProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Breadcrumb = ({
   segments,
-  separator = <ChevronRight className="w-4 h-4 mx-1 text-muted-foreground" />,
+  separator = <ChevronRight aria-hidden="true" className="w-4 h-4 mx-1 text-muted-foreground" />,
   homeHref = "/",
   showHome = true,
   className,
@@ -35,7 +35,7 @@ const Breadcrumb = ({
               href={homeHref}
               className="flex items-center transition-colors hover:text-foreground"
             >
-              <Home className="w-4 h-4" />
+              <Home aria-hidden="true" className="w-4 h-4" />
               <span className="sr-only">Home</span>
             </Link>
             <span aria-hidden="true" className="inline-block ml-1">

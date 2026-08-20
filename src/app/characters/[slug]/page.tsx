@@ -1,6 +1,14 @@
-import { getCharacterBySlug } from '@/lib/characters-data';
-import { Metadata } from 'next';
-import CharacterDetailContent from '@/components/CharacterDetailContent';
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+import { CharacterProfile } from "@/components/CharacterProfile";
+import { PageShell } from "@/components/PageShell";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { getImportedCharacterBySlug, getImportedCharacters } from "@/lib/imported-content";
+
+export function generateStaticParams() {
+  return getImportedCharacters().map((character) => ({ slug: character.slug }));
+}
 
 interface CharacterDetailPageProps {
   params: Promise<{
@@ -10,21 +18,38 @@ interface CharacterDetailPageProps {
 
 export async function generateMetadata({ params }: CharacterDetailPageProps): Promise<Metadata> {
   const resolvedParams = await params;
-  const character = getCharacterBySlug(resolvedParams.slug);
-  
+  const character = getImportedCharacterBySlug(resolvedParams.slug);
+
   if (!character) {
     return {
-      title: "Character Not Found | Stephen King's Universe",
-      description: "This character could not be found in Stephen King's Universe."
+      title: "Personagem não encontrado | Arquivo Stephen King",
+      description: "Este personagem não foi encontrado no arquivo.",
     };
   }
-  
+
   return {
-    title: `${character.name} | Stephen King Character Profile`,
-    description: `Learn about ${character.name}, ${character.isVillain ? 'a villain' : 'a hero'} from Stephen King's fiction. ${character.description?.substring(0, 150)}...`,
+    title: `${character.name} | Personagens`,
+    description: character.description.slice(0, 160),
   };
 }
 
-export default function CharacterDetailPage({ params }: CharacterDetailPageProps) {
-  return <CharacterDetailContent params={params} />;
-} 
+export default async function CharacterDetailPage({ params }: CharacterDetailPageProps) {
+  const resolvedParams = await params;
+  const character = getImportedCharacterBySlug(resolvedParams.slug);
+
+  if (!character) {
+    notFound();
+  }
+
+  const breadcrumbSegments = [
+    { name: "Personagens", href: "/characters" },
+    { name: character.name, href: `/characters/${character.slug}`, isCurrent: true },
+  ];
+
+  return (
+    <PageShell>
+      <Breadcrumb segments={breadcrumbSegments} />
+      <CharacterProfile character={character} />
+    </PageShell>
+  );
+}

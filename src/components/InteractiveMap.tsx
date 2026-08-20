@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Map, Marker, ZoomControl } from 'pigeon-maps';
 import { FictionalLocation } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -59,7 +60,7 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center">
-                    <MapPin className="h-5 w-5 mr-2 text-primary" />
+                    <MapPin aria-hidden="true" className="h-5 w-5 mr-2 text-primary" />
                     {selectedLocation.name}
                   </CardTitle>
                   <Badge variant={selectedLocation.importance === 'major' ? 'destructive' : 'default'}>
@@ -97,7 +98,12 @@ export function InteractiveMap({ locations, fullscreen = false }: InteractiveMap
                     </div>
                   </div>
                 )}
-                <div className="pt-2 flex justify-end">
+                <div className="pt-2 flex justify-end gap-2">
+                  {selectedLocation.href ? (
+                    <Button asChild size="sm">
+                      <Link href={selectedLocation.href}>Ler mais</Link>
+                    </Button>
+                  ) : null}
                   <Button 
                     variant="outline" 
                     size="sm" 

@@ -647,6 +647,27 @@ export const fictionWorks: Work[] = [
         format: "Novel",
         notes: "Featuring Holly Gibney, a character from the Bill Hodges trilogy and The Outsider.",
         location: "none"
+    },
+    {
+        year: 2025,
+        title: "Never Flinch",
+        format: "Novel",
+        notes: "Holly Gibney investiga uma ameaça pública e um assassino em série.",
+        location: "none"
+    },
+    {
+        year: 2025,
+        title: "Hansel and Gretel",
+        format: "Novel",
+        notes: "Releitura de João e Maria publicada no Brasil em 2025.",
+        location: "none"
+    },
+    {
+        year: 2026,
+        title: "Other Worlds Than These",
+        format: "Novel",
+        notes: "Último volume da trilogia de O Talismã, anunciado para 2026.",
+        location: "none"
     }
 ];
 

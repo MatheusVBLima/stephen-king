@@ -18,8 +18,6 @@ import {
 import { ArrowUpDown, Search, X } from 'lucide-react';
 
 import { formatBookFormatForDisplay } from '@/lib/book-display-pt';
-import { getCanonicalWorkHref } from '@/lib/work-utils';
-import { BookDetail } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -51,8 +49,16 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
+interface LocationWorkItem {
+  format: string;
+  href: string;
+  notes: string;
+  title: string;
+  year: number;
+}
+
 interface ResponsiveWorksDisplayProps {
-  works: BookDetail[];
+  works: LocationWorkItem[];
   location: string;
 }
 
@@ -101,7 +107,7 @@ export function ResponsiveWorksDisplay({ works, location }: ResponsiveWorksDispl
           title: book.title,
           format: formatBookFormatForDisplay(book.format),
           notes: book.notes,
-          href: getCanonicalWorkHref(book.title),
+          href: book.href,
         })),
     [works],
   );
@@ -211,7 +217,7 @@ export function ResponsiveWorksDisplay({ works, location }: ResponsiveWorksDispl
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">
-      <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
+      <Card>
         <CardContent className="flex flex-col gap-6 px-5 py-6 sm:px-8 sm:py-8">
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_220px_auto] lg:items-end">
             <div className="flex flex-col gap-3">

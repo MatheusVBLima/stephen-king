@@ -78,18 +78,49 @@ export interface ImportedWorkContent {
     searchText: string;
 }
 
-export interface ImportedArticle {
-    slug: string;
-    kind: 'especial';
-    title: string;
-    summary: string;
-    date: string | null;
-    url: string;
-    categories: string[];
-    tags: string[];
-    sections: ImportedSection[];
-    images: ContentImage[];
-    searchText: string;
+export type AdaptationCatalogKind = "cinema" | "serie" | "minisserie" | "hq" | "outro"
+
+export interface AdaptationCatalogItem {
+    slug: string
+    title: string
+    year: number | null
+    kind: AdaptationCatalogKind
+    summary: string
+    href: string
+    sourceUrl: string
+    images: ContentImage[]
+    sections: ImportedSection[]
+    hasImportedDetail: boolean
+    relatedWorkHref: string | null
+}
+
+export interface AuthorPersona {
+    id: "king" | "bachman"
+    title: string
+    sourceUrl: string
+    beats: ImportedSection[]
+    images: ContentImage[]
+}
+
+export interface AuthorViewModel {
+    title: string
+    summary: string
+    sourceUrl: string
+    date: string | null
+    beats: ImportedSection[]
+    images: ContentImage[]
+    personas: AuthorPersona[]
+}
+
+export interface CityEditorial {
+    locationId: string
+    title: string
+    summary: string
+    sourceUrl: string
+    sections: ImportedSection[]
+    images: ContentImage[]
+    relatedBooks: string[]
+    relatedWorks: Array<{ title: string; href: string }>
 }
 
 export interface ImportedWorkMappingStatus {
@@ -114,6 +145,9 @@ export interface WorkDetailViewModel extends Work {
     adaptations: Adaptation[];
     ratings: Rating[];
     images: ContentImage[];
+    displayTitle: string;
+    originalTitle: string | null;
+    sourceUrl: string | null;
 }
 
 export interface BookDetail extends Work {
@@ -158,7 +192,8 @@ export interface Character {
     traits: string[];
     quotes: Quote[];
     isVillain: boolean;
-    firstAppearance: string;  // Título do livro da primeira aparição
+    firstAppearance: string;
+    sourceUrl?: string;
 }
 
 export interface BookAppearance {
@@ -166,6 +201,7 @@ export interface BookAppearance {
     role: 'Protagonist' | 'Antagonist' | 'Supporting' | 'Mentioned' | 'Protagonista' | 'Antagonista' | 'Coadjuvante' | 'Mencionado';
     significance: 'Major' | 'Minor' | 'Principal' | 'Secundário';
     notes?: string;
+    href?: string;
 }
 
 export interface Relationship {
@@ -192,4 +228,5 @@ export interface FictionalLocation {
     importance: 'major' | 'minor';
     imageUrl?: string;
     firstAppearance: string;
+    href?: string;
 } 

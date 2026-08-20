@@ -1,8 +1,8 @@
 import { ResponsiveWorksDisplay } from './responsive-works-display';
-import { getBooksByLocation } from '@/lib/books-data';
+import { getCatalogWorksForLocation } from '@/lib/imported-content';
 
 export default function DerryWorks() {
-  const works = getBooksByLocation('derry');
+  const works = getCatalogWorksForLocation('derry');
   
   return (
     <div className="py-8">

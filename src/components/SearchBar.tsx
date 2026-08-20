@@ -33,17 +33,18 @@ import {
 
 interface SearchBarProps {
   initialValue?: string;
+  variant?: "field" | "icon";
 }
 
 interface GlobalSearchResult {
   badge: string;
   description: string;
   href: string;
-  kind: "especial" | "obra";
+  kind: string;
   title: string;
 }
 
-export function SearchBar({ initialValue = "" }: SearchBarProps) {
+export function SearchBar({ initialValue = "", variant = "field" }: SearchBarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [query, setQuery] = useQueryState(
@@ -62,7 +63,7 @@ export function SearchBar({ initialValue = "" }: SearchBarProps) {
   const abortRef = useRef<AbortController | null>(null);
 
   const resolvedInitialValue = pathname === "/search" ? query : initialValue;
-  const triggerLabel = resolvedInitialValue.trim() || "Buscar obras, especiais e personagens...";
+  const triggerLabel = resolvedInitialValue.trim() || "Buscar no arquivo brasileiro…";
   const isSearchPage = pathname === "/search";
   const hasTypedQuery = deferredSearchTerm.length > 0;
 
@@ -125,7 +126,8 @@ export function SearchBar({ initialValue = "" }: SearchBarProps) {
     () => [
       { href: "/search", label: "Abrir página de pesquisa", shortcut: "Enter" },
       { href: "/works", label: "Explorar obras", shortcut: "Obras" },
-      { href: "/artigos", label: "Explorar especiais", shortcut: "Especiais" },
+      { href: "/adaptacoes", label: "Explorar adaptações", shortcut: "Adaptações" },
+      { href: "/characters", label: "Explorar personagens", shortcut: "Personagens" },
     ],
     [],
   );
@@ -167,33 +169,46 @@ export function SearchBar({ initialValue = "" }: SearchBarProps) {
 
   return (
     <>
-      <Button
-        type="button"
-        variant="outline"
-        className="h-12 w-full justify-between gap-3 rounded-full border-border/60 bg-background/80 px-4 text-sm font-normal shadow-sm transition-colors hover:bg-background/90"
-        onClick={() => handleOpenChange(true)}
-      >
-        <span className="truncate text-left text-muted-foreground">{triggerLabel}</span>
-        <span className="flex items-center gap-3 text-muted-foreground">
-          <kbd className="hidden rounded-md border border-border/60 bg-background/80 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground/80 md:inline-flex">
-            Ctrl K
-          </kbd>
-          <Search data-icon="inline-end" />
-        </span>
-      </Button>
+      {variant === "icon" ? (
+        <Button
+          type="button"
+          variant="outline"
+          size="icon"
+          aria-label="Abrir pesquisa"
+          onClick={() => handleOpenChange(true)}
+        >
+          <Search aria-hidden="true" />
+        </Button>
+      ) : (
+        <Button
+          type="button"
+          variant="outline"
+          className="h-9 w-full min-w-0 justify-between gap-3 px-3 text-sm font-normal"
+          aria-label="Abrir pesquisa"
+          onClick={() => handleOpenChange(true)}
+        >
+          <span className="truncate text-left text-muted-foreground">{triggerLabel}</span>
+          <span className="flex shrink-0 items-center gap-2 text-muted-foreground">
+            <kbd className="hidden rounded-md border border-border px-1.5 py-0.5 text-[11px] text-muted-foreground xl:inline-flex">
+              Ctrl&nbsp;K
+            </kbd>
+            <Search data-icon="inline-end" />
+          </span>
+        </Button>
+      )}
 
       <Dialog open={open} onOpenChange={handleOpenChange}>
         <DialogContent className="overflow-hidden border-border/60 bg-background p-0 shadow-2xl sm:max-w-2xl">
           <DialogHeader className="sr-only">
             <DialogTitle>Pesquisa global</DialogTitle>
             <DialogDescription>
-              Busque obras, especiais e personagens sem sair da página atual.
+              Busque obras, autor, cidades, adaptações e personagens.
             </DialogDescription>
           </DialogHeader>
           <Command shouldFilter={false} className="bg-transparent">
             <CommandInput
               autoFocus
-              placeholder="Digite para pesquisar em todo o arquivo..."
+              placeholder="Digite para pesquisar em todo o arquivo…"
               value={searchTerm}
               onValueChange={(value) => {
                 setSearchTerm(value);
@@ -214,7 +229,7 @@ export function SearchBar({ initialValue = "" }: SearchBarProps) {
                   <CommandGroup heading="Resultados">
                     {results.map((result) => (
                       <CommandItem
-                        key={`${result.kind}-${result.href}`}
+                        key={`${result.kind}-${result.href}-${result.title}`}
                         value={`${result.title} ${result.description}`}
                         onSelect={() => handleNavigate(result.href)}
                         className="flex items-start gap-3 rounded-xl px-3 py-3"
@@ -239,7 +254,7 @@ export function SearchBar({ initialValue = "" }: SearchBarProps) {
 
                   {isLoading ? (
                     <div className="px-4 py-8 text-center text-sm text-muted-foreground">
-                      Buscando resultados...
+                      Buscando…
                     </div>
                   ) : null}
 

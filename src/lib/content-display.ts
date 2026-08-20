@@ -112,6 +112,10 @@ function isMeaningfulText(value: string) {
   if (cleaned.length < 80) return false
   if (countWords(cleaned) < 12) return false
   if (isMetadataHeavy(cleaned)) return false
+  const normalized = normalizeText(cleaned)
+  if (normalized.startsWith("gostou deste conteudo")) return false
+  if (normalized.includes("access token")) return false
+  if (normalized.startsWith("professor de lingua portuguesa")) return false
   return true
 }
 

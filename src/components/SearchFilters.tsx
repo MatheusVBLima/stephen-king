@@ -4,16 +4,14 @@ import { useQueryStates } from "nuqs";
 
 import { searchPageParsers } from "@/lib/search-page-params";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
-
-interface SearchFiltersProps {
-  availableCategories: string[];
-}
 
 const typeOptions = [
   { value: "todos", label: "Tudo" },
   { value: "obra", label: "Obras" },
-  { value: "especial", label: "Especiais" },
+  { value: "adaptacao", label: "Adaptações" },
+  { value: "autor", label: "Autor" },
+  { value: "cidade", label: "Cidades" },
+  { value: "personagem", label: "Personagens" },
 ] as const;
 
 const orderOptions = [
@@ -21,7 +19,7 @@ const orderOptions = [
   { value: "alfabetica", label: "A-Z" },
 ] as const;
 
-export function SearchFilters({ availableCategories }: SearchFiltersProps) {
+export function SearchFilters() {
   const [params, setParams] = useQueryStates(searchPageParsers, {
     history: "push",
     shallow: false,
@@ -45,24 +43,6 @@ export function SearchFilters({ availableCategories }: SearchFiltersProps) {
             </button>
           ))}
         </div>
-      </div>
-
-      <div className="flex flex-col gap-3">
-        <span className="text-sm font-medium">Categoria</span>
-        <ScrollArea className="w-full whitespace-nowrap">
-          <div className="flex gap-2 pb-1">
-            <button type="button" onClick={() => setParams({ categoria: null })}>
-              <Badge variant={params.categoria === "todas" ? "secondary" : "outline"}>Todas</Badge>
-            </button>
-            {availableCategories.map((value) => (
-              <button key={value} type="button" onClick={() => setParams({ categoria: value })}>
-                <Badge variant={params.categoria === value ? "secondary" : "outline"}>
-                  {value}
-                </Badge>
-              </button>
-            ))}
-          </div>
-        </ScrollArea>
       </div>
 
       <div className="flex flex-col gap-3">

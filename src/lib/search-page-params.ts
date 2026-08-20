@@ -2,8 +2,7 @@ import { createSearchParamsCache, parseAsString, parseAsStringLiteral } from "nu
 
 export const searchPageParsers = {
   q: parseAsString.withDefault(""),
-  tipo: parseAsStringLiteral(["todos", "obra", "especial"] as const).withDefault("todos"),
-  categoria: parseAsString.withDefault("todas"),
+  tipo: parseAsStringLiteral(["todos", "obra", "adaptacao", "autor", "cidade", "personagem"] as const).withDefault("todos"),
   ordem: parseAsStringLiteral(["recentes", "alfabetica"] as const).withDefault("recentes"),
 };
 

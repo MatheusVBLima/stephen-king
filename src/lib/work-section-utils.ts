@@ -27,7 +27,12 @@ export function groupImportedSections(sections: ImportedSection[]) {
       continue
     }
 
-    grouped[group].push(section)
+    const paragraphs = section.paragraphs.filter((paragraph) => !isLeakedSectionHeading(paragraph))
+    if (paragraphs.length === 0) {
+      continue
+    }
+
+    grouped[group].push({ ...section, paragraphs })
   }
 
   return grouped
@@ -49,6 +54,25 @@ export function getSectionDisplayTitle(title: string) {
   if (squashed.startsWith("adapta")) return "Adaptações"
 
   return title
+}
+
+function isLeakedSectionHeading(paragraph: string) {
+  const normalized = normalizeSectionKey(paragraph)
+  if (!normalized || normalized.split(" ").length > 6) return false
+  const squashed = normalized.replace(/\s+/g, "")
+
+  return (
+    squashed === "sobrelivro" ||
+    squashed === "sobreolivro" ||
+    squashed.startsWith("curiosidades") ||
+    squashed === "conexoes" ||
+    squashed === "fichatecnica" ||
+    squashed === "capas" ||
+    (squashed.startsWith("edi") && squashed.includes("brasileiras")) ||
+    squashed.startsWith("adapta") ||
+    squashed === "sinopse" ||
+    squashed === "resenha"
+  )
 }
 
 function classifySection(title: string): WorkSectionGroup {

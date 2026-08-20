@@ -1,14 +1,15 @@
 "use client";
 
-import { Character } from '@/lib/types';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { BookOpen, Quote, Users, Bookmark, Skull, UserCheck } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Particles } from '@/components/magicui/particles';
+import Link from "next/link";
+import { BookOpen, Bookmark, Skull, UserCheck, Users } from "lucide-react";
+
+import { Particles } from "@/components/magicui/particles";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { Character } from "@/lib/types";
 
 interface CharacterProfileProps {
   character: Character;
@@ -27,13 +28,12 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
     <div className="space-y-8">
       <Card className="border-0 shadow-none">
         <div className="relative h-64 overflow-hidden rounded-t-lg">
-          {/* Background particles */}
           <div className="absolute inset-0 bg-black">
             <Particles
               className="absolute inset-0 z-0"
               quantity={100}
               staticity={20}
-              color={character.isVillain ? '#ef4444' : '#3b82f6'}
+              color={character.isVillain ? "#ef4444" : "#3b82f6"}
               size={0.8}
             />
           </div>
@@ -55,7 +55,7 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                 )}
               </div>
             </div>
-            <h1 className="mb-2 text-3xl font-bold text-white">{character.name}</h1>
+            <h1 className="mb-2 font-display text-4xl font-bold text-white">{character.name}</h1>
             <Badge variant={character.isVillain ? "destructive" : "default"}>
               {character.isVillain ? 'Vilão' : 'Herói'}
             </Badge>
@@ -99,34 +99,47 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Citações</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Fonte</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-semibold">{character.quotes.length}</p>
+                <p className="text-lg font-semibold">{character.sourceUrl ? "Arquivo brasileiro" : "Catálogo local"}</p>
               </CardContent>
             </Card>
           </div>
         </CardContent>
       </Card>
       
-      <Tabs defaultValue="traits" className="space-y-4">
-        <TabsList className="grid w-full h-auto grid-cols-1 sm:grid-cols-4">
-          <TabsTrigger value="traits" className="py-3">
-            <Bookmark className="w-4 h-4 mr-2" />
-            Traços
-          </TabsTrigger>
-          <TabsTrigger value="books" className="py-3">
-            <BookOpen className="w-4 h-4 mr-2" />
-            Obras
-          </TabsTrigger>
-          <TabsTrigger value="relationships" className="py-3">
-            <Users className="w-4 h-4 mr-2" />
-            Relações
-          </TabsTrigger>
-          <TabsTrigger value="quotes" className="py-3">
-            <Quote className="w-4 h-4 mr-2" />
-            Citações
-          </TabsTrigger>
+      {character.sourceUrl ? (
+        <p className="text-sm text-muted-foreground">
+          Texto do{" "}
+          <a href={character.sourceUrl} target="_blank" rel="noreferrer" className="underline-offset-4 hover:underline">
+            arquivo brasileiro
+          </a>
+          .
+        </p>
+      ) : null}
+
+      {character.traits.length || character.books.length || character.relationships.length ? (
+      <Tabs defaultValue={character.traits.length ? "traits" : character.books.length ? "books" : "relationships"} className="space-y-4">
+        <TabsList className="flex h-auto w-full flex-wrap justify-start gap-1">
+          {character.traits.length > 0 ? (
+            <TabsTrigger value="traits" className="py-3">
+              <Bookmark className="w-4 h-4 mr-2" />
+              Traços
+            </TabsTrigger>
+          ) : null}
+          {character.books.length > 0 ? (
+            <TabsTrigger value="books" className="py-3">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Obras
+            </TabsTrigger>
+          ) : null}
+          {character.relationships.length > 0 ? (
+            <TabsTrigger value="relationships" className="py-3">
+              <Users className="w-4 h-4 mr-2" />
+              Relações
+            </TabsTrigger>
+          ) : null}
         </TabsList>
         
         <TabsContent value="traits" className="p-6 border rounded-lg">
@@ -143,11 +156,20 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
         <TabsContent value="books" className="p-6 border rounded-lg">
           <h3 className="mb-4 text-xl font-semibold">Aparições em obras</h3>
           <div className="space-y-4">
-            {character.books.map((book, index) => (
+            {character.books.map((book, index) => {
+              const title = book.href ? (
+                <Link href={book.href} className="underline-offset-4 hover:underline">
+                  {book.bookTitle}
+                </Link>
+              ) : (
+                book.bookTitle
+              );
+
+              return (
               <Card key={index} className="overflow-hidden">
                 <CardHeader className="pb-2">
                   <div className="flex items-center justify-between">
-                    <CardTitle>{book.bookTitle}</CardTitle>
+                    <CardTitle>{title}</CardTitle>
                     <Badge variant={book.significance === 'Major' || book.significance === 'Principal' ? 'default' : 'outline'}>
                       {book.significance}
                     </Badge>
@@ -160,7 +182,8 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
                   </CardContent>
                 )}
               </Card>
-            ))}
+              );
+            })}
           </div>
         </TabsContent>
         
@@ -193,31 +216,8 @@ export function CharacterProfile({ character }: CharacterProfileProps) {
             ))}
           </div>
         </TabsContent>
-        
-        <TabsContent value="quotes" className="p-6 border rounded-lg">
-          <h3 className="mb-4 text-xl font-semibold">Citações memoráveis</h3>
-          <div className="space-y-4">
-            {character.quotes.map((quote, index) => (
-              <Card key={index}>
-                <CardHeader className="pb-2">
-                  <div className="flex items-center">
-                    <Quote className="w-5 h-5 mr-2 text-muted-foreground" />
-                    <CardTitle className="text-lg italic">{`"${quote.text}"`}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <Badge variant="outline">{quote.book}</Badge>
-                    {quote.context && (
-                      <p className="text-sm text-muted-foreground">{quote.context}</p>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </TabsContent>
       </Tabs>
+      ) : null}
     </div>
   );
 } 

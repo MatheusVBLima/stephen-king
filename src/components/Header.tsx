@@ -2,8 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Suspense } from "react";
-import { BookOpen, Clock, Compass, FileText, Map, Menu, Search, Users } from "lucide-react";
+import { Suspense, type ComponentType, type SVGProps } from "react";
+import {
+  BookOpen,
+  Clapperboard,
+  Clock,
+  Map,
+  Menu,
+  Search,
+  UserRound,
+  Users,
+} from "lucide-react";
 
 import { SearchBar } from "@/components/SearchBar";
 import { Button } from "@/components/ui/button";
@@ -13,195 +22,146 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+
+const xlLinks = [
+  { href: "/works", label: "Obras", match: "/works" },
+  { href: "/adaptacoes", label: "Adaptações", match: "/adaptacoes" },
+  { href: "/autor", label: "O autor", match: "/autor" },
+  { href: "/map", label: "Cidades", match: "/map" },
+  { href: "/characters", label: "Personagens", match: "/characters" },
+  { href: "/timeline", label: "Linha do tempo", match: "/timeline" },
+] as const;
+
+const lgLinks = xlLinks.slice(0, 3);
+
+const lgMoreLinks = [
+  { href: "/map", label: "Cidades", icon: Map },
+  { href: "/characters", label: "Personagens", icon: Users },
+  { href: "/timeline", label: "Linha do tempo", icon: Clock },
+] as const;
+
+const mobileLinks = [
+  { href: "/works", label: "Obras", icon: BookOpen },
+  { href: "/adaptacoes", label: "Adaptações", icon: Clapperboard },
+  { href: "/autor", label: "O autor", icon: UserRound },
+  { href: "/map", label: "Cidades", icon: Map },
+  { href: "/characters", label: "Personagens", icon: Users },
+  { href: "/timeline", label: "Linha do tempo", icon: Clock },
+  { href: "/search", label: "Pesquisa", icon: Search },
+] as const;
+
+function isActivePath(pathname: string, match: string) {
+  return pathname === match || pathname.startsWith(`${match}/`);
+}
 
 export function Header() {
   const pathname = usePathname();
+  const lgMoreActive = lgMoreLinks.some((link) => isActivePath(pathname, link.href));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 py-3 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 md:px-0">
-        <div className="flex w-full items-center justify-between gap-6">
-          <Link href="/" className="truncate text-xl font-bold">
-            Arquivo Stephen King
-          </Link>
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
+        <Link
+          href="/"
+          className="min-w-0 shrink truncate font-display text-lg font-bold tracking-tight whitespace-nowrap sm:text-xl"
+        >
+          Stephen King
+        </Link>
 
-          <div className="flex items-center gap-2 md:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="size-9 rounded-full">
-                  <Menu />
-                  <span className="sr-only">Abrir menu</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-[220px]">
-                <DropdownMenuItem asChild>
-                  <Link href="/timeline" className="flex w-full items-center">
-                    <Clock className="mr-2" />
-                    Linha do tempo
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/works" className="flex w-full items-center">
-                    <BookOpen className="mr-2" />
-                    Obras
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/characters" className="flex w-full items-center">
-                    <Users className="mr-2" />
-                    Personagens
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/map" className="flex w-full items-center">
-                    <Map className="mr-2" />
-                    Mapa
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/artigos" className="flex w-full items-center">
-                    <FileText className="mr-2" />
-                    Especiais
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/search" className="flex w-full items-center">
-                    <Search className="mr-2" />
-                    Pesquisa
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+        <nav aria-label="Seções" className="hidden min-w-0 items-center gap-1 lg:flex xl:hidden">
+          {lgLinks.map((link) => (
+            <NavTextLink key={link.href} href={link.href} label={link.label} active={isActivePath(pathname, link.match)} />
+          ))}
+          <MoreMenu links={lgMoreLinks} active={lgMoreActive} />
+        </nav>
+
+        <nav aria-label="Seções" className="hidden min-w-0 items-center gap-1 xl:flex">
+          {xlLinks.map((link) => (
+            <NavTextLink key={link.href} href={link.href} label={link.label} active={isActivePath(pathname, link.match)} />
+          ))}
+        </nav>
+
+        <div className="ml-auto flex shrink-0 items-center gap-3">
+          <div className="xl:hidden">
+            <Suspense fallback={<div className="size-9 border border-border" />}>
+              <SearchBar variant="icon" />
+            </Suspense>
+          </div>
+          <div className="hidden w-56 xl:block 2xl:w-64">
+            <Suspense fallback={<div className="h-9 w-full border border-border" />}>
+              <SearchBar />
+            </Suspense>
           </div>
 
-          <NavigationMenu viewport={false} className="hidden md:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Explorar</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[320px] gap-1">
-                    <DesktopNavLink
-                      href="/timeline"
-                      title="Linha do tempo"
-                      description="Percorra a obra em ordem cronológica."
-                      icon={Clock}
-                    />
-                    <DesktopNavLink
-                      href="/characters"
-                      title="Personagens"
-                      description="Veja personagens recorrentes e suas conexões."
-                      icon={Users}
-                    />
-                    <DesktopNavLink
-                      href="/map"
-                      title="Mapa"
-                      description="Explore os lugares ficcionais mais importantes."
-                      icon={Map}
-                    />
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Obras</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[360px] gap-1">
-                    <DesktopNavLink
-                      href="/works"
-                      title="Catálogo de obras"
-                      description="Lista completa com detalhes e conteúdo importado."
-                      icon={BookOpen}
-                    />
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Especiais</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[360px] gap-1">
-                    <DesktopNavLink
-                      href="/artigos"
-                      title="Arquivo de especiais"
-                      description="Acesse páginas evergreen importadas para consulta e referência."
-                      icon={FileText}
-                    />
-                    <DesktopNavLink
-                      href="/artigos?tipo=especial"
-                      title="Guias e cronologias"
-                      description="Conteúdo permanente reaproveitado do acervo importado."
-                      icon={Compass}
-                    />
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    pathname === "/search" && "bg-accent text-accent-foreground",
-                  )}
-                >
-                  <Link href="/search">Pesquisa</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          <div className="hidden items-center md:flex">
-            <div className="w-full min-w-[280px] flex-1 lg:min-w-[360px]">
-              <Suspense fallback={<SearchBarFallback />}>
-                <SearchBar />
-              </Suspense>
-            </div>
-          </div>
-        </div>
-
-        <div className="md:hidden">
-          <Suspense fallback={<SearchBarFallback />}>
-            <SearchBar />
-          </Suspense>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Abrir menu">
+                <Menu aria-hidden="true" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-[220px]">
+              {mobileLinks.map((link) => (
+                <DropdownMenuItem key={link.href} asChild>
+                  <Link href={link.href} className="flex w-full items-center">
+                    <link.icon aria-hidden="true" className="mr-2" />
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
   );
 }
 
-interface DesktopNavLinkProps {
-  href: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
-
-function DesktopNavLink({ href, title, description, icon: Icon }: DesktopNavLinkProps) {
+function NavTextLink({ href, label, active }: { href: string; label: string; active: boolean }) {
   return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link href={href} className="flex-row items-start gap-3">
-          <Icon className="mt-0.5" />
-          <div className="flex flex-col gap-1">
-            <div className="font-medium">{title}</div>
-            <div className="line-clamp-2 text-muted-foreground">{description}</div>
-          </div>
-        </Link>
-      </NavigationMenuLink>
-    </li>
+    <Link
+      href={href}
+      aria-current={active ? "page" : undefined}
+      className={cn(
+        "border-b border-transparent px-2.5 py-1.5 text-[11px] font-medium tracking-[0.14em] whitespace-nowrap text-muted-foreground uppercase transition-colors hover:text-foreground",
+        active && "border-foreground text-foreground",
+      )}
+    >
+      {label}
+    </Link>
   );
 }
 
-function SearchBarFallback() {
-  return <div className="h-12 w-full rounded-full border border-border/60 bg-background/80 shadow-sm" />;
+function MoreMenu({
+  links,
+  active,
+}: {
+  links: ReadonlyArray<{ href: string; label: string; icon: ComponentType<SVGProps<SVGSVGElement>> }>;
+  active: boolean;
+}) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className={cn(
+            "border-b border-transparent px-2.5 py-1.5 text-[11px] font-medium tracking-[0.14em] whitespace-nowrap text-muted-foreground uppercase transition-colors hover:text-foreground",
+            active && "border-foreground text-foreground",
+          )}
+        >
+          Mais
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {links.map((link) => (
+          <DropdownMenuItem key={link.href} asChild>
+            <Link href={link.href} className="flex w-full items-center">
+              <link.icon aria-hidden="true" className="mr-2" />
+              {link.label}
+            </Link>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 }

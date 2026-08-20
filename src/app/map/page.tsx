@@ -1,8 +1,8 @@
 import MapContent from '@/components/MapContent';
 
 export const metadata = {
-  title: "Mapa | Stephen King",
-  description: "Explore os locais ficcionais mais importantes do universo de Stephen King.",
+  title: "Cidades | Arquivo Stephen King",
+  description: "Castle Rock, Derry e Jerusalem's Lot no arquivo de Stephen King.",
 };
 
 export default function MapPage() {

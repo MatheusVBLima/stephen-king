@@ -7,31 +7,34 @@ export const locations: FictionalLocation[] = [
         id: 'derry',
         name: 'Derry',
         coordinates: [44.8023, -68.7778], // Fictional - based near Bangor
-        description: 'A sinister town haunted by an ancient evil entity. Derry seems to have a curse that makes violent events occur in cycles of 27 years. The town has a dark energy that makes people ignore or forget tragic events.',
-        books: ['It', 'Insomnia', '11/22/63', 'Dreamcatcher', 'Fair Extension', 'Autopsy Room Four', 'Mute'],
+        description: 'Derry é uma cidade do estado do Maine, que se situa ao longo da interestadual 95, ao sul de Dexter e ao oeste de Bangor e Haven. Aparentemente trata-se de uma típica cidade norte-americana interiorana, mas marcada por ciclos de violência e por uma memória coletiva que prefere esquecer.',
+        books: ['It, A Coisa', 'Insônia', 'Novembro de 63', 'O Apanhador de Sonhos'],
         importance: 'major',
         imageUrl: '/images/locations/derry-hd.png',
-        firstAppearance: 'It'
+        firstAppearance: 'It, A Coisa',
+        href: '/map/derry'
     },
     {
         id: 'castle-rock',
         name: 'Castle Rock',
         coordinates: [43.8073, -70.2567], // Fictional - based in western Maine
-        description: 'A small town with a dark history, Castle Rock is the setting for numerous strange occurrences and supernatural events. The town appears calm on the surface but harbors deep secrets.',
-        books: ['The Dead Zone', 'Cujo', 'The Dark Half', 'Needful Things', 'Elevation', "Mrs. Todd's Shortcut"],
+        description: 'Castle Rock, por vezes chamada de “The Rock”, é uma cidade imaginária da geografia fictícia do Maine criada por Stephen King. Serve de palco para romances, novelas e contos, e estreou em A Zona Morta.',
+        books: ['A Zona Morta', 'Cujo', 'A Metade Sombria', 'Ascensão'],
         importance: 'major',
         imageUrl: '/images/locations/castle-rock-hd.png',
-        firstAppearance: 'The Dead Zone'
+        firstAppearance: 'A Zona Morta',
+        href: '/map/castle-rock'
     },
     {
         id: 'jerusalems-lot',
         name: "Jerusalem's Lot",
         coordinates: [43.5021, -70.4529], // Fictional - based near Portland
-        description: "Also known as Salem's Lot, this small town was overrun by vampires led by Kurt Barlow. The town has an evil history dating back to its founding, centered around the Marsten House that overlooks it.",
-        books: ["Salem's Lot", 'One for the Road', 'Jerusalem\'s Lot'],
+        description: 'Jerusalem’s Lot, também conhecida como Salem’s Lot ou apenas Lot, é uma cidade fictícia da topografia do Maine de Stephen King. Serviu de cenário para o romance Salem e para contos de Sombras da Noite.',
+        books: ['Salem', 'Sombras da Noite'],
         importance: 'major',
         imageUrl: '/images/locations/jerusalems-lot.jpg',
-        firstAppearance: "Salem's Lot"
+        firstAppearance: 'Salem',
+        href: '/map/jerusalems-lot'
     }
 ];
 

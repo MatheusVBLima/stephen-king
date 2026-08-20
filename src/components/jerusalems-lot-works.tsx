@@ -1,8 +1,8 @@
 import { ResponsiveWorksDisplay } from './responsive-works-display';
-import { getBooksByLocation } from '@/lib/books-data';
+import { getCatalogWorksForLocation } from '@/lib/imported-content';
 
 export default function JerusalamsLotWorks() {
-  const works = getBooksByLocation('jerusalems-lot');
+  const works = getCatalogWorksForLocation('jerusalems-lot');
   
   return (
     <div className="py-8">

@@ -1,8 +1,8 @@
 import { ResponsiveWorksDisplay } from './responsive-works-display';
-import { getBooksByLocation } from '@/lib/books-data';
+import { getCatalogWorksForLocation } from '@/lib/imported-content';
 
 export default function CastleRockWorks() {
-  const works = getBooksByLocation('castle-rock');
+  const works = getCatalogWorksForLocation('castle-rock');
   
   return (
     <div className="py-8">

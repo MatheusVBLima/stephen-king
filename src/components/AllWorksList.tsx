@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useDeferredValue, useMemo } from "react";
 import { useQueryStates } from "nuqs";
 
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { HoverHighlightGrid } from "@/components/ui/card-hover-effect";
 import { Input } from "@/components/ui/input";
 import {
   Pagination,
@@ -28,9 +29,11 @@ interface AllWorksListProps {
     Work & {
       slug: string;
       href: string;
+      displayTitle?: string;
       hasImportedContent: boolean;
       hasDetailPage: boolean;
       importedSummary?: string;
+      catalogGroup?: "fiction" | "nonfiction" | "collections" | "darktower" | "bachman";
     }
   >;
 }
@@ -46,38 +49,12 @@ const categoryLabels = {
   bachman: "Richard Bachman",
 } satisfies Record<(typeof worksCategoryValues)[number], string>;
 
-const categorizeWork = (work: Work): (typeof worksCategoryValues)[number] => {
-  if (
-    work.notes.toLowerCase().includes("bachman") ||
-    work.notes.toLowerCase().includes("richard bachman")
-  ) {
-    return "bachman";
-  }
-
-  if (
-    work.title.toLowerCase().includes("dark tower") ||
-    work.notes.toLowerCase().includes("dark tower")
-  ) {
-    return "darktower";
-  }
-
-  if (
-    work.format.toLowerCase().includes("short story") ||
-    work.notes.toLowerCase().includes("story collection") ||
-    work.format.toLowerCase().includes("collection")
-  ) {
-    return "collections";
-  }
-
-  if (
-    work.notes.toLowerCase().includes("non-fiction") ||
-    work.format.toLowerCase().includes("non-fiction")
-  ) {
-    return "nonfiction";
-  }
-
-  return "fiction";
-};
+const categorizeWork = (
+  work: AllWorksListProps["works"][number],
+): (typeof worksCategoryValues)[number] => {
+  if (work.catalogGroup) return work.catalogGroup
+  return "fiction"
+}
 
 function normalizeText(value: string) {
   return String(value || "")
@@ -133,7 +110,9 @@ export function AllWorksList({ works }: AllWorksListProps) {
         }
 
         const haystack = normalizeText(
-          [work.title, work.notes, work.format, work.importedSummary].filter(Boolean).join(" "),
+          [work.displayTitle, work.title, work.notes, work.format, work.importedSummary]
+            .filter(Boolean)
+            .join(" "),
         );
 
         return haystack.includes(normalizedSearch);
@@ -177,37 +156,44 @@ export function AllWorksList({ works }: AllWorksListProps) {
   const paginationItems = buildPaginationItems(totalPages, currentPageIndex);
 
   return (
-    <div className="w-full space-y-6 md:space-y-8">
-      <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
-        <CardContent className="flex flex-col gap-6 px-5 py-6 sm:px-8 sm:py-8">
-          <div className="flex flex-col gap-3">
-            <span className="text-sm font-medium">Buscar no catálogo</span>
-            <div className="relative">
-              <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                value={params.busca}
-                onChange={(event) =>
-                  setParams({
-                    busca: event.target.value || null,
-                    pagina: null,
-                  })
-                }
-                placeholder="Pesquisar apenas nas obras..."
-                className="h-12 rounded-2xl border-border/60 bg-background/60 pl-11 pr-4"
-              />
-            </div>
+    <div className="flex w-full flex-col gap-6">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <label htmlFor="busca-obras" className="text-sm font-medium">
+            Buscar no catálogo
+          </label>
+          <div className="relative">
+            <Search
+              aria-hidden="true"
+              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
+            />
+            <Input
+              id="busca-obras"
+              name="busca"
+              autoComplete="off"
+              spellCheck={false}
+              value={params.busca}
+              onChange={(event) =>
+                setParams({
+                  busca: event.target.value || null,
+                  pagina: null,
+                })
+              }
+              placeholder="Não Pisque, 1977…"
+              className="pl-9"
+            />
           </div>
+        </div>
 
-          <div className="flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-            <span>
-              {filteredWorks.length} obras encontradas em {categoryLabels[params.categoria]}
-            </span>
-            <span>
-              Página {currentPageIndex + 1} de {totalPages}
-            </span>
-          </div>
-        </CardContent>
-      </Card>
+        <div className="flex flex-col gap-1 text-sm tabular-nums text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            {filteredWorks.length} obras em {categoryLabels[params.categoria]}
+          </span>
+          <span>
+            Página {currentPageIndex + 1} de {totalPages}
+          </span>
+        </div>
+      </div>
 
       <div className="md:hidden">
         <Select
@@ -219,7 +205,7 @@ export function AllWorksList({ works }: AllWorksListProps) {
             })
           }
         >
-          <SelectTrigger className="h-12 w-full rounded-2xl border-border/60 bg-card/50 px-4">
+          <SelectTrigger className="w-full">
             <SelectValue placeholder="Escolha uma categoria" />
           </SelectTrigger>
           <SelectContent>
@@ -234,7 +220,7 @@ export function AllWorksList({ works }: AllWorksListProps) {
 
       <div className="hidden md:block">
         <Tabs value={params.categoria} onValueChange={() => undefined} className="w-full">
-          <TabsList className="grid h-auto w-full grid-cols-6 gap-1 rounded-2xl border border-border/60 bg-card/50 p-1">
+          <TabsList className="grid h-auto w-full grid-cols-6">
             {Object.entries(categoryLabels).map(([value, label]) => (
               <TabsTrigger
                 key={value}
@@ -254,54 +240,29 @@ export function AllWorksList({ works }: AllWorksListProps) {
       </div>
 
       {visibleWorks.length > 0 ? (
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <HoverHighlightGrid>
           {visibleWorks.map((work) => (
-            <Link key={work.title} href={work.href} className="group block h-full">
-              <Card className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border-border/60 bg-card/55 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:border-primary/30 group-hover:shadow-xl">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.07),transparent_42%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <CardHeader className="relative space-y-5 p-5 sm:p-6">
+            <Link key={work.slug} href={work.href} className="group block h-full min-w-0">
+              <Card className="h-full transition-colors group-hover:border-foreground/40">
+                <CardHeader className="flex flex-col gap-3">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">{work.year}</Badge>
                     <Badge variant="outline">{formatBookFormatForDisplay(work.format)}</Badge>
-                    {work.hasImportedContent ? (
-                      <Badge>Importado</Badge>
-                    ) : (
-                      <Badge variant="outline">Base local</Badge>
-                    )}
+                    {work.hasImportedContent ? <Badge>Arquivo brasileiro</Badge> : null}
                   </div>
-
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-start justify-between gap-4">
-                      <CardTitle className="text-lg leading-tight transition-colors group-hover:text-primary">
-                        {work.title}
-                      </CardTitle>
-                      <span className="rounded-full border border-border/60 bg-background/50 p-2 text-muted-foreground transition-all duration-300 group-hover:border-primary/30 group-hover:bg-primary/10 group-hover:text-primary">
-                        <ArrowUpRight className="size-4" />
-                      </span>
-                    </div>
-                    <p className="text-sm leading-7 text-muted-foreground">{work.notes}</p>
-                  </div>
+                  <CardTitle className="font-display text-xl leading-tight">{work.displayTitle || work.title}</CardTitle>
+                  <p className="line-clamp-3 text-sm leading-6 text-muted-foreground">
+                    {work.importedSummary || work.notes}
+                  </p>
                 </CardHeader>
-                <CardContent className="relative mt-auto border-t border-border/50 p-5 pt-4 sm:px-6 sm:pb-6">
-                  <div className="flex items-center justify-between gap-3 text-sm">
-                    <span className="text-muted-foreground">Explorar obra</span>
-                    <span className="font-medium text-primary transition-transform duration-300 group-hover:translate-x-0.5">
-                      Abrir
-                    </span>
-                  </div>
-                </CardContent>
               </Card>
             </Link>
           ))}
-        </div>
+        </HoverHighlightGrid>
       ) : (
-        <Card className="rounded-[1.75rem] border-border/60 bg-card/55">
-          <CardContent className="px-5 py-8 sm:px-8 sm:py-10">
-            <p className="text-sm leading-7 text-muted-foreground">
-              Nenhuma obra encontrada para essa categoria com o termo pesquisado.
-            </p>
-          </CardContent>
-        </Card>
+        <p className="text-sm text-muted-foreground">
+          Nenhuma obra encontrada para essa categoria com o termo pesquisado.
+        </p>
       )}
 
       {totalPages > 1 && (
