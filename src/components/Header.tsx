@@ -67,7 +67,7 @@ export function Header() {
           href="/"
           className="z-10 flex min-w-0 items-center gap-2.5 justify-self-start"
         >
-          <SiteLogo className="size-8" />
+          <SiteLogo />
           <span className="min-w-0 truncate font-display text-lg font-bold tracking-tight sm:text-xl">
             Stephen King
           </span>
