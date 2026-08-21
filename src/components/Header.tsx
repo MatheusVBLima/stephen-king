@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { SearchBar } from "@/components/SearchBar";
+import { SiteLogo } from "@/components/SiteLogo";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -61,28 +62,32 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 px-4 sm:px-6">
         <Link
           href="/"
-          className="min-w-0 shrink truncate font-display text-lg font-bold tracking-tight whitespace-nowrap sm:text-xl"
+          className="z-10 flex min-w-0 items-center gap-2.5 justify-self-start"
         >
-          Stephen King
+          <SiteLogo className="size-8" />
+          <span className="min-w-0 truncate font-display text-lg font-bold tracking-tight sm:text-xl">
+            Stephen King
+          </span>
         </Link>
 
-        <nav aria-label="Seções" className="hidden min-w-0 items-center gap-1 lg:flex xl:hidden">
+        <nav aria-label="Seções" className="hidden items-center gap-0.5 justify-self-center lg:flex">
           {lgLinks.map((link) => (
             <NavTextLink key={link.href} href={link.href} label={link.label} active={isActivePath(pathname, link.match)} />
           ))}
-          <MoreMenu links={lgMoreLinks} active={lgMoreActive} />
+          <span className="xl:hidden">
+            <MoreMenu links={lgMoreLinks} active={lgMoreActive} />
+          </span>
+          <span className="hidden xl:contents">
+            {xlLinks.slice(3).map((link) => (
+              <NavTextLink key={link.href} href={link.href} label={link.label} active={isActivePath(pathname, link.match)} />
+            ))}
+          </span>
         </nav>
 
-        <nav aria-label="Seções" className="hidden min-w-0 items-center gap-1 xl:flex">
-          {xlLinks.map((link) => (
-            <NavTextLink key={link.href} href={link.href} label={link.label} active={isActivePath(pathname, link.match)} />
-          ))}
-        </nav>
-
-        <div className="ml-auto flex shrink-0 items-center gap-3">
+        <div className="z-10 flex shrink-0 items-center justify-end gap-3 justify-self-end">
           <div className="xl:hidden">
             <Suspense fallback={<div className="size-9 border border-border" />}>
               <SearchBar variant="icon" />
